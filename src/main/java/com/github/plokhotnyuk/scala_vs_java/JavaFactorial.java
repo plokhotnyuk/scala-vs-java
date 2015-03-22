@@ -56,8 +56,8 @@ public class JavaFactorial {
         return recursion(n1, n1 + (d >> 1)).multiply(recursion(n1 + (d >> 1) + 1, n2));
     }
 
-    private BigInteger recursePar(long n1, long n2) {
-        long d = n2 - n1;
+    private BigInteger recursePar(final long n1, final long n2) {
+        final long d = n2 - n1;
         if (d < 333) return recursion(n1, n2);
         RecursiveTask<BigInteger> t = new RecursiveTask<BigInteger>() {
             protected BigInteger compute() {
