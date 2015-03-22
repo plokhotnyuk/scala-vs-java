@@ -3,6 +3,8 @@ package com.github.plokhotnyuk.scala_vs_java;
 import org.openjdk.jmh.annotations.*;
 
 import java.math.BigInteger;
+import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 import java.util.concurrent.TimeUnit;
 
@@ -13,6 +15,8 @@ import java.util.concurrent.TimeUnit;
 public class JavaFactorial {
     @Param({"10", "100", "1000", "10000"})
     public int n;
+
+    private static ForkJoinPool pool = new ForkJoinPool();
 
     @Benchmark
     public BigInteger loop() {
@@ -64,7 +68,7 @@ public class JavaFactorial {
                 return recursePar(n1 + (d >> 1) + 1, n2);
             }
         };
-        t.fork();
+        pool.execute(t);
         return recursePar(n1, n1 + (d >> 1)).multiply(t.join());
     }
 }
