@@ -68,7 +68,11 @@ public class JavaFactorial {
                 return recursePar(n1 + (d >> 1) + 1, n2);
             }
         };
-        pool.execute(t);
+        if (ForkJoinTask.getPool() == pool) {
+            t.fork();
+        } else {
+            pool.execute(t);
+        }
         return recursePar(n1, n1 + (d >> 1)).multiply(t.join());
     }
 }
