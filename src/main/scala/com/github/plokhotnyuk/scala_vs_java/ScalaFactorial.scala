@@ -18,31 +18,34 @@ class ScalaFactorial {
   var n: Int = _
 
   @Benchmark
-  def loop(): BigInt = if (n > 20) loop(1, n, 1) else fastLoop(1, n, 1)
+  def loop(): BigInt = if (n > 20) loop(1, n) else fastLoop(1, n)
 
   @Benchmark
-  def recursion(): BigInt = if (n > 20) recursion(1, n) else fastLoop(1, n, 1)
+  def recursion(): BigInt = if (n > 20) recursion(1, n) else fastLoop(1, n)
 
   @Benchmark
-  def recursionPar(): BigInt = if (n > 20) recursionPar(1, n) else fastLoop(1, n, 1)
+  def recursionPar(): BigInt = if (n > 20) recursionPar(1, n) else fastLoop(1, n)
 
   @tailrec
-  private def fastLoop(n1: Int, n2: Int, p: Long): Long = if (n2 > n1) fastLoop(n1, n2 - 1, p * n2) else p
+  private def fastLoop(n1: Int, n2: Int, p: Long = 1): Long = if (n2 > n1) fastLoop(n1, n2 - 1, p * n2) else p
 
   @tailrec
-  private def loop(n1: Int, n2: Int, p: BigInt): BigInt = if (n2 > n1) loop(n1, n2 - 1, p * n2) else p
-
-  private def recursion(n1: Long, n2: Long): BigInt = n2 - n1 match {
-    case 0 => BigInt(n1)
-    case 1 => BigInt(n1 * n2)
-    case 2 => BigInt(n1 * (n1 + 1)) * BigInt(n2)
-    case 3 => BigInt(n1 * (n1 + 1)) * BigInt((n2 - 1) * n2)
-    case d => recursion(n1, n1 + (d >> 1)) * recursion(n1 + (d >> 1) + 1, n2)
+  private def loop(n1: Int, n2: Int, p: BigInt = BigInt(1), pp: Long = 1): BigInt = {
+    if (n1 <= n2) {
+      if (pp < Int.MaxValue) loop(n1 + 1, n2, p, pp * n1)
+      else loop(n1 + 1, n2, p * pp, n1)
+    } else p * pp
   }
 
-  private def recursionPar(n1: Long, n2: Long): BigInt = {
+  private def recursion(n1: Int, n2: Int): BigInt = {
     val d = n2 - n1
-    if (d < 333) recursion(n1, n2)
+    if (d < 50) loop(n1, n2)
+    else recursion(n1, n1 + (d >> 1)) * recursion(n1 + (d >> 1) + 1, n2)
+  }
+
+  private def recursionPar(n1: Int, n2: Int): BigInt = {
+    val d = n2 - n1
+    if (d < 500) recursion(n1, n2)
     else {
       val f = Future(recursionPar(n1 + (d >> 1) + 1, n2))
       recursionPar(n1, n1 + (d >> 1)) * Await.result(f, Duration(1, TimeUnit.MINUTES))

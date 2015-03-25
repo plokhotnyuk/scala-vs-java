@@ -42,27 +42,30 @@ public class JavaFactorial {
         return p;
     }
 
-    private BigInteger loop(final int n1, int n2) {
-        BigInteger p = BigInteger.valueOf(n1);
-        while (n2 > n1) {
-            p = p.multiply(BigInteger.valueOf(n2));
-            n2--;
+    private BigInteger loop(int n1, final int n2) {
+        BigInteger p = BigInteger.ONE;
+        long pp = 1;
+        while (n1 <= n2) {
+            if (pp <= Integer.MAX_VALUE) {
+                pp *= n1;
+            } else {
+                p = p.multiply(BigInteger.valueOf(pp));
+                pp = n1;
+            }
+            n1++;
         }
-        return p;
+        return p.multiply(BigInteger.valueOf(pp));
     }
 
-    private BigInteger recursion(final long n1, final long n2) {
-        long d = n2 - n1;
-        if (d == 0) return BigInteger.valueOf(n1);
-        else if (d == 1) return BigInteger.valueOf(n1 * n2);
-        else if (d == 2) return BigInteger.valueOf(n1 * (n1 + 1)).multiply(BigInteger.valueOf(n2));
-        else if (d == 3) return BigInteger.valueOf(n1 * (n1 + 1)).multiply(BigInteger.valueOf((n2 - 1) * n2));
+    private BigInteger recursion(final int n1, final int n2) {
+        final int d = n2 - n1;
+        if (d < 50) return loop(n1, n2);
         return recursion(n1, n1 + (d >> 1)).multiply(recursion(n1 + (d >> 1) + 1, n2));
     }
 
-    private BigInteger recursePar(final long n1, final long n2) {
-        final long d = n2 - n1;
-        if (d < 333) return recursion(n1, n2);
+    private BigInteger recursePar(final int n1, final int n2) {
+        final int d = n2 - n1;
+        if (d < 500) return recursion(n1, n2);
         RecursiveTask<BigInteger> t = new RecursiveTask<BigInteger>() {
             protected BigInteger compute() {
                 return recursePar(n1 + (d >> 1) + 1, n2);
