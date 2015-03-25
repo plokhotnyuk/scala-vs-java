@@ -25,19 +25,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 0.00% complete, ETA 00:05:20
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 58286735.248 ops/s
-[info] # Warmup Iteration   2: 58990837.222 ops/s
-[info] # Warmup Iteration   3: 57825285.968 ops/s
-[info] Iteration   1: 58032803.848 ops/s
-[info] Iteration   2: 57915330.150 ops/s
-[info] Iteration   3: 58620748.963 ops/s
-[info] Iteration   4: 58948906.730 ops/s
-[info] Iteration   5: 58344170.655 ops/s
+[info] # Warmup Iteration   1: 49186812.397 ops/s
+[info] # Warmup Iteration   2: 58200437.669 ops/s
+[info] # Warmup Iteration   3: 58027792.191 ops/s
+[info] Iteration   1: 58031178.654 ops/s
+[info] Iteration   2: 58029263.419 ops/s
+[info] Iteration   3: 54733575.768 ops/s
+[info] Iteration   4: 58366447.076 ops/s
+[info] Iteration   5: 58594082.166 ops/s
 [info] 
 [info] 
-[info] Result: 58372392.069 ±(99.9%) 1632637.274 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (57915330.150, 58372392.069, 58948906.730), stdev = 423990.715
-[info]   Confidence interval (99.9%): [56739754.795, 60005029.343]
+[info] Result: 57550909.417 ±(99.9%) 6133944.353 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (54733575.768, 57550909.417, 58594082.166), stdev = 1592965.869
+[info]   Confidence interval (99.9%): [51416965.064, 63684853.769]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -51,21 +51,21 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.loop
 [info] # Parameters: (n = 100)
 [info] 
-[info] # Run progress: 2.50% complete, ETA 00:05:26
+[info] # Run progress: 2.50% complete, ETA 00:05:27
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 130178.266 ops/s
-[info] # Warmup Iteration   2: 110030.336 ops/s
-[info] # Warmup Iteration   3: 108649.172 ops/s
-[info] Iteration   1: 85811.712 ops/s
-[info] Iteration   2: 114813.886 ops/s
-[info] Iteration   3: 107699.537 ops/s
-[info] Iteration   4: 110015.477 ops/s
-[info] Iteration   5: 103243.848 ops/s
+[info] # Warmup Iteration   1: 129525.100 ops/s
+[info] # Warmup Iteration   2: 120872.214 ops/s
+[info] # Warmup Iteration   3: 116403.075 ops/s
+[info] Iteration   1: 100604.195 ops/s
+[info] Iteration   2: 101211.669 ops/s
+[info] Iteration   3: 110884.900 ops/s
+[info] Iteration   4: 110823.655 ops/s
+[info] Iteration   5: 114144.308 ops/s
 [info] 
 [info] 
-[info] Result: 104316.892 ±(99.9%) 42952.210 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (85811.712, 104316.892, 114813.886), stdev = 11154.552
-[info]   Confidence interval (99.9%): [61364.682, 147269.102]
+[info] Result: 107533.745 ±(99.9%) 23872.487 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (100604.195, 107533.745, 114144.308), stdev = 6199.609
+[info]   Confidence interval (99.9%): [83661.259, 131406.232]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -81,19 +81,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 5.00% complete, ETA 00:05:18
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 1389.050 ops/s
-[info] # Warmup Iteration   2: 1429.546 ops/s
-[info] # Warmup Iteration   3: 1427.247 ops/s
-[info] Iteration   1: 1260.019 ops/s
-[info] Iteration   2: 1344.323 ops/s
-[info] Iteration   3: 1341.727 ops/s
-[info] Iteration   4: 1444.870 ops/s
-[info] Iteration   5: 1417.689 ops/s
+[info] # Warmup Iteration   1: 1384.883 ops/s
+[info] # Warmup Iteration   2: 1431.726 ops/s
+[info] # Warmup Iteration   3: 1421.531 ops/s
+[info] Iteration   1: 1413.729 ops/s
+[info] Iteration   2: 1294.482 ops/s
+[info] Iteration   3: 1378.450 ops/s
+[info] Iteration   4: 1420.191 ops/s
+[info] Iteration   5: 1435.229 ops/s
 [info] 
 [info] 
-[info] Result: 1361.726 ±(99.9%) 279.616 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (1260.019, 1361.726, 1444.870), stdev = 72.615
-[info]   Confidence interval (99.9%): [1082.109, 1641.342]
+[info] Result: 1388.416 ±(99.9%) 217.524 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (1294.482, 1388.416, 1435.229), stdev = 56.490
+[info]   Confidence interval (99.9%): [1170.892, 1605.940]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -109,19 +109,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 7.50% complete, ETA 00:05:09
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 9.599 ops/s
-[info] # Warmup Iteration   2: 10.603 ops/s
-[info] # Warmup Iteration   3: 10.154 ops/s
-[info] Iteration   1: 9.934 ops/s
-[info] Iteration   2: 8.838 ops/s
-[info] Iteration   3: 10.767 ops/s
-[info] Iteration   4: 10.194 ops/s
-[info] Iteration   5: 9.283 ops/s
+[info] # Warmup Iteration   1: 9.318 ops/s
+[info] # Warmup Iteration   2: 10.327 ops/s
+[info] # Warmup Iteration   3: 10.542 ops/s
+[info] Iteration   1: 10.280 ops/s
+[info] Iteration   2: 10.669 ops/s
+[info] Iteration   3: 10.775 ops/s
+[info] Iteration   4: 9.741 ops/s
+[info] Iteration   5: 10.766 ops/s
 [info] 
 [info] 
-[info] Result: 9.803 ±(99.9%) 2.921 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (8.838, 9.803, 10.767), stdev = 0.758
-[info]   Confidence interval (99.9%): [6.883, 12.724]
+[info] Result: 10.446 ±(99.9%) 1.706 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (9.741, 10.446, 10.775), stdev = 0.443
+[info]   Confidence interval (99.9%): [8.740, 12.152]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -137,19 +137,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 10.00% complete, ETA 00:05:04
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 53337896.296 ops/s
-[info] # Warmup Iteration   2: 56324144.715 ops/s
-[info] # Warmup Iteration   3: 60265401.669 ops/s
-[info] Iteration   1: 60112826.743 ops/s
-[info] Iteration   2: 59719001.254 ops/s
-[info] Iteration   3: 58604208.129 ops/s
-[info] Iteration   4: 48883443.119 ops/s
-[info] Iteration   5: 58729689.691 ops/s
+[info] # Warmup Iteration   1: 54148392.448 ops/s
+[info] # Warmup Iteration   2: 56216812.100 ops/s
+[info] # Warmup Iteration   3: 59561436.275 ops/s
+[info] Iteration   1: 58918645.450 ops/s
+[info] Iteration   2: 55709316.070 ops/s
+[info] Iteration   3: 51116287.929 ops/s
+[info] Iteration   4: 60044268.397 ops/s
+[info] Iteration   5: 59169140.640 ops/s
 [info] 
 [info] 
-[info] Result: 57209833.787 ±(99.9%) 18092527.484 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (48883443.119, 57209833.787, 60112826.743), stdev = 4698571.932
-[info]   Confidence interval (99.9%): [39117306.303, 75302361.272]
+[info] Result: 56991531.697 ±(99.9%) 14139981.303 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (51116287.929, 56991531.697, 60044268.397), stdev = 3672108.241
+[info]   Confidence interval (99.9%): [42851550.395, 71131513.000]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -165,19 +165,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 12.50% complete, ETA 00:04:55
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 174847.944 ops/s
-[info] # Warmup Iteration   2: 272153.420 ops/s
-[info] # Warmup Iteration   3: 279770.375 ops/s
-[info] Iteration   1: 287999.113 ops/s
-[info] Iteration   2: 294237.209 ops/s
-[info] Iteration   3: 295784.286 ops/s
-[info] Iteration   4: 283284.495 ops/s
-[info] Iteration   5: 279105.967 ops/s
+[info] # Warmup Iteration   1: 220534.773 ops/s
+[info] # Warmup Iteration   2: 268509.189 ops/s
+[info] # Warmup Iteration   3: 296992.249 ops/s
+[info] Iteration   1: 274885.238 ops/s
+[info] Iteration   2: 298934.674 ops/s
+[info] Iteration   3: 255183.360 ops/s
+[info] Iteration   4: 239709.789 ops/s
+[info] Iteration   5: 182135.261 ops/s
 [info] 
 [info] 
-[info] Result: 288082.214 ±(99.9%) 27282.831 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (279105.967, 288082.214, 295784.286), stdev = 7085.265
-[info]   Confidence interval (99.9%): [260799.383, 315365.045]
+[info] Result: 250169.664 ±(99.9%) 169517.049 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (182135.261, 250169.664, 298934.674), stdev = 44023.039
+[info]   Confidence interval (99.9%): [80652.616, 419686.713]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -193,19 +193,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 15.00% complete, ETA 00:04:46
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 10920.401 ops/s
-[info] # Warmup Iteration   2: 11770.021 ops/s
-[info] # Warmup Iteration   3: 11873.610 ops/s
-[info] Iteration   1: 11788.641 ops/s
-[info] Iteration   2: 11676.139 ops/s
-[info] Iteration   3: 11082.792 ops/s
-[info] Iteration   4: 11013.882 ops/s
-[info] Iteration   5: 10930.267 ops/s
+[info] # Warmup Iteration   1: 10903.396 ops/s
+[info] # Warmup Iteration   2: 11779.427 ops/s
+[info] # Warmup Iteration   3: 11282.298 ops/s
+[info] Iteration   1: 10399.407 ops/s
+[info] Iteration   2: 10294.506 ops/s
+[info] Iteration   3: 11892.632 ops/s
+[info] Iteration   4: 11865.966 ops/s
+[info] Iteration   5: 11084.124 ops/s
 [info] 
 [info] 
-[info] Result: 11298.344 ±(99.9%) 1547.439 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (10930.267, 11298.344, 11788.641), stdev = 401.865
-[info]   Confidence interval (99.9%): [9750.906, 12845.783]
+[info] Result: 11107.327 ±(99.9%) 2954.353 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (10294.506, 11107.327, 11892.632), stdev = 767.236
+[info]   Confidence interval (99.9%): [8152.975, 14061.680]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -221,19 +221,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 17.50% complete, ETA 00:04:37
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 87.605 ops/s
-[info] # Warmup Iteration   2: 93.476 ops/s
-[info] # Warmup Iteration   3: 87.528 ops/s
-[info] Iteration   1: 91.220 ops/s
-[info] Iteration   2: 92.061 ops/s
-[info] Iteration   3: 89.961 ops/s
-[info] Iteration   4: 93.532 ops/s
-[info] Iteration   5: 90.500 ops/s
+[info] # Warmup Iteration   1: 88.249 ops/s
+[info] # Warmup Iteration   2: 93.951 ops/s
+[info] # Warmup Iteration   3: 89.230 ops/s
+[info] Iteration   1: 92.954 ops/s
+[info] Iteration   2: 90.309 ops/s
+[info] Iteration   3: 93.663 ops/s
+[info] Iteration   4: 89.441 ops/s
+[info] Iteration   5: 88.837 ops/s
 [info] 
 [info] 
-[info] Result: 91.455 ±(99.9%) 5.404 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (89.961, 91.455, 93.532), stdev = 1.403
-[info]   Confidence interval (99.9%): [86.051, 96.859]
+[info] Result: 91.041 ±(99.9%) 8.278 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (88.837, 91.041, 93.663), stdev = 2.150
+[info]   Confidence interval (99.9%): [82.763, 99.319]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -247,21 +247,21 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.recursionPar
 [info] # Parameters: (n = 10)
 [info] 
-[info] # Run progress: 20.00% complete, ETA 00:04:29
+[info] # Run progress: 20.00% complete, ETA 00:04:28
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 55456574.190 ops/s
-[info] # Warmup Iteration   2: 56301075.425 ops/s
-[info] # Warmup Iteration   3: 53509875.094 ops/s
-[info] Iteration   1: 58432983.636 ops/s
-[info] Iteration   2: 59326247.681 ops/s
-[info] Iteration   3: 60657919.172 ops/s
-[info] Iteration   4: 53303014.761 ops/s
-[info] Iteration   5: 58161901.616 ops/s
+[info] # Warmup Iteration   1: 55871316.686 ops/s
+[info] # Warmup Iteration   2: 56649442.976 ops/s
+[info] # Warmup Iteration   3: 54256557.640 ops/s
+[info] Iteration   1: 59626595.685 ops/s
+[info] Iteration   2: 50772048.867 ops/s
+[info] Iteration   3: 56823348.447 ops/s
+[info] Iteration   4: 60765899.436 ops/s
+[info] Iteration   5: 60252310.062 ops/s
 [info] 
 [info] 
-[info] Result: 57976413.373 ±(99.9%) 10736331.899 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (53303014.761, 57976413.373, 60657919.172), stdev = 2788191.300
-[info]   Confidence interval (99.9%): [47240081.474, 68712745.272]
+[info] Result: 57648040.500 ±(99.9%) 15920599.297 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (50772048.867, 57648040.500, 60765899.436), stdev = 4134529.079
+[info]   Confidence interval (99.9%): [41727441.203, 73568639.796]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -277,19 +277,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 22.50% complete, ETA 00:04:20
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 219404.801 ops/s
-[info] # Warmup Iteration   2: 300499.884 ops/s
-[info] # Warmup Iteration   3: 281280.125 ops/s
-[info] Iteration   1: 298946.389 ops/s
-[info] Iteration   2: 276616.019 ops/s
-[info] Iteration   3: 298559.765 ops/s
-[info] Iteration   4: 260604.817 ops/s
-[info] Iteration   5: 282330.798 ops/s
+[info] # Warmup Iteration   1: 216587.893 ops/s
+[info] # Warmup Iteration   2: 267430.477 ops/s
+[info] # Warmup Iteration   3: 277380.620 ops/s
+[info] Iteration   1: 291939.918 ops/s
+[info] Iteration   2: 293870.752 ops/s
+[info] Iteration   3: 298420.313 ops/s
+[info] Iteration   4: 270816.230 ops/s
+[info] Iteration   5: 239410.525 ops/s
 [info] 
 [info] 
-[info] Result: 283411.558 ±(99.9%) 62038.820 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (260604.817, 283411.558, 298946.389), stdev = 16111.285
-[info]   Confidence interval (99.9%): [221372.738, 345450.378]
+[info] Result: 278891.547 ±(99.9%) 94320.560 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (239410.525, 278891.547, 298420.313), stdev = 24494.750
+[info]   Confidence interval (99.9%): [184570.988, 373212.107]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -305,19 +305,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 25.00% complete, ETA 00:04:11
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 8337.058 ops/s
-[info] # Warmup Iteration   2: 10230.000 ops/s
-[info] # Warmup Iteration   3: 10596.919 ops/s
-[info] Iteration   1: 10194.245 ops/s
-[info] Iteration   2: 12160.326 ops/s
-[info] Iteration   3: 8820.778 ops/s
-[info] Iteration   4: 10470.240 ops/s
-[info] Iteration   5: 10074.394 ops/s
+[info] # Warmup Iteration   1: 7436.219 ops/s
+[info] # Warmup Iteration   2: 11087.690 ops/s
+[info] # Warmup Iteration   3: 11271.369 ops/s
+[info] Iteration   1: 10854.115 ops/s
+[info] Iteration   2: 10284.112 ops/s
+[info] Iteration   3: 11312.069 ops/s
+[info] Iteration   4: 10805.489 ops/s
+[info] Iteration   5: 10679.772 ops/s
 [info] 
 [info] 
-[info] Result: 10343.997 ±(99.9%) 4608.843 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (8820.778, 10343.997, 12160.326), stdev = 1196.902
-[info]   Confidence interval (99.9%): [5735.153, 14952.840]
+[info] Result: 10787.111 ±(99.9%) 1421.271 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (10284.112, 10787.111, 11312.069), stdev = 369.100
+[info]   Confidence interval (99.9%): [9365.840, 12208.382]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -333,19 +333,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 27.50% complete, ETA 00:04:03
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 96.288 ops/s
-[info] # Warmup Iteration   2: 96.716 ops/s
-[info] # Warmup Iteration   3: 111.064 ops/s
-[info] Iteration   1: 106.943 ops/s
-[info] Iteration   2: 103.780 ops/s
-[info] Iteration   3: 108.719 ops/s
-[info] Iteration   4: 108.026 ops/s
-[info] Iteration   5: 103.678 ops/s
+[info] # Warmup Iteration   1: 95.583 ops/s
+[info] # Warmup Iteration   2: 103.847 ops/s
+[info] # Warmup Iteration   3: 110.893 ops/s
+[info] Iteration   1: 108.014 ops/s
+[info] Iteration   2: 107.503 ops/s
+[info] Iteration   3: 110.225 ops/s
+[info] Iteration   4: 106.378 ops/s
+[info] Iteration   5: 103.416 ops/s
 [info] 
 [info] 
-[info] Result: 106.229 ±(99.9%) 9.121 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (103.678, 106.229, 108.719), stdev = 2.369
-[info]   Confidence interval (99.9%): [97.108, 115.350]
+[info] Result: 107.107 ±(99.9%) 9.599 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (103.416, 107.107, 110.225), stdev = 2.493
+[info]   Confidence interval (99.9%): [97.508, 116.706]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -361,19 +361,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 30.00% complete, ETA 00:03:54
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 332459163.015 ops/s
-[info] # Warmup Iteration   2: 323524008.350 ops/s
-[info] # Warmup Iteration   3: 333044323.161 ops/s
-[info] Iteration   1: 362780108.841 ops/s
-[info] Iteration   2: 358353501.105 ops/s
-[info] Iteration   3: 333498683.736 ops/s
-[info] Iteration   4: 353685205.931 ops/s
-[info] Iteration   5: 341403279.422 ops/s
+[info] # Warmup Iteration   1: 333748098.728 ops/s
+[info] # Warmup Iteration   2: 329830522.093 ops/s
+[info] # Warmup Iteration   3: 359928766.206 ops/s
+[info] Iteration   1: 364955521.118 ops/s
+[info] Iteration   2: 332594671.742 ops/s
+[info] Iteration   3: 342149907.156 ops/s
+[info] Iteration   4: 368947565.588 ops/s
+[info] Iteration   5: 367621188.579 ops/s
 [info] 
 [info] 
-[info] Result: 349944155.807 ±(99.9%) 46879686.439 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (333498683.736, 349944155.807, 362780108.841), stdev = 12174505.695
-[info]   Confidence interval (99.9%): [303064469.367, 396823842.246]
+[info] Result: 355253770.836 ±(99.9%) 64426204.286 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (332594671.742, 355253770.836, 368947565.588), stdev = 16731280.659
+[info]   Confidence interval (99.9%): [290827566.550, 419679975.123]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -389,19 +389,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 32.50% complete, ETA 00:03:46
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 329154952.159 ops/s
-[info] # Warmup Iteration   2: 329907224.882 ops/s
-[info] # Warmup Iteration   3: 366660486.542 ops/s
-[info] Iteration   1: 355347025.174 ops/s
-[info] Iteration   2: 329389866.541 ops/s
-[info] Iteration   3: 343010242.445 ops/s
-[info] Iteration   4: 327899627.527 ops/s
-[info] Iteration   5: 365389604.386 ops/s
+[info] # Warmup Iteration   1: 327150863.034 ops/s
+[info] # Warmup Iteration   2: 324554863.317 ops/s
+[info] # Warmup Iteration   3: 351688941.756 ops/s
+[info] Iteration   1: 355534001.681 ops/s
+[info] Iteration   2: 337388902.124 ops/s
+[info] Iteration   3: 331358972.163 ops/s
+[info] Iteration   4: 364547606.799 ops/s
+[info] Iteration   5: 319678374.824 ops/s
 [info] 
 [info] 
-[info] Result: 344207273.215 ±(99.9%) 62675453.908 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (327899627.527, 344207273.215, 365389604.386), stdev = 16276616.346
-[info]   Confidence interval (99.9%): [281531819.306, 406882727.123]
+[info] Result: 341701571.518 ±(99.9%) 70052810.530 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (319678374.824, 341701571.518, 364547606.799), stdev = 18192492.432
+[info]   Confidence interval (99.9%): [271648760.988, 411754382.048]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -417,19 +417,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 35.00% complete, ETA 00:03:37
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 327195665.241 ops/s
-[info] # Warmup Iteration   2: 327288032.577 ops/s
-[info] # Warmup Iteration   3: 300828883.891 ops/s
-[info] Iteration   1: 298711352.553 ops/s
-[info] Iteration   2: 277158278.815 ops/s
-[info] Iteration   3: 300856445.710 ops/s
-[info] Iteration   4: 299624077.593 ops/s
-[info] Iteration   5: 300682514.698 ops/s
+[info] # Warmup Iteration   1: 331618754.762 ops/s
+[info] # Warmup Iteration   2: 334971559.109 ops/s
+[info] # Warmup Iteration   3: 346731281.552 ops/s
+[info] Iteration   1: 365514868.994 ops/s
+[info] Iteration   2: 367328245.831 ops/s
+[info] Iteration   3: 346336355.123 ops/s
+[info] Iteration   4: 364130981.225 ops/s
+[info] Iteration   5: 366532182.532 ops/s
 [info] 
 [info] 
-[info] Result: 295406533.874 ±(99.9%) 39421917.027 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (277158278.815, 295406533.874, 300856445.710), stdev = 10237746.662
-[info]   Confidence interval (99.9%): [255984616.847, 334828450.901]
+[info] Result: 361968526.741 ±(99.9%) 33962760.499 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (346336355.123, 361968526.741, 367328245.831), stdev = 8820021.048
+[info]   Confidence interval (99.9%): [328005766.242, 395931287.239]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -445,19 +445,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 37.50% complete, ETA 00:03:29
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 328770662.239 ops/s
-[info] # Warmup Iteration   2: 331037201.942 ops/s
-[info] # Warmup Iteration   3: 366593111.027 ops/s
-[info] Iteration   1: 364850298.514 ops/s
-[info] Iteration   2: 355996250.135 ops/s
-[info] Iteration   3: 319065422.024 ops/s
-[info] Iteration   4: 319081500.641 ops/s
-[info] Iteration   5: 319108531.899 ops/s
+[info] # Warmup Iteration   1: 333524684.873 ops/s
+[info] # Warmup Iteration   2: 325685874.914 ops/s
+[info] # Warmup Iteration   3: 339757714.581 ops/s
+[info] Iteration   1: 369095679.866 ops/s
+[info] Iteration   2: 370018164.718 ops/s
+[info] Iteration   3: 355598766.757 ops/s
+[info] Iteration   4: 318284776.022 ops/s
+[info] Iteration   5: 323924957.660 ops/s
 [info] 
 [info] 
-[info] Result: 335620400.643 ±(99.9%) 88014941.446 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (319065422.024, 335620400.643, 364850298.514), stdev = 22857200.790
-[info]   Confidence interval (99.9%): [247605459.196, 423635342.089]
+[info] Result: 347384469.005 ±(99.9%) 95265046.563 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (318284776.022, 347384469.005, 370018164.718), stdev = 24740030.065
+[info]   Confidence interval (99.9%): [252119422.441, 442649515.568]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -473,19 +473,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 40.00% complete, ETA 00:03:21
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 139222682.086 ops/s
-[info] # Warmup Iteration   2: 140126580.287 ops/s
-[info] # Warmup Iteration   3: 204802910.823 ops/s
-[info] Iteration   1: 205158407.801 ops/s
-[info] Iteration   2: 203361985.726 ops/s
-[info] Iteration   3: 199371075.053 ops/s
-[info] Iteration   4: 204871333.250 ops/s
-[info] Iteration   5: 192988499.154 ops/s
+[info] # Warmup Iteration   1: 102033118.906 ops/s
+[info] # Warmup Iteration   2: 102557935.522 ops/s
+[info] # Warmup Iteration   3: 99342940.371 ops/s
+[info] Iteration   1: 107233433.768 ops/s
+[info] Iteration   2: 108549909.705 ops/s
+[info] Iteration   3: 100974776.655 ops/s
+[info] Iteration   4: 99048857.446 ops/s
+[info] Iteration   5: 109600772.582 ops/s
 [info] 
 [info] 
-[info] Result: 201150260.197 ±(99.9%) 19689484.161 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (192988499.154, 201150260.197, 205158407.801), stdev = 5113296.510
-[info]   Confidence interval (99.9%): [181460776.036, 220839744.357]
+[info] Result: 105081550.031 ±(99.9%) 18299925.720 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (99048857.446, 105081550.031, 109600772.582), stdev = 4752432.595
+[info]   Confidence interval (99.9%): [86781624.311, 123381475.751]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -501,19 +501,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 42.50% complete, ETA 00:03:12
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 29102663.829 ops/s
-[info] # Warmup Iteration   2: 29228720.614 ops/s
-[info] # Warmup Iteration   3: 31506768.926 ops/s
-[info] Iteration   1: 32825780.004 ops/s
-[info] Iteration   2: 31618257.505 ops/s
-[info] Iteration   3: 33844847.649 ops/s
-[info] Iteration   4: 33803510.939 ops/s
-[info] Iteration   5: 31920471.163 ops/s
+[info] # Warmup Iteration   1: 20369597.153 ops/s
+[info] # Warmup Iteration   2: 20484655.366 ops/s
+[info] # Warmup Iteration   3: 21323683.200 ops/s
+[info] Iteration   1: 21246798.731 ops/s
+[info] Iteration   2: 19409755.530 ops/s
+[info] Iteration   3: 21227083.734 ops/s
+[info] Iteration   4: 20195509.891 ops/s
+[info] Iteration   5: 21324943.721 ops/s
 [info] 
 [info] 
-[info] Result: 32802573.452 ±(99.9%) 3978228.910 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (31618257.505, 32802573.452, 33844847.649), stdev = 1033133.415
-[info]   Confidence interval (99.9%): [28824344.542, 36780802.362]
+[info] Result: 20680818.321 ±(99.9%) 3270079.949 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (19409755.530, 20680818.321, 21324943.721), stdev = 849229.378
+[info]   Confidence interval (99.9%): [17410738.373, 23950898.270]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -529,19 +529,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 45.00% complete, ETA 00:03:04
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 3070153.382 ops/s
-[info] # Warmup Iteration   2: 3084900.519 ops/s
-[info] # Warmup Iteration   3: 3265661.227 ops/s
-[info] Iteration   1: 3221606.134 ops/s
-[info] Iteration   2: 3246748.922 ops/s
-[info] Iteration   3: 3260260.576 ops/s
-[info] Iteration   4: 3086467.762 ops/s
-[info] Iteration   5: 3263427.933 ops/s
+[info] # Warmup Iteration   1: 2428104.325 ops/s
+[info] # Warmup Iteration   2: 2440416.974 ops/s
+[info] # Warmup Iteration   3: 2142082.526 ops/s
+[info] Iteration   1: 2407942.044 ops/s
+[info] Iteration   2: 2448996.311 ops/s
+[info] Iteration   3: 2470991.147 ops/s
+[info] Iteration   4: 2469971.373 ops/s
+[info] Iteration   5: 2473656.781 ops/s
 [info] 
 [info] 
-[info] Result: 3215702.265 ±(99.9%) 285334.338 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (3086467.762, 3215702.265, 3263427.933), stdev = 74100.421
-[info]   Confidence interval (99.9%): [2930367.927, 3501036.603]
+[info] Result: 2454311.531 ±(99.9%) 106782.665 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (2407942.044, 2454311.531, 2473656.781), stdev = 27731.119
+[info]   Confidence interval (99.9%): [2347528.866, 2561094.197]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -557,19 +557,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 47.50% complete, ETA 00:02:55
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 313232.239 ops/s
-[info] # Warmup Iteration   2: 309728.223 ops/s
-[info] # Warmup Iteration   3: 327416.250 ops/s
-[info] Iteration   1: 324177.691 ops/s
-[info] Iteration   2: 314114.770 ops/s
-[info] Iteration   3: 284297.728 ops/s
-[info] Iteration   4: 326419.848 ops/s
-[info] Iteration   5: 284382.935 ops/s
+[info] # Warmup Iteration   1: 245629.436 ops/s
+[info] # Warmup Iteration   2: 243312.472 ops/s
+[info] # Warmup Iteration   3: 249751.887 ops/s
+[info] Iteration   1: 236807.652 ops/s
+[info] Iteration   2: 245431.203 ops/s
+[info] Iteration   3: 244730.731 ops/s
+[info] Iteration   4: 249637.637 ops/s
+[info] Iteration   5: 217293.661 ops/s
 [info] 
 [info] 
-[info] Result: 306678.594 ±(99.9%) 80524.315 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (284297.728, 306678.594, 326419.848), stdev = 20911.909
-[info]   Confidence interval (99.9%): [226154.279, 387202.909]
+[info] Result: 238780.177 ±(99.9%) 49578.102 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (217293.661, 238780.177, 249637.637), stdev = 12875.276
+[info]   Confidence interval (99.9%): [189202.074, 288358.279]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -585,19 +585,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 50.00% complete, ETA 00:02:47
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 47106366.379 ops/s
-[info] # Warmup Iteration   2: 47666558.353 ops/s
-[info] # Warmup Iteration   3: 51475214.371 ops/s
-[info] Iteration   1: 46617732.838 ops/s
-[info] Iteration   2: 47617345.161 ops/s
-[info] Iteration   3: 46930046.018 ops/s
-[info] Iteration   4: 43098558.562 ops/s
-[info] Iteration   5: 44351563.174 ops/s
+[info] # Warmup Iteration   1: 46733233.285 ops/s
+[info] # Warmup Iteration   2: 47722299.616 ops/s
+[info] # Warmup Iteration   3: 51379659.684 ops/s
+[info] Iteration   1: 51486425.615 ops/s
+[info] Iteration   2: 50316495.446 ops/s
+[info] Iteration   3: 46038756.928 ops/s
+[info] Iteration   4: 49100216.021 ops/s
+[info] Iteration   5: 37044710.360 ops/s
 [info] 
 [info] 
-[info] Result: 45723049.151 ±(99.9%) 7360317.853 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (43098558.562, 45723049.151, 47617345.161), stdev = 1911451.173
-[info]   Confidence interval (99.9%): [38362731.297, 53083367.004]
+[info] Result: 46797320.874 ±(99.9%) 22400395.022 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (37044710.360, 46797320.874, 51486425.615), stdev = 5817311.452
+[info]   Confidence interval (99.9%): [24396925.852, 69197715.896]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -613,19 +613,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 52.50% complete, ETA 00:02:39
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 127157.410 ops/s
-[info] # Warmup Iteration   2: 126621.131 ops/s
-[info] # Warmup Iteration   3: 130558.693 ops/s
-[info] Iteration   1: 129121.656 ops/s
-[info] Iteration   2: 129402.010 ops/s
-[info] Iteration   3: 122930.191 ops/s
-[info] Iteration   4: 117808.658 ops/s
-[info] Iteration   5: 120625.113 ops/s
+[info] # Warmup Iteration   1: 124767.405 ops/s
+[info] # Warmup Iteration   2: 124724.763 ops/s
+[info] # Warmup Iteration   3: 129600.067 ops/s
+[info] Iteration   1: 129972.880 ops/s
+[info] Iteration   2: 127451.634 ops/s
+[info] Iteration   3: 130160.275 ops/s
+[info] Iteration   4: 130632.979 ops/s
+[info] Iteration   5: 112960.874 ops/s
 [info] 
 [info] 
-[info] Result: 123977.526 ±(99.9%) 19848.343 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (117808.658, 123977.526, 129402.010), stdev = 5154.552
-[info]   Confidence interval (99.9%): [104129.183, 143825.869]
+[info] Result: 126235.728 ±(99.9%) 28969.818 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (112960.874, 126235.728, 130632.979), stdev = 7523.370
+[info]   Confidence interval (99.9%): [97265.910, 155205.547]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -641,19 +641,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 55.00% complete, ETA 00:02:30
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 1376.127 ops/s
-[info] # Warmup Iteration   2: 1371.647 ops/s
-[info] # Warmup Iteration   3: 1403.376 ops/s
-[info] Iteration   1: 1037.622 ops/s
-[info] Iteration   2: 1309.243 ops/s
-[info] Iteration   3: 1374.458 ops/s
-[info] Iteration   4: 1421.438 ops/s
-[info] Iteration   5: 1425.428 ops/s
+[info] # Warmup Iteration   1: 1377.825 ops/s
+[info] # Warmup Iteration   2: 1425.225 ops/s
+[info] # Warmup Iteration   3: 1330.593 ops/s
+[info] Iteration   1: 1380.971 ops/s
+[info] Iteration   2: 1415.576 ops/s
+[info] Iteration   3: 1334.390 ops/s
+[info] Iteration   4: 1435.728 ops/s
+[info] Iteration   5: 1429.471 ops/s
 [info] 
 [info] 
-[info] Result: 1313.638 ±(99.9%) 620.960 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (1037.622, 1313.638, 1425.428), stdev = 161.261
-[info]   Confidence interval (99.9%): [692.678, 1934.598]
+[info] Result: 1399.227 ±(99.9%) 161.675 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (1334.390, 1399.227, 1435.728), stdev = 41.987
+[info]   Confidence interval (99.9%): [1237.552, 1560.903]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -669,19 +669,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 57.50% complete, ETA 00:02:22
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 9.902 ops/s
-[info] # Warmup Iteration   2: 10.433 ops/s
-[info] # Warmup Iteration   3: 9.813 ops/s
-[info] Iteration   1: 10.332 ops/s
-[info] Iteration   2: 9.787 ops/s
-[info] Iteration   3: 10.118 ops/s
-[info] Iteration   4: 10.576 ops/s
-[info] Iteration   5: 10.402 ops/s
+[info] # Warmup Iteration   1: 9.614 ops/s
+[info] # Warmup Iteration   2: 8.711 ops/s
+[info] # Warmup Iteration   3: 9.876 ops/s
+[info] Iteration   1: 9.569 ops/s
+[info] Iteration   2: 10.052 ops/s
+[info] Iteration   3: 9.596 ops/s
+[info] Iteration   4: 9.929 ops/s
+[info] Iteration   5: 9.567 ops/s
 [info] 
 [info] 
-[info] Result: 10.243 ±(99.9%) 1.167 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (9.787, 10.243, 10.576), stdev = 0.303
-[info]   Confidence interval (99.9%): [9.076, 11.410]
+[info] Result: 9.742 ±(99.9%) 0.888 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (9.567, 9.742, 10.052), stdev = 0.231
+[info]   Confidence interval (99.9%): [8.854, 10.631]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -697,19 +697,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 60.00% complete, ETA 00:02:14
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 41269251.604 ops/s
-[info] # Warmup Iteration   2: 47507985.586 ops/s
-[info] # Warmup Iteration   3: 44919372.086 ops/s
-[info] Iteration   1: 47099116.123 ops/s
-[info] Iteration   2: 47864018.794 ops/s
-[info] Iteration   3: 46462090.838 ops/s
-[info] Iteration   4: 48217157.611 ops/s
-[info] Iteration   5: 47864093.409 ops/s
+[info] # Warmup Iteration   1: 42156146.040 ops/s
+[info] # Warmup Iteration   2: 45901671.379 ops/s
+[info] # Warmup Iteration   3: 45178302.666 ops/s
+[info] Iteration   1: 46845060.917 ops/s
+[info] Iteration   2: 48231976.925 ops/s
+[info] Iteration   3: 47470427.126 ops/s
+[info] Iteration   4: 42277712.400 ops/s
+[info] Iteration   5: 42578450.165 ops/s
 [info] 
 [info] 
-[info] Result: 47501295.355 ±(99.9%) 2734596.845 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (46462090.838, 47501295.355, 48217157.611), stdev = 710166.117
-[info]   Confidence interval (99.9%): [44766698.510, 50235892.200]
+[info] Result: 45480725.507 ±(99.9%) 10903546.054 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (42277712.400, 45480725.507, 48231976.925), stdev = 2831616.285
+[info]   Confidence interval (99.9%): [34577179.453, 56384271.561]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -725,19 +725,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 62.50% complete, ETA 00:02:05
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 197869.227 ops/s
-[info] # Warmup Iteration   2: 263705.078 ops/s
-[info] # Warmup Iteration   3: 284016.948 ops/s
-[info] Iteration   1: 291266.592 ops/s
-[info] Iteration   2: 256120.731 ops/s
-[info] Iteration   3: 267846.719 ops/s
-[info] Iteration   4: 297211.526 ops/s
-[info] Iteration   5: 295097.166 ops/s
+[info] # Warmup Iteration   1: 196288.670 ops/s
+[info] # Warmup Iteration   2: 277606.508 ops/s
+[info] # Warmup Iteration   3: 299532.185 ops/s
+[info] Iteration   1: 269851.151 ops/s
+[info] Iteration   2: 273641.833 ops/s
+[info] Iteration   3: 276730.341 ops/s
+[info] Iteration   4: 282068.110 ops/s
+[info] Iteration   5: 299232.727 ops/s
 [info] 
 [info] 
-[info] Result: 281508.547 ±(99.9%) 70940.743 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (256120.731, 281508.547, 297211.526), stdev = 18423.086
-[info]   Confidence interval (99.9%): [210567.804, 352449.289]
+[info] Result: 280304.833 ±(99.9%) 44233.254 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (269851.151, 280304.833, 299232.727), stdev = 11487.236
+[info]   Confidence interval (99.9%): [236071.578, 324538.087]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -753,19 +753,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 65.00% complete, ETA 00:01:57
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 7739.337 ops/s
-[info] # Warmup Iteration   2: 11978.348 ops/s
-[info] # Warmup Iteration   3: 12107.635 ops/s
-[info] Iteration   1: 12012.672 ops/s
-[info] Iteration   2: 12130.997 ops/s
-[info] Iteration   3: 11637.144 ops/s
-[info] Iteration   4: 11754.007 ops/s
-[info] Iteration   5: 12066.058 ops/s
+[info] # Warmup Iteration   1: 8869.533 ops/s
+[info] # Warmup Iteration   2: 11290.729 ops/s
+[info] # Warmup Iteration   3: 11967.878 ops/s
+[info] Iteration   1: 11932.798 ops/s
+[info] Iteration   2: 10162.550 ops/s
+[info] Iteration   3: 11331.460 ops/s
+[info] Iteration   4: 11503.302 ops/s
+[info] Iteration   5: 10514.108 ops/s
 [info] 
 [info] 
-[info] Result: 11920.175 ±(99.9%) 821.375 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (11637.144, 11920.175, 12130.997), stdev = 213.308
-[info]   Confidence interval (99.9%): [11098.801, 12741.550]
+[info] Result: 11088.844 ±(99.9%) 2810.731 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (10162.550, 11088.844, 11932.798), stdev = 729.938
+[info]   Confidence interval (99.9%): [8278.113, 13899.574]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -779,21 +779,21 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.recursion
 [info] # Parameters: (n = 10000)
 [info] 
-[info] # Run progress: 67.50% complete, ETA 00:01:49
+[info] # Run progress: 67.50% complete, ETA 00:01:48
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 72.430 ops/s
-[info] # Warmup Iteration   2: 98.507 ops/s
-[info] # Warmup Iteration   3: 85.992 ops/s
-[info] Iteration   1: 98.225 ops/s
-[info] Iteration   2: 91.170 ops/s
-[info] Iteration   3: 98.717 ops/s
-[info] Iteration   4: 98.749 ops/s
-[info] Iteration   5: 87.154 ops/s
+[info] # Warmup Iteration   1: 77.752 ops/s
+[info] # Warmup Iteration   2: 93.764 ops/s
+[info] # Warmup Iteration   3: 89.297 ops/s
+[info] Iteration   1: 92.952 ops/s
+[info] Iteration   2: 86.988 ops/s
+[info] Iteration   3: 81.804 ops/s
+[info] Iteration   4: 93.262 ops/s
+[info] Iteration   5: 87.697 ops/s
 [info] 
 [info] 
-[info] Result: 94.803 ±(99.9%) 20.585 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (87.154, 94.803, 98.749), stdev = 5.346
-[info]   Confidence interval (99.9%): [74.219, 115.388]
+[info] Result: 88.541 ±(99.9%) 18.292 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (81.804, 88.541, 93.262), stdev = 4.750
+[info]   Confidence interval (99.9%): [70.249, 106.833]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -809,19 +809,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 70.00% complete, ETA 00:01:40
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 47496947.829 ops/s
-[info] # Warmup Iteration   2: 48795640.657 ops/s
-[info] # Warmup Iteration   3: 48014170.415 ops/s
-[info] Iteration   1: 41777999.265 ops/s
-[info] Iteration   2: 48234406.943 ops/s
-[info] Iteration   3: 48365963.244 ops/s
-[info] Iteration   4: 44686755.351 ops/s
-[info] Iteration   5: 48534275.120 ops/s
+[info] # Warmup Iteration   1: 47553346.939 ops/s
+[info] # Warmup Iteration   2: 48958649.509 ops/s
+[info] # Warmup Iteration   3: 44662631.084 ops/s
+[info] Iteration   1: 45484006.325 ops/s
+[info] Iteration   2: 47737689.857 ops/s
+[info] Iteration   3: 42320030.148 ops/s
+[info] Iteration   4: 48265574.650 ops/s
+[info] Iteration   5: 48327633.073 ops/s
 [info] 
 [info] 
-[info] Result: 46319879.984 ±(99.9%) 11560142.377 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (41777999.265, 46319879.984, 48534275.120), stdev = 3002132.264
-[info]   Confidence interval (99.9%): [34759737.608, 57880022.361]
+[info] Result: 46426986.811 ±(99.9%) 9905048.802 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (42320030.148, 46426986.811, 48327633.073), stdev = 2572309.719
+[info]   Confidence interval (99.9%): [36521938.009, 56332035.613]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -837,19 +837,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 72.50% complete, ETA 00:01:32
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 193125.063 ops/s
-[info] # Warmup Iteration   2: 299474.717 ops/s
-[info] # Warmup Iteration   3: 299365.641 ops/s
-[info] Iteration   1: 299185.662 ops/s
-[info] Iteration   2: 265379.917 ops/s
-[info] Iteration   3: 296642.595 ops/s
-[info] Iteration   4: 298463.656 ops/s
-[info] Iteration   5: 298265.570 ops/s
+[info] # Warmup Iteration   1: 170080.462 ops/s
+[info] # Warmup Iteration   2: 295566.445 ops/s
+[info] # Warmup Iteration   3: 298852.426 ops/s
+[info] Iteration   1: 277726.736 ops/s
+[info] Iteration   2: 264093.839 ops/s
+[info] Iteration   3: 270086.605 ops/s
+[info] Iteration   4: 265570.793 ops/s
+[info] Iteration   5: 297661.268 ops/s
 [info] 
 [info] 
-[info] Result: 291587.480 ±(99.9%) 56527.191 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (265379.917, 291587.480, 299185.662), stdev = 14679.932
-[info]   Confidence interval (99.9%): [235060.289, 348114.670]
+[info] Result: 275027.848 ±(99.9%) 52831.060 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (264093.839, 275027.848, 297661.268), stdev = 13720.058
+[info]   Confidence interval (99.9%): [222196.788, 327858.908]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -865,19 +865,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 75.00% complete, ETA 00:01:23
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 4858.136 ops/s
-[info] # Warmup Iteration   2: 11865.533 ops/s
-[info] # Warmup Iteration   3: 12055.488 ops/s
-[info] Iteration   1: 12050.918 ops/s
-[info] Iteration   2: 11953.478 ops/s
-[info] Iteration   3: 12244.652 ops/s
-[info] Iteration   4: 11781.653 ops/s
-[info] Iteration   5: 12146.031 ops/s
+[info] # Warmup Iteration   1: 3976.844 ops/s
+[info] # Warmup Iteration   2: 10862.895 ops/s
+[info] # Warmup Iteration   3: 11767.720 ops/s
+[info] Iteration   1: 11680.055 ops/s
+[info] Iteration   2: 11930.180 ops/s
+[info] Iteration   3: 11872.967 ops/s
+[info] Iteration   4: 11675.881 ops/s
+[info] Iteration   5: 12013.068 ops/s
 [info] 
 [info] 
-[info] Result: 12035.346 ±(99.9%) 687.115 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (11781.653, 12035.346, 12244.652), stdev = 178.442
-[info]   Confidence interval (99.9%): [11348.231, 12722.462]
+[info] Result: 11834.430 ±(99.9%) 582.498 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (11675.881, 11834.430, 12013.068), stdev = 151.273
+[info]   Confidence interval (99.9%): [11251.932, 12416.928]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -893,19 +893,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 77.50% complete, ETA 00:01:15
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 70.242 ops/s
-[info] # Warmup Iteration   2: 101.716 ops/s
-[info] # Warmup Iteration   3: 100.191 ops/s
-[info] Iteration   1: 95.291 ops/s
-[info] Iteration   2: 106.961 ops/s
-[info] Iteration   3: 98.981 ops/s
-[info] Iteration   4: 106.924 ops/s
-[info] Iteration   5: 103.502 ops/s
+[info] # Warmup Iteration   1: 70.369 ops/s
+[info] # Warmup Iteration   2: 96.692 ops/s
+[info] # Warmup Iteration   3: 100.185 ops/s
+[info] Iteration   1: 106.001 ops/s
+[info] Iteration   2: 99.231 ops/s
+[info] Iteration   3: 105.657 ops/s
+[info] Iteration   4: 104.166 ops/s
+[info] Iteration   5: 99.777 ops/s
 [info] 
 [info] 
-[info] Result: 102.332 ±(99.9%) 19.699 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (95.291, 102.332, 106.961), stdev = 5.116
-[info]   Confidence interval (99.9%): [82.633, 122.030]
+[info] Result: 102.966 ±(99.9%) 12.478 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (99.231, 102.966, 106.001), stdev = 3.241
+[info]   Confidence interval (99.9%): [90.488, 115.444]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -921,19 +921,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 80.00% complete, ETA 00:01:07
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 327076899.155 ops/s
-[info] # Warmup Iteration   2: 328952966.214 ops/s
-[info] # Warmup Iteration   3: 342344544.608 ops/s
-[info] Iteration   1: 355383191.485 ops/s
-[info] Iteration   2: 332890168.894 ops/s
-[info] Iteration   3: 325476490.200 ops/s
-[info] Iteration   4: 352934255.930 ops/s
-[info] Iteration   5: 328450218.708 ops/s
+[info] # Warmup Iteration   1: 332923279.852 ops/s
+[info] # Warmup Iteration   2: 335232764.813 ops/s
+[info] # Warmup Iteration   3: 280833191.836 ops/s
+[info] Iteration   1: 295812669.103 ops/s
+[info] Iteration   2: 273587574.713 ops/s
+[info] Iteration   3: 278472081.481 ops/s
+[info] Iteration   4: 284150214.927 ops/s
+[info] Iteration   5: 263581196.855 ops/s
 [info] 
 [info] 
-[info] Result: 339026865.043 ±(99.9%) 54254537.234 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (325476490.200, 339026865.043, 355383191.485), stdev = 14089731.027
-[info]   Confidence interval (99.9%): [284772327.809, 393281402.278]
+[info] Result: 279120747.416 ±(99.9%) 46224979.313 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (263581196.855, 279120747.416, 295812669.103), stdev = 12004480.334
+[info]   Confidence interval (99.9%): [232895768.102, 325345726.729]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -949,19 +949,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 82.50% complete, ETA 00:00:58
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 331131990.327 ops/s
-[info] # Warmup Iteration   2: 323880123.898 ops/s
-[info] # Warmup Iteration   3: 351751735.390 ops/s
-[info] Iteration   1: 363660202.283 ops/s
-[info] Iteration   2: 333856165.724 ops/s
-[info] Iteration   3: 320789641.632 ops/s
-[info] Iteration   4: 360957063.405 ops/s
-[info] Iteration   5: 331957904.940 ops/s
+[info] # Warmup Iteration   1: 329549519.387 ops/s
+[info] # Warmup Iteration   2: 333358110.942 ops/s
+[info] # Warmup Iteration   3: 350525635.139 ops/s
+[info] Iteration   1: 357972138.344 ops/s
+[info] Iteration   2: 318896167.009 ops/s
+[info] Iteration   3: 313741862.810 ops/s
+[info] Iteration   4: 359738648.699 ops/s
+[info] Iteration   5: 358179943.281 ops/s
 [info] 
 [info] 
-[info] Result: 342244195.597 ±(99.9%) 73194691.170 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (320789641.632, 342244195.597, 363660202.283), stdev = 19008428.857
-[info]   Confidence interval (99.9%): [269049504.427, 415438886.767]
+[info] Result: 341705752.029 ±(99.9%) 89552019.607 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (313741862.810, 341705752.029, 359738648.699), stdev = 23256375.107
+[info]   Confidence interval (99.9%): [252153732.422, 431257771.635]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -977,19 +977,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 85.00% complete, ETA 00:00:50
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 330592104.119 ops/s
-[info] # Warmup Iteration   2: 334394059.092 ops/s
-[info] # Warmup Iteration   3: 317385136.447 ops/s
-[info] Iteration   1: 357807937.581 ops/s
-[info] Iteration   2: 347052954.984 ops/s
-[info] Iteration   3: 372037314.957 ops/s
-[info] Iteration   4: 360410676.035 ops/s
-[info] Iteration   5: 323226670.220 ops/s
+[info] # Warmup Iteration   1: 332328208.557 ops/s
+[info] # Warmup Iteration   2: 330640004.684 ops/s
+[info] # Warmup Iteration   3: 370311869.318 ops/s
+[info] Iteration   1: 315921229.054 ops/s
+[info] Iteration   2: 370742857.018 ops/s
+[info] Iteration   3: 359533230.033 ops/s
+[info] Iteration   4: 337289750.824 ops/s
+[info] Iteration   5: 323299116.059 ops/s
 [info] 
 [info] 
-[info] Result: 352107110.756 ±(99.9%) 70957609.698 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (323226670.220, 352107110.756, 372037314.957), stdev = 18427465.903
-[info]   Confidence interval (99.9%): [281149501.057, 423064720.454]
+[info] Result: 341357236.598 ±(99.9%) 89966569.971 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (315921229.054, 341357236.598, 370742857.018), stdev = 23364032.520
+[info]   Confidence interval (99.9%): [251390666.626, 431323806.569]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -1005,19 +1005,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 87.50% complete, ETA 00:00:41
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 329018892.932 ops/s
-[info] # Warmup Iteration   2: 320551798.959 ops/s
-[info] # Warmup Iteration   3: 366553365.760 ops/s
-[info] Iteration   1: 359318274.189 ops/s
-[info] Iteration   2: 331652385.489 ops/s
-[info] Iteration   3: 366296451.510 ops/s
-[info] Iteration   4: 318662507.980 ops/s
-[info] Iteration   5: 363704527.357 ops/s
+[info] # Warmup Iteration   1: 333228106.691 ops/s
+[info] # Warmup Iteration   2: 334356417.404 ops/s
+[info] # Warmup Iteration   3: 365098484.977 ops/s
+[info] Iteration   1: 362585698.033 ops/s
+[info] Iteration   2: 367802926.253 ops/s
+[info] Iteration   3: 358727737.402 ops/s
+[info] Iteration   4: 366767620.227 ops/s
+[info] Iteration   5: 367420622.289 ops/s
 [info] 
 [info] 
-[info] Result: 347926829.305 ±(99.9%) 82528782.075 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (318662507.980, 347926829.305, 366296451.510), stdev = 21432462.624
-[info]   Confidence interval (99.9%): [265398047.230, 430455611.381]
+[info] Result: 364660920.841 ±(99.9%) 15090833.689 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (358727737.402, 364660920.841, 367802926.253), stdev = 3919041.586
+[info]   Confidence interval (99.9%): [349570087.151, 379751754.530]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -1033,19 +1033,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 90.00% complete, ETA 00:00:33
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 135717141.586 ops/s
-[info] # Warmup Iteration   2: 139923140.963 ops/s
-[info] # Warmup Iteration   3: 195283784.572 ops/s
-[info] Iteration   1: 203459026.653 ops/s
-[info] Iteration   2: 195061792.790 ops/s
-[info] Iteration   3: 181473961.517 ops/s
-[info] Iteration   4: 184011499.970 ops/s
-[info] Iteration   5: 189719395.025 ops/s
+[info] # Warmup Iteration   1: 102052211.976 ops/s
+[info] # Warmup Iteration   2: 102431437.680 ops/s
+[info] # Warmup Iteration   3: 104733267.541 ops/s
+[info] Iteration   1: 109354687.821 ops/s
+[info] Iteration   2: 109622440.715 ops/s
+[info] Iteration   3: 107965875.376 ops/s
+[info] Iteration   4: 103096719.231 ops/s
+[info] Iteration   5: 98332131.415 ops/s
 [info] 
 [info] 
-[info] Result: 190745135.191 ±(99.9%) 34042023.565 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (181473961.517, 190745135.191, 203459026.653), stdev = 8840605.415
-[info]   Confidence interval (99.9%): [156703111.626, 224787158.757]
+[info] Result: 105674370.912 ±(99.9%) 18759370.329 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (98332131.415, 105674370.912, 109622440.715), stdev = 4871748.901
+[info]   Confidence interval (99.9%): [86915000.583, 124433741.241]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -1061,19 +1061,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 92.50% complete, ETA 00:00:25
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 29159427.806 ops/s
-[info] # Warmup Iteration   2: 29314455.145 ops/s
-[info] # Warmup Iteration   3: 33884675.353 ops/s
-[info] Iteration   1: 33162853.388 ops/s
-[info] Iteration   2: 31247468.082 ops/s
-[info] Iteration   3: 30357270.725 ops/s
-[info] Iteration   4: 32017761.855 ops/s
-[info] Iteration   5: 31635756.066 ops/s
+[info] # Warmup Iteration   1: 20409679.016 ops/s
+[info] # Warmup Iteration   2: 20528714.430 ops/s
+[info] # Warmup Iteration   3: 19345473.164 ops/s
+[info] Iteration   1: 21280325.769 ops/s
+[info] Iteration   2: 19287862.048 ops/s
+[info] Iteration   3: 19822077.985 ops/s
+[info] Iteration   4: 21328473.435 ops/s
+[info] Iteration   5: 21278649.779 ops/s
 [info] 
 [info] 
-[info] Result: 31684222.023 ±(99.9%) 3969854.331 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (30357270.725, 31684222.023, 33162853.388), stdev = 1030958.563
-[info]   Confidence interval (99.9%): [27714367.692, 35654076.354]
+[info] Result: 20599477.803 ±(99.9%) 3743723.841 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (19287862.048, 20599477.803, 21328473.435), stdev = 972233.193
+[info]   Confidence interval (99.9%): [16855753.963, 24343201.644]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -1089,19 +1089,19 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 95.00% complete, ETA 00:00:16
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 3061955.328 ops/s
-[info] # Warmup Iteration   2: 3071226.318 ops/s
-[info] # Warmup Iteration   3: 3262160.813 ops/s
-[info] Iteration   1: 3213999.361 ops/s
-[info] Iteration   2: 3219315.034 ops/s
-[info] Iteration   3: 3220014.477 ops/s
-[info] Iteration   4: 3268756.905 ops/s
-[info] Iteration   5: 2900524.968 ops/s
+[info] # Warmup Iteration   1: 2427333.514 ops/s
+[info] # Warmup Iteration   2: 2440871.598 ops/s
+[info] # Warmup Iteration   3: 2471473.023 ops/s
+[info] Iteration   1: 2432993.833 ops/s
+[info] Iteration   2: 2444342.082 ops/s
+[info] Iteration   3: 2473881.803 ops/s
+[info] Iteration   4: 2295637.568 ops/s
+[info] Iteration   5: 2471901.907 ops/s
 [info] 
 [info] 
-[info] Result: 3164522.149 ±(99.9%) 574666.031 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (2900524.968, 3164522.149, 3268756.905), stdev = 149238.943
-[info]   Confidence interval (99.9%): [2589856.117, 3739188.180]
+[info] Result: 2423751.439 ±(99.9%) 283970.835 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (2295637.568, 2423751.439, 2473881.803), stdev = 73746.324
+[info]   Confidence interval (99.9%): [2139780.604, 2707722.273]
 [info] 
 [info] 
 [info] # JMH 1.6 (released 40 days ago, please consider updating!)
@@ -1117,62 +1117,62 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 97.50% complete, ETA 00:00:08
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 312425.211 ops/s
-[info] # Warmup Iteration   2: 306951.091 ops/s
-[info] # Warmup Iteration   3: 326543.638 ops/s
-[info] Iteration   1: 325024.647 ops/s
-[info] Iteration   2: 320388.628 ops/s
-[info] Iteration   3: 307176.590 ops/s
-[info] Iteration   4: 326571.878 ops/s
-[info] Iteration   5: 325943.147 ops/s
+[info] # Warmup Iteration   1: 244970.531 ops/s
+[info] # Warmup Iteration   2: 246418.812 ops/s
+[info] # Warmup Iteration   3: 250217.906 ops/s
+[info] Iteration   1: 249639.962 ops/s
+[info] Iteration   2: 249192.610 ops/s
+[info] Iteration   3: 234223.624 ops/s
+[info] Iteration   4: 232768.020 ops/s
+[info] Iteration   5: 250446.403 ops/s
 [info] 
 [info] 
-[info] Result: 321020.978 ±(99.9%) 31231.580 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (307176.590, 321020.978, 326571.878), stdev = 8110.742
-[info]   Confidence interval (99.9%): [289789.397, 352252.558]
+[info] Result: 243254.124 ±(99.9%) 34402.531 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (232768.020, 243254.124, 250446.403), stdev = 8934.228
+[info]   Confidence interval (99.9%): [208851.593, 277656.655]
 [info] 
 [info] 
 [info] # Run complete. Total time: 00:05:35
 [info] 
 [info] Benchmark                             (n)   Mode  Cnt          Score          Error  Units
-[info] JavaFactorial.loop                     10  thrpt    5   58372392.069 ±  1632637.274  ops/s
-[info] JavaFactorial.loop                    100  thrpt    5     104316.892 ±    42952.210  ops/s
-[info] JavaFactorial.loop                   1000  thrpt    5       1361.726 ±      279.616  ops/s
-[info] JavaFactorial.loop                  10000  thrpt    5          9.803 ±        2.921  ops/s
-[info] JavaFactorial.recursion                10  thrpt    5   57209833.787 ± 18092527.484  ops/s
-[info] JavaFactorial.recursion               100  thrpt    5     288082.214 ±    27282.831  ops/s
-[info] JavaFactorial.recursion              1000  thrpt    5      11298.344 ±     1547.439  ops/s
-[info] JavaFactorial.recursion             10000  thrpt    5         91.455 ±        5.404  ops/s
-[info] JavaFactorial.recursionPar             10  thrpt    5   57976413.373 ± 10736331.899  ops/s
-[info] JavaFactorial.recursionPar            100  thrpt    5     283411.558 ±    62038.820  ops/s
-[info] JavaFactorial.recursionPar           1000  thrpt    5      10343.997 ±     4608.843  ops/s
-[info] JavaFactorial.recursionPar          10000  thrpt    5        106.229 ±        9.121  ops/s
-[info] JavaSumOfArithmeticSeries.formula      10  thrpt    5  349944155.807 ± 46879686.439  ops/s
-[info] JavaSumOfArithmeticSeries.formula     100  thrpt    5  344207273.215 ± 62675453.908  ops/s
-[info] JavaSumOfArithmeticSeries.formula    1000  thrpt    5  295406533.874 ± 39421917.027  ops/s
-[info] JavaSumOfArithmeticSeries.formula   10000  thrpt    5  335620400.643 ± 88014941.446  ops/s
-[info] JavaSumOfArithmeticSeries.loop         10  thrpt    5  201150260.197 ± 19689484.161  ops/s
-[info] JavaSumOfArithmeticSeries.loop        100  thrpt    5   32802573.452 ±  3978228.910  ops/s
-[info] JavaSumOfArithmeticSeries.loop       1000  thrpt    5    3215702.265 ±   285334.338  ops/s
-[info] JavaSumOfArithmeticSeries.loop      10000  thrpt    5     306678.594 ±    80524.315  ops/s
-[info] ScalaFactorial.loop                    10  thrpt    5   45723049.151 ±  7360317.853  ops/s
-[info] ScalaFactorial.loop                   100  thrpt    5     123977.526 ±    19848.343  ops/s
-[info] ScalaFactorial.loop                  1000  thrpt    5       1313.638 ±      620.960  ops/s
-[info] ScalaFactorial.loop                 10000  thrpt    5         10.243 ±        1.167  ops/s
-[info] ScalaFactorial.recursion               10  thrpt    5   47501295.355 ±  2734596.845  ops/s
-[info] ScalaFactorial.recursion              100  thrpt    5     281508.547 ±    70940.743  ops/s
-[info] ScalaFactorial.recursion             1000  thrpt    5      11920.175 ±      821.375  ops/s
-[info] ScalaFactorial.recursion            10000  thrpt    5         94.803 ±       20.585  ops/s
-[info] ScalaFactorial.recursionPar            10  thrpt    5   46319879.984 ± 11560142.377  ops/s
-[info] ScalaFactorial.recursionPar           100  thrpt    5     291587.480 ±    56527.191  ops/s
-[info] ScalaFactorial.recursionPar          1000  thrpt    5      12035.346 ±      687.115  ops/s
-[info] ScalaFactorial.recursionPar         10000  thrpt    5        102.332 ±       19.699  ops/s
-[info] ScalaSumOfArithmeticSeries.formula     10  thrpt    5  339026865.043 ± 54254537.234  ops/s
-[info] ScalaSumOfArithmeticSeries.formula    100  thrpt    5  342244195.597 ± 73194691.170  ops/s
-[info] ScalaSumOfArithmeticSeries.formula   1000  thrpt    5  352107110.756 ± 70957609.698  ops/s
-[info] ScalaSumOfArithmeticSeries.formula  10000  thrpt    5  347926829.305 ± 82528782.075  ops/s
-[info] ScalaSumOfArithmeticSeries.loop        10  thrpt    5  190745135.191 ± 34042023.565  ops/s
-[info] ScalaSumOfArithmeticSeries.loop       100  thrpt    5   31684222.023 ±  3969854.331  ops/s
-[info] ScalaSumOfArithmeticSeries.loop      1000  thrpt    5    3164522.149 ±   574666.031  ops/s
-[info] ScalaSumOfArithmeticSeries.loop     10000  thrpt    5     321020.978 ±    31231.580  ops/s
-[success] Total time: 341 s, completed Mar 25, 2015 9:51:47 AM
+[info] JavaFactorial.loop                     10  thrpt    5   57550909.417 ±  6133944.353  ops/s
+[info] JavaFactorial.loop                    100  thrpt    5     107533.745 ±    23872.487  ops/s
+[info] JavaFactorial.loop                   1000  thrpt    5       1388.416 ±      217.524  ops/s
+[info] JavaFactorial.loop                  10000  thrpt    5         10.446 ±        1.706  ops/s
+[info] JavaFactorial.recursion                10  thrpt    5   56991531.697 ± 14139981.303  ops/s
+[info] JavaFactorial.recursion               100  thrpt    5     250169.664 ±   169517.049  ops/s
+[info] JavaFactorial.recursion              1000  thrpt    5      11107.327 ±     2954.353  ops/s
+[info] JavaFactorial.recursion             10000  thrpt    5         91.041 ±        8.278  ops/s
+[info] JavaFactorial.recursionPar             10  thrpt    5   57648040.500 ± 15920599.297  ops/s
+[info] JavaFactorial.recursionPar            100  thrpt    5     278891.547 ±    94320.560  ops/s
+[info] JavaFactorial.recursionPar           1000  thrpt    5      10787.111 ±     1421.271  ops/s
+[info] JavaFactorial.recursionPar          10000  thrpt    5        107.107 ±        9.599  ops/s
+[info] JavaSumOfArithmeticSeries.formula      10  thrpt    5  355253770.836 ± 64426204.286  ops/s
+[info] JavaSumOfArithmeticSeries.formula     100  thrpt    5  341701571.518 ± 70052810.530  ops/s
+[info] JavaSumOfArithmeticSeries.formula    1000  thrpt    5  361968526.741 ± 33962760.499  ops/s
+[info] JavaSumOfArithmeticSeries.formula   10000  thrpt    5  347384469.005 ± 95265046.563  ops/s
+[info] JavaSumOfArithmeticSeries.loop         10  thrpt    5  105081550.031 ± 18299925.720  ops/s
+[info] JavaSumOfArithmeticSeries.loop        100  thrpt    5   20680818.321 ±  3270079.949  ops/s
+[info] JavaSumOfArithmeticSeries.loop       1000  thrpt    5    2454311.531 ±   106782.665  ops/s
+[info] JavaSumOfArithmeticSeries.loop      10000  thrpt    5     238780.177 ±    49578.102  ops/s
+[info] ScalaFactorial.loop                    10  thrpt    5   46797320.874 ± 22400395.022  ops/s
+[info] ScalaFactorial.loop                   100  thrpt    5     126235.728 ±    28969.818  ops/s
+[info] ScalaFactorial.loop                  1000  thrpt    5       1399.227 ±      161.675  ops/s
+[info] ScalaFactorial.loop                 10000  thrpt    5          9.742 ±        0.888  ops/s
+[info] ScalaFactorial.recursion               10  thrpt    5   45480725.507 ± 10903546.054  ops/s
+[info] ScalaFactorial.recursion              100  thrpt    5     280304.833 ±    44233.254  ops/s
+[info] ScalaFactorial.recursion             1000  thrpt    5      11088.844 ±     2810.731  ops/s
+[info] ScalaFactorial.recursion            10000  thrpt    5         88.541 ±       18.292  ops/s
+[info] ScalaFactorial.recursionPar            10  thrpt    5   46426986.811 ±  9905048.802  ops/s
+[info] ScalaFactorial.recursionPar           100  thrpt    5     275027.848 ±    52831.060  ops/s
+[info] ScalaFactorial.recursionPar          1000  thrpt    5      11834.430 ±      582.498  ops/s
+[info] ScalaFactorial.recursionPar         10000  thrpt    5        102.966 ±       12.478  ops/s
+[info] ScalaSumOfArithmeticSeries.formula     10  thrpt    5  279120747.416 ± 46224979.313  ops/s
+[info] ScalaSumOfArithmeticSeries.formula    100  thrpt    5  341705752.029 ± 89552019.607  ops/s
+[info] ScalaSumOfArithmeticSeries.formula   1000  thrpt    5  341357236.598 ± 89966569.971  ops/s
+[info] ScalaSumOfArithmeticSeries.formula  10000  thrpt    5  364660920.841 ± 15090833.689  ops/s
+[info] ScalaSumOfArithmeticSeries.loop        10  thrpt    5  105674370.912 ± 18759370.329  ops/s
+[info] ScalaSumOfArithmeticSeries.loop       100  thrpt    5   20599477.803 ±  3743723.841  ops/s
+[info] ScalaSumOfArithmeticSeries.loop      1000  thrpt    5    2423751.439 ±   283970.835  ops/s
+[info] ScalaSumOfArithmeticSeries.loop     10000  thrpt    5     243254.124 ±    34402.531  ops/s
+[success] Total time: 341 s, completed Mar 25, 2015 12:06:32 PM
