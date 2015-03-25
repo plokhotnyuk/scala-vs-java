@@ -8,4 +8,5 @@ jdk:
 script:
   - sudo cat /proc/cpuinfo
   - sudo cat /proc/meminfo
+  - sbt test
   - sbt "run .*"
