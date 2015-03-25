@@ -33,5 +33,10 @@ object Build extends Build {
       "-Xlog-reflective-calls",
       "-Xfuture",
       "-Xlint"
-    )).settings(pl.project13.scala.sbt.SbtJmh.jmhSettings: _*)
+    ),
+    libraryDependencies ++= Seq(
+      "org.scalatest" %% "scalatest" % "2.2.1" % "test",
+      "org.scalacheck" %% "scalacheck" % "1.12.2" % "test"
+    )
+  ).settings(pl.project13.scala.sbt.SbtJmh.jmhSettings: _*)
 }

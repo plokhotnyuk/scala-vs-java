@@ -13,14 +13,14 @@ public class JavaSumOfArithmeticSeries {
     public int n;
 
     @Benchmark
-    public int formula() {
-        return ((n + 1) * n) >> 1;
+    public long formula() {
+        return ((n + 1L) * n) >> 1;
     }
 
     @Benchmark
-    public int loop() {
+    public long loop() {
         int i = n;
-        int s = 0;
+        long s = 0;
         while (i > 0) {
             s += i;
             i--;

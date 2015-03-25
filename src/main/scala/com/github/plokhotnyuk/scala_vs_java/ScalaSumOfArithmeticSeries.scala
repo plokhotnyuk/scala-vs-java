@@ -15,12 +15,12 @@ class ScalaSumOfArithmeticSeries {
   var n: Int = _
 
   @Benchmark
-  def formula(): Int = ((n + 1) * n) >> 1
+  def formula(): Long = ((n + 1L) * n) >> 1
 
   @Benchmark
-  def loop(): Int = {
+  def loop(): Long = {
     @tailrec
-    def loop(n: Int, s: Int): Int = if (n > 0) loop(n - 1, s + n) else s
+    def loop(n: Int, s: Long): Long = if (n > 0) loop(n - 1, s + n) else s
 
     loop(n, 0)
   }
