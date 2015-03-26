@@ -40,10 +40,11 @@ public class JavaFactorial {
     }
 
     private BigInteger loop(int n1, final int n2) {
+        long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2));
         BigInteger p = BigInteger.ONE;
         long pp = 1;
         while (n1 <= n2) {
-            if (pp <= Integer.MAX_VALUE) {
+            if (pp <= l) {
                 pp *= n1;
             } else {
                 p = p.multiply(BigInteger.valueOf(pp));

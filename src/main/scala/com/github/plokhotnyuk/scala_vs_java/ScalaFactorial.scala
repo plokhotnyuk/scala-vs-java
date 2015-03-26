@@ -28,12 +28,16 @@ class ScalaFactorial {
   @annotation.tailrec
   private def fastLoop(n1: Int, n2: Int, p: Long = 1): Long = if (n2 > n1) fastLoop(n1, n2 - 1, p * n2) else p
 
-  @annotation.tailrec
-  private def loop(n1: Int, n2: Int, p: BigInt = BigInt(1), pp: Long = 1): BigInt =
-    if (n1 <= n2) {
-      if (pp < Int.MaxValue) loop(n1 + 1, n2, p, pp * n1)
-      else loop(n1 + 1, n2, p * pp, n1)
-    } else p * pp
+  private def loop(n1: Int, n2: Int): BigInt = {
+    @annotation.tailrec
+    def loop(n1: Int, n2: Int, l: Long, pp: Long, p: BigInt): BigInt =
+      if (n1 <= n2) {
+        if (pp < l) loop(n1 + 1, n2, l, pp * n1, p)
+        else loop(n1 + 1, n2, l, n1, p * pp)
+      } else p * pp
+
+    loop(n1, n2, Long.MaxValue >> (32 - Integer.numberOfLeadingZeros(n2)), 1, 1)
+  }
 
   private def recursion(n1: Int, n2: Int): BigInt =
     if (n2 - n1 < 50) loop(n1, n2)
