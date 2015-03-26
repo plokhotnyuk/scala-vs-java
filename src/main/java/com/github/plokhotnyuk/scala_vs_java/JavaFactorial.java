@@ -3,10 +3,7 @@ package com.github.plokhotnyuk.scala_vs_java;
 import org.openjdk.jmh.annotations.*;
 
 import java.math.BigInteger;
-import java.util.concurrent.ForkJoinPool;
-import java.util.concurrent.ForkJoinTask;
-import java.util.concurrent.RecursiveTask;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 @State(Scope.Benchmark)
 @Warmup(iterations = 3, time = 1, timeUnit = TimeUnit.SECONDS)
@@ -58,17 +55,21 @@ public class JavaFactorial {
     }
 
     private BigInteger recursion(final int n1, final int n2) {
-        final int d = n2 - n1;
-        if (d < 50) return loop(n1, n2);
-        return recursion(n1, n1 + (d >> 1)).multiply(recursion(n1 + (d >> 1) + 1, n2));
+        if (n2 - n1 < 50) {
+            return loop(n1, n2);
+        }
+        final int nm = (n1 + n2) >> 1;
+        return recursion(nm + 1, n2).multiply(recursion(n1, nm));
     }
 
     private BigInteger recursePar(final int n1, final int n2) {
-        final int d = n2 - n1;
-        if (d < 500) return recursion(n1, n2);
+        if (n2 - n1 < 500) {
+            return recursion(n1, n2);
+        }
+        final int nm = (n1 + n2) >> 1;
         RecursiveTask<BigInteger> t = new RecursiveTask<BigInteger>() {
             protected BigInteger compute() {
-                return recursePar(n1 + (d >> 1) + 1, n2);
+                return recursePar(nm + 1, n2);
             }
         };
         if (ForkJoinTask.getPool() == pool) {
@@ -76,6 +77,6 @@ public class JavaFactorial {
         } else {
             pool.execute(t);
         }
-        return recursePar(n1, n1 + (d >> 1)).multiply(t.join());
+        return recursePar(n1, nm).multiply(t.join());
     }
 }

@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit
 
 import org.openjdk.jmh.annotations._
 
-import scala.annotation.tailrec
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, Future}
@@ -26,29 +25,28 @@ class ScalaFactorial {
   @Benchmark
   def recursionPar(): BigInt = if (n > 20) recursionPar(1, n) else fastLoop(1, n)
 
-  @tailrec
+  @annotation.tailrec
   private def fastLoop(n1: Int, n2: Int, p: Long = 1): Long = if (n2 > n1) fastLoop(n1, n2 - 1, p * n2) else p
 
-  @tailrec
-  private def loop(n1: Int, n2: Int, p: BigInt = BigInt(1), pp: Long = 1): BigInt = {
+  @annotation.tailrec
+  private def loop(n1: Int, n2: Int, p: BigInt = BigInt(1), pp: Long = 1): BigInt =
     if (n1 <= n2) {
       if (pp < Int.MaxValue) loop(n1 + 1, n2, p, pp * n1)
       else loop(n1 + 1, n2, p * pp, n1)
     } else p * pp
-  }
 
-  private def recursion(n1: Int, n2: Int): BigInt = {
-    val d = n2 - n1
-    if (d < 50) loop(n1, n2)
-    else recursion(n1, n1 + (d >> 1)) * recursion(n1 + (d >> 1) + 1, n2)
-  }
-
-  private def recursionPar(n1: Int, n2: Int): BigInt = {
-    val d = n2 - n1
-    if (d < 500) recursion(n1, n2)
+  private def recursion(n1: Int, n2: Int): BigInt =
+    if (n2 - n1 < 50) loop(n1, n2)
     else {
-      val f = Future(recursionPar(n1 + (d >> 1) + 1, n2))
-      recursionPar(n1, n1 + (d >> 1)) * Await.result(f, Duration(1, TimeUnit.MINUTES))
+      val nm = (n1 + n2) >> 1
+      recursion(nm + 1, n2) * recursion(n1, nm)
     }
-  }
+
+  private def recursionPar(n1: Int, n2: Int): BigInt =
+    if (n2 - n1 < 500) recursion(n1, n2)
+    else {
+      val nm = (n1 + n2) >> 1
+      val f = Future(recursionPar(nm + 1, n2))
+      recursionPar(n1, nm) * Await.result(f, Duration.Inf)
+    }
 }
