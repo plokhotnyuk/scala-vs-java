@@ -4,8 +4,6 @@ import java.util.concurrent.TimeUnit
 
 import org.openjdk.jmh.annotations._
 
-import scala.annotation.tailrec
-
 @State(Scope.Benchmark)
 @Warmup(iterations = 3, time = 1, timeUnit = TimeUnit.SECONDS)
 @Measurement(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
@@ -19,7 +17,7 @@ class ScalaSumOfArithmeticSeries {
 
   @Benchmark
   def loop(): Long = {
-    @tailrec
+    @annotation.tailrec
     def loop(n: Int, s: Long): Long = if (n > 0) loop(n - 1, s + n) else s
 
     loop(n, 0)

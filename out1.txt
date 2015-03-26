@@ -1,25 +1,46 @@
 [info] Loading project definition from /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/project
 [info] Set current project to scala-vs-java (in build file:/home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/)
+[info] Updating {file:/home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/}scala-vs-java...
+[info] Resolving org.scala-lang#scala-library;2.11.6 ...
+[info] Resolving org.openjdk.jmh#jmh-core;1.6 ...
+[info] Resolving net.sf.jopt-simple#jopt-simple;4.6 ...
+[info] Resolving org.apache.commons#commons-math3;3.2 ...
+[info] Resolving org.openjdk.jmh#jmh-generator-bytecode;1.6 ...
+[info] Resolving org.openjdk.jmh#jmh-generator-reflection;1.6 ...
+[info] Resolving org.openjdk.jmh#jmh-generator-asm;1.6 ...
+[info] Resolving org.ow2.asm#asm;5.0.3 ...
+[info] Resolving org.scalatest#scalatest_2.11;2.2.1 ...
+[info] Resolving org.scala-lang#scala-reflect;2.11.2 ...
+[info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...
+[info] Resolving org.scalacheck#scalacheck_2.11;1.12.2 ...
+[info] Resolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 ...
+[info] Resolving org.scala-sbt#test-interface;1.0 ...
+[info] Resolving org.scala-lang#scala-compiler;2.11.6 ...
+[info] Resolving org.scala-lang#scala-reflect;2.11.6 ...
+[info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.3 ...
+[info] Resolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 ...
+[info] Resolving jline#jline;2.12.1 ...
+[info] Done updating.
 [info] Compiling 2 Scala sources and 2 Java sources to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/classes...
-[warn] /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/src/main/java/com/github/plokhotnyuk/scala_vs_java/JavaFactorial.java:69: serializable class <anonymous com.github.plokhotnyuk.scala_vs_java.JavaFactorial$1> has no definition of serialVersionUID
+[warn] /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/src/main/java/com/github/plokhotnyuk/scala_vs_java/JavaFactorial.java:70: serializable class <anonymous com.github.plokhotnyuk.scala_vs_java.JavaFactorial$1> has no definition of serialVersionUID
 [warn] {
 [warn]             protected BigInteger compute() {
-[warn]                 return recursePar(n1 + (d >> 1) + 1, n2);
+[warn]                 return recursePar(nm + 1, n2);
 [warn]             }
 [warn]         }
 [info] Generating JMH benchmark Java source files...
-Processing 36 classes from /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/classes with "reflection" generator
+Processing 6 classes from /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/classes with "reflection" generator
 Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/generated-sources/jmh and resources to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/classes
 [info] Compiling generated JMH benchmarks...
 [info] Compiling 2 Scala sources and 32 Java sources to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/classes...
-[warn] /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/src/main/java/com/github/plokhotnyuk/scala_vs_java/JavaFactorial.java:69: serializable class <anonymous com.github.plokhotnyuk.scala_vs_java.JavaFactorial$1> has no definition of serialVersionUID
+[warn] /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/src/main/java/com/github/plokhotnyuk/scala_vs_java/JavaFactorial.java:70: serializable class <anonymous com.github.plokhotnyuk.scala_vs_java.JavaFactorial$1> has no definition of serialVersionUID
 [warn] {
 [warn]             protected BigInteger compute() {
-[warn]                 return recursePar(n1 + (d >> 1) + 1, n2);
+[warn]                 return recursePar(nm + 1, n2);
 [warn]             }
 [warn]         }
 [info] Running org.openjdk.jmh.Main .*
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -32,22 +53,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 0.00% complete, ETA 00:05:20
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 58144158.824 ops/s
-[info] # Warmup Iteration   2: 59160614.764 ops/s
-[info] # Warmup Iteration   3: 57752481.645 ops/s
-[info] Iteration   1: 57290931.164 ops/s
-[info] Iteration   2: 55750408.304 ops/s
-[info] Iteration   3: 58158058.318 ops/s
-[info] Iteration   4: 50001143.678 ops/s
-[info] Iteration   5: 50818125.610 ops/s
+[info] # Warmup Iteration   1: 49187180.137 ops/s
+[info] # Warmup Iteration   2: 59028312.837 ops/s
+[info] # Warmup Iteration   3: 58287445.545 ops/s
+[info] Iteration   1: 56884731.149 ops/s
+[info] Iteration   2: 56432650.414 ops/s
+[info] Iteration   3: 58115256.664 ops/s
+[info] Iteration   4: 56891721.659 ops/s
+[info] Iteration   5: 58693788.500 ops/s
 [info] 
 [info] 
-[info] Result: 54403733.415 ±(99.9%) 14469890.313 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (50001143.678, 54403733.415, 58158058.318), stdev = 3757784.563
-[info]   Confidence interval (99.9%): [39933843.101, 68873623.728]
+[info] Result: 57403629.677 ±(99.9%) 3675816.802 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (56432650.414, 57403629.677, 58693788.500), stdev = 954597.950
+[info]   Confidence interval (99.9%): [53727812.875, 61079446.479]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -60,22 +81,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 2.50% complete, ETA 00:05:27
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 641879.507 ops/s
-[info] # Warmup Iteration   2: 684319.817 ops/s
-[info] # Warmup Iteration   3: 664852.896 ops/s
-[info] Iteration   1: 654437.561 ops/s
-[info] Iteration   2: 661408.337 ops/s
-[info] Iteration   3: 628907.799 ops/s
-[info] Iteration   4: 597097.949 ops/s
-[info] Iteration   5: 667734.581 ops/s
+[info] # Warmup Iteration   1: 630135.842 ops/s
+[info] # Warmup Iteration   2: 670141.842 ops/s
+[info] # Warmup Iteration   3: 617670.613 ops/s
+[info] Iteration   1: 665940.749 ops/s
+[info] Iteration   2: 664691.158 ops/s
+[info] Iteration   3: 660879.936 ops/s
+[info] Iteration   4: 641312.728 ops/s
+[info] Iteration   5: 554918.193 ops/s
 [info] 
 [info] 
-[info] Result: 641917.245 ±(99.9%) 111953.967 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (597097.949, 641917.245, 667734.581), stdev = 29074.090
-[info]   Confidence interval (99.9%): [529963.279, 753871.212]
+[info] Result: 637548.553 ±(99.9%) 181931.584 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (554918.193, 637548.553, 665940.749), stdev = 47247.055
+[info]   Confidence interval (99.9%): [455616.969, 819480.137]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -88,22 +109,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 5.00% complete, ETA 00:05:18
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 5053.285 ops/s
-[info] # Warmup Iteration   2: 5181.346 ops/s
-[info] # Warmup Iteration   3: 4858.891 ops/s
-[info] Iteration   1: 5153.588 ops/s
-[info] Iteration   2: 5119.562 ops/s
-[info] Iteration   3: 4979.116 ops/s
-[info] Iteration   4: 5121.093 ops/s
-[info] Iteration   5: 4584.614 ops/s
+[info] # Warmup Iteration   1: 5237.816 ops/s
+[info] # Warmup Iteration   2: 5149.708 ops/s
+[info] # Warmup Iteration   3: 5200.577 ops/s
+[info] Iteration   1: 5240.742 ops/s
+[info] Iteration   2: 5192.642 ops/s
+[info] Iteration   3: 4802.193 ops/s
+[info] Iteration   4: 5245.998 ops/s
+[info] Iteration   5: 4848.401 ops/s
 [info] 
 [info] 
-[info] Result: 4991.595 ±(99.9%) 913.618 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (4584.614, 4991.595, 5153.588), stdev = 237.264
-[info]   Confidence interval (99.9%): [4077.977, 5905.212]
+[info] Result: 5065.995 ±(99.9%) 852.193 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (4802.193, 5065.995, 5245.998), stdev = 221.312
+[info]   Confidence interval (99.9%): [4213.803, 5918.188]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -116,22 +137,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 7.50% complete, ETA 00:05:09
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 26.522 ops/s
-[info] # Warmup Iteration   2: 25.875 ops/s
-[info] # Warmup Iteration   3: 28.213 ops/s
-[info] Iteration   1: 27.937 ops/s
-[info] Iteration   2: 28.354 ops/s
-[info] Iteration   3: 27.765 ops/s
-[info] Iteration   4: 26.814 ops/s
-[info] Iteration   5: 25.462 ops/s
+[info] # Warmup Iteration   1: 27.068 ops/s
+[info] # Warmup Iteration   2: 28.483 ops/s
+[info] # Warmup Iteration   3: 27.775 ops/s
+[info] Iteration   1: 26.138 ops/s
+[info] Iteration   2: 25.129 ops/s
+[info] Iteration   3: 28.307 ops/s
+[info] Iteration   4: 25.972 ops/s
+[info] Iteration   5: 26.847 ops/s
 [info] 
 [info] 
-[info] Result: 27.267 ±(99.9%) 4.450 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (25.462, 27.267, 28.354), stdev = 1.156
-[info]   Confidence interval (99.9%): [22.817, 31.716]
+[info] Result: 26.479 ±(99.9%) 4.585 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (25.129, 26.479, 28.307), stdev = 1.191
+[info]   Confidence interval (99.9%): [21.894, 31.064]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -144,22 +165,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 10.00% complete, ETA 00:05:02
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 56037446.933 ops/s
-[info] # Warmup Iteration   2: 58451092.743 ops/s
-[info] # Warmup Iteration   3: 49308162.286 ops/s
-[info] Iteration   1: 57555340.166 ops/s
-[info] Iteration   2: 57605016.501 ops/s
-[info] Iteration   3: 56869394.785 ops/s
-[info] Iteration   4: 57571956.952 ops/s
-[info] Iteration   5: 58406483.944 ops/s
+[info] # Warmup Iteration   1: 52470567.894 ops/s
+[info] # Warmup Iteration   2: 54028612.369 ops/s
+[info] # Warmup Iteration   3: 50720008.419 ops/s
+[info] Iteration   1: 54489137.825 ops/s
+[info] Iteration   2: 57269992.776 ops/s
+[info] Iteration   3: 53534954.988 ops/s
+[info] Iteration   4: 56701485.950 ops/s
+[info] Iteration   5: 57984014.558 ops/s
 [info] 
 [info] 
-[info] Result: 57601638.470 ±(99.9%) 2097623.029 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (56869394.785, 57601638.470, 58406483.944), stdev = 544746.039
-[info]   Confidence interval (99.9%): [55504015.441, 59699261.498]
+[info] Result: 55995917.219 ±(99.9%) 7306170.946 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (53534954.988, 55995917.219, 57984014.558), stdev = 1897389.393
+[info]   Confidence interval (99.9%): [48689746.273, 63302088.165]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -172,22 +193,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 12.50% complete, ETA 00:04:53
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 504762.964 ops/s
-[info] # Warmup Iteration   2: 640884.631 ops/s
-[info] # Warmup Iteration   3: 628161.818 ops/s
-[info] Iteration   1: 653874.206 ops/s
-[info] Iteration   2: 615014.855 ops/s
-[info] Iteration   3: 642308.375 ops/s
-[info] Iteration   4: 655836.045 ops/s
-[info] Iteration   5: 582469.320 ops/s
+[info] # Warmup Iteration   1: 601503.950 ops/s
+[info] # Warmup Iteration   2: 636988.711 ops/s
+[info] # Warmup Iteration   3: 657545.468 ops/s
+[info] Iteration   1: 571643.910 ops/s
+[info] Iteration   2: 589124.625 ops/s
+[info] Iteration   3: 650404.819 ops/s
+[info] Iteration   4: 595886.900 ops/s
+[info] Iteration   5: 647217.897 ops/s
 [info] 
 [info] 
-[info] Result: 629900.560 ±(99.9%) 119813.912 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (582469.320, 629900.560, 655836.045), stdev = 31115.292
-[info]   Confidence interval (99.9%): [510086.648, 749714.472]
+[info] Result: 610855.630 ±(99.9%) 137767.667 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (571643.910, 610855.630, 650404.819), stdev = 35777.826
+[info]   Confidence interval (99.9%): [473087.963, 748623.297]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -200,22 +221,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 15.00% complete, ETA 00:04:45
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 12428.232 ops/s
-[info] # Warmup Iteration   2: 11192.877 ops/s
-[info] # Warmup Iteration   3: 12229.452 ops/s
-[info] Iteration   1: 11842.105 ops/s
-[info] Iteration   2: 12956.325 ops/s
-[info] Iteration   3: 13004.505 ops/s
-[info] Iteration   4: 13051.054 ops/s
-[info] Iteration   5: 11622.068 ops/s
+[info] # Warmup Iteration   1: 12368.941 ops/s
+[info] # Warmup Iteration   2: 11610.395 ops/s
+[info] # Warmup Iteration   3: 12511.119 ops/s
+[info] Iteration   1: 13347.792 ops/s
+[info] Iteration   2: 13347.616 ops/s
+[info] Iteration   3: 10536.475 ops/s
+[info] Iteration   4: 13403.354 ops/s
+[info] Iteration   5: 13500.935 ops/s
 [info] 
 [info] 
-[info] Result: 12495.211 ±(99.9%) 2702.245 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (11622.068, 12495.211, 13051.054), stdev = 701.765
-[info]   Confidence interval (99.9%): [9792.966, 15197.457]
+[info] Result: 12827.234 ±(99.9%) 4936.919 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (10536.475, 12827.234, 13500.935), stdev = 1282.102
+[info]   Confidence interval (99.9%): [7890.316, 17764.153]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -228,22 +249,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 17.50% complete, ETA 00:04:36
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 89.525 ops/s
-[info] # Warmup Iteration   2: 91.667 ops/s
-[info] # Warmup Iteration   3: 93.350 ops/s
-[info] Iteration   1: 92.404 ops/s
-[info] Iteration   2: 92.978 ops/s
-[info] Iteration   3: 93.362 ops/s
-[info] Iteration   4: 88.195 ops/s
-[info] Iteration   5: 82.946 ops/s
+[info] # Warmup Iteration   1: 88.951 ops/s
+[info] # Warmup Iteration   2: 93.538 ops/s
+[info] # Warmup Iteration   3: 88.029 ops/s
+[info] Iteration   1: 93.475 ops/s
+[info] Iteration   2: 92.542 ops/s
+[info] Iteration   3: 93.163 ops/s
+[info] Iteration   4: 83.932 ops/s
+[info] Iteration   5: 89.518 ops/s
 [info] 
 [info] 
-[info] Result: 89.977 ±(99.9%) 17.109 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (82.946, 89.977, 93.362), stdev = 4.443
-[info]   Confidence interval (99.9%): [72.868, 107.086]
+[info] Result: 90.526 ±(99.9%) 15.428 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (83.932, 90.526, 93.475), stdev = 4.007
+[info]   Confidence interval (99.9%): [75.098, 105.954]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -256,22 +277,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 20.00% complete, ETA 00:04:28
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 57544144.619 ops/s
-[info] # Warmup Iteration   2: 58032820.980 ops/s
-[info] # Warmup Iteration   3: 52746628.330 ops/s
-[info] Iteration   1: 47769097.282 ops/s
-[info] Iteration   2: 54165831.671 ops/s
-[info] Iteration   3: 51449093.472 ops/s
-[info] Iteration   4: 57630052.511 ops/s
-[info] Iteration   5: 52611833.568 ops/s
+[info] # Warmup Iteration   1: 58122359.631 ops/s
+[info] # Warmup Iteration   2: 58615912.153 ops/s
+[info] # Warmup Iteration   3: 58081173.927 ops/s
+[info] Iteration   1: 57560174.452 ops/s
+[info] Iteration   2: 58230121.981 ops/s
+[info] Iteration   3: 52999299.778 ops/s
+[info] Iteration   4: 56809975.067 ops/s
+[info] Iteration   5: 58580125.377 ops/s
 [info] 
 [info] 
-[info] Result: 52725181.701 ±(99.9%) 13928643.480 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (47769097.282, 52725181.701, 57630052.511), stdev = 3617224.479
-[info]   Confidence interval (99.9%): [38796538.221, 66653825.180]
+[info] Result: 56835939.331 ±(99.9%) 8659867.038 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (52999299.778, 56835939.331, 58580125.377), stdev = 2248939.969
+[info]   Confidence interval (99.9%): [48176072.293, 65495806.369]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -284,22 +305,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 22.50% complete, ETA 00:04:19
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 600998.951 ops/s
-[info] # Warmup Iteration   2: 657026.063 ops/s
-[info] # Warmup Iteration   3: 616013.349 ops/s
-[info] Iteration   1: 657976.252 ops/s
-[info] Iteration   2: 659157.486 ops/s
-[info] Iteration   3: 645144.135 ops/s
-[info] Iteration   4: 613083.921 ops/s
-[info] Iteration   5: 657344.218 ops/s
+[info] # Warmup Iteration   1: 628568.499 ops/s
+[info] # Warmup Iteration   2: 596520.829 ops/s
+[info] # Warmup Iteration   3: 624860.981 ops/s
+[info] Iteration   1: 665814.629 ops/s
+[info] Iteration   2: 672001.583 ops/s
+[info] Iteration   3: 601775.574 ops/s
+[info] Iteration   4: 648697.393 ops/s
+[info] Iteration   5: 676497.255 ops/s
 [info] 
 [info] 
-[info] Result: 646541.202 ±(99.9%) 75259.591 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (613083.921, 646541.202, 659157.486), stdev = 19544.677
-[info]   Confidence interval (99.9%): [571281.611, 721800.793]
+[info] Result: 652957.287 ±(99.9%) 117426.347 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (601775.574, 652957.287, 676497.255), stdev = 30495.250
+[info]   Confidence interval (99.9%): [535530.939, 770383.634]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -312,22 +333,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 25.00% complete, ETA 00:04:11
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 12763.804 ops/s
-[info] # Warmup Iteration   2: 12915.796 ops/s
-[info] # Warmup Iteration   3: 15014.113 ops/s
-[info] Iteration   1: 14592.394 ops/s
-[info] Iteration   2: 14226.389 ops/s
-[info] Iteration   3: 15001.159 ops/s
-[info] Iteration   4: 12767.927 ops/s
-[info] Iteration   5: 14895.369 ops/s
+[info] # Warmup Iteration   1: 11590.245 ops/s
+[info] # Warmup Iteration   2: 13744.350 ops/s
+[info] # Warmup Iteration   3: 12380.382 ops/s
+[info] Iteration   1: 15031.619 ops/s
+[info] Iteration   2: 14940.026 ops/s
+[info] Iteration   3: 15135.627 ops/s
+[info] Iteration   4: 12894.990 ops/s
+[info] Iteration   5: 15013.977 ops/s
 [info] 
 [info] 
-[info] Result: 14296.648 ±(99.9%) 3489.134 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (12767.927, 14296.648, 15001.159), stdev = 906.117
-[info]   Confidence interval (99.9%): [10807.514, 17785.781]
+[info] Result: 14603.248 ±(99.9%) 3686.974 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (12894.990, 14603.248, 15135.627), stdev = 957.496
+[info]   Confidence interval (99.9%): [10916.273, 18290.222]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -340,22 +361,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 27.50% complete, ETA 00:04:02
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 95.926 ops/s
-[info] # Warmup Iteration   2: 107.684 ops/s
-[info] # Warmup Iteration   3: 106.832 ops/s
-[info] Iteration   1: 107.010 ops/s
-[info] Iteration   2: 101.650 ops/s
-[info] Iteration   3: 105.440 ops/s
-[info] Iteration   4: 108.167 ops/s
-[info] Iteration   5: 103.766 ops/s
+[info] # Warmup Iteration   1: 99.250 ops/s
+[info] # Warmup Iteration   2: 104.191 ops/s
+[info] # Warmup Iteration   3: 103.274 ops/s
+[info] Iteration   1: 106.458 ops/s
+[info] Iteration   2: 109.912 ops/s
+[info] Iteration   3: 109.091 ops/s
+[info] Iteration   4: 107.121 ops/s
+[info] Iteration   5: 101.763 ops/s
 [info] 
 [info] 
-[info] Result: 105.207 ±(99.9%) 9.965 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (101.650, 105.207, 108.167), stdev = 2.588
-[info]   Confidence interval (99.9%): [95.241, 115.172]
+[info] Result: 106.869 ±(99.9%) 12.253 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (101.763, 106.869, 109.912), stdev = 3.182
+[info]   Confidence interval (99.9%): [94.616, 119.122]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -368,22 +389,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 30.00% complete, ETA 00:03:54
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 326238924.089 ops/s
-[info] # Warmup Iteration   2: 334908869.469 ops/s
-[info] # Warmup Iteration   3: 334791067.893 ops/s
-[info] Iteration   1: 367809165.699 ops/s
-[info] Iteration   2: 333893198.914 ops/s
-[info] Iteration   3: 331849031.590 ops/s
-[info] Iteration   4: 332848467.609 ops/s
-[info] Iteration   5: 320047275.114 ops/s
+[info] # Warmup Iteration   1: 332000914.110 ops/s
+[info] # Warmup Iteration   2: 333731942.667 ops/s
+[info] # Warmup Iteration   3: 337236495.059 ops/s
+[info] Iteration   1: 360304674.583 ops/s
+[info] Iteration   2: 371708083.047 ops/s
+[info] Iteration   3: 325269447.095 ops/s
+[info] Iteration   4: 369335349.319 ops/s
+[info] Iteration   5: 324861091.722 ops/s
 [info] 
 [info] 
-[info] Result: 337289427.785 ±(99.9%) 69140256.324 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (320047275.114, 337289427.785, 367809165.699), stdev = 17955505.003
-[info]   Confidence interval (99.9%): [268149171.461, 406429684.109]
+[info] Result: 350295729.153 ±(99.9%) 90190815.009 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (324861091.722, 350295729.153, 371708083.047), stdev = 23422268.245
+[info]   Confidence interval (99.9%): [260104914.145, 440486544.162]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -396,22 +417,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 32.50% complete, ETA 00:03:46
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 331950022.691 ops/s
-[info] # Warmup Iteration   2: 322380644.623 ops/s
-[info] # Warmup Iteration   3: 372297118.132 ops/s
-[info] Iteration   1: 345463029.002 ops/s
-[info] Iteration   2: 324152919.233 ops/s
-[info] Iteration   3: 361075327.895 ops/s
-[info] Iteration   4: 369895120.530 ops/s
-[info] Iteration   5: 371159818.172 ops/s
+[info] # Warmup Iteration   1: 268494851.908 ops/s
+[info] # Warmup Iteration   2: 269713144.987 ops/s
+[info] # Warmup Iteration   3: 342407939.921 ops/s
+[info] Iteration   1: 369691417.485 ops/s
+[info] Iteration   2: 367689694.221 ops/s
+[info] Iteration   3: 323059903.254 ops/s
+[info] Iteration   4: 322769266.974 ops/s
+[info] Iteration   5: 368455514.624 ops/s
 [info] 
 [info] 
-[info] Result: 354349242.966 ±(99.9%) 76051259.011 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (324152919.233, 354349242.966, 371159818.172), stdev = 19750270.454
-[info]   Confidence interval (99.9%): [278297983.955, 430400501.978]
+[info] Result: 350333159.311 ±(99.9%) 96420190.911 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (322769266.974, 350333159.311, 369691417.485), stdev = 25040017.384
+[info]   Confidence interval (99.9%): [253912968.400, 446753350.223]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -424,22 +445,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 35.00% complete, ETA 00:03:37
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 331311452.628 ops/s
-[info] # Warmup Iteration   2: 333167629.910 ops/s
-[info] # Warmup Iteration   3: 357995464.810 ops/s
-[info] Iteration   1: 359324261.399 ops/s
-[info] Iteration   2: 360728486.334 ops/s
-[info] Iteration   3: 343555391.592 ops/s
-[info] Iteration   4: 364372934.664 ops/s
-[info] Iteration   5: 364956492.975 ops/s
+[info] # Warmup Iteration   1: 334845293.788 ops/s
+[info] # Warmup Iteration   2: 335501000.280 ops/s
+[info] # Warmup Iteration   3: 349184126.538 ops/s
+[info] Iteration   1: 349194925.521 ops/s
+[info] Iteration   2: 366586087.681 ops/s
+[info] Iteration   3: 347190024.092 ops/s
+[info] Iteration   4: 358755510.931 ops/s
+[info] Iteration   5: 313073578.353 ops/s
 [info] 
 [info] 
-[info] Result: 358587513.393 ±(99.9%) 33631260.910 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (343555391.592, 358587513.393, 364956492.975), stdev = 8733931.658
-[info]   Confidence interval (99.9%): [324956252.483, 392218774.303]
+[info] Result: 346960025.315 ±(99.9%) 78859616.995 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (313073578.353, 346960025.315, 366586087.681), stdev = 20479592.104
+[info]   Confidence interval (99.9%): [268100408.320, 425819642.311]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -452,22 +473,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 37.50% complete, ETA 00:03:29
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 332995184.120 ops/s
-[info] # Warmup Iteration   2: 334453932.982 ops/s
-[info] # Warmup Iteration   3: 372722594.333 ops/s
-[info] Iteration   1: 369729392.007 ops/s
-[info] Iteration   2: 359978620.218 ops/s
-[info] Iteration   3: 372626246.445 ops/s
-[info] Iteration   4: 351373189.193 ops/s
-[info] Iteration   5: 331922385.798 ops/s
+[info] # Warmup Iteration   1: 326872777.485 ops/s
+[info] # Warmup Iteration   2: 335211473.671 ops/s
+[info] # Warmup Iteration   3: 371318310.205 ops/s
+[info] Iteration   1: 370157241.896 ops/s
+[info] Iteration   2: 370242862.140 ops/s
+[info] Iteration   3: 352478536.538 ops/s
+[info] Iteration   4: 371347648.576 ops/s
+[info] Iteration   5: 339217628.283 ops/s
 [info] 
 [info] 
-[info] Result: 357125966.732 ±(99.9%) 63142270.817 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (331922385.798, 357125966.732, 372626246.445), stdev = 16397847.214
-[info]   Confidence interval (99.9%): [293983695.915, 420268237.549]
+[info] Result: 360688783.487 ±(99.9%) 55232322.610 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (339217628.283, 360688783.487, 371347648.576), stdev = 14343658.784
+[info]   Confidence interval (99.9%): [305456460.876, 415921106.097]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -480,22 +501,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 40.00% complete, ETA 00:03:20
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 101956404.405 ops/s
-[info] # Warmup Iteration   2: 102128025.495 ops/s
-[info] # Warmup Iteration   3: 95321088.409 ops/s
-[info] Iteration   1: 107096230.470 ops/s
-[info] Iteration   2: 104575113.388 ops/s
-[info] Iteration   3: 103079055.707 ops/s
-[info] Iteration   4: 111536281.976 ops/s
-[info] Iteration   5: 95426286.667 ops/s
+[info] # Warmup Iteration   1: 102019052.378 ops/s
+[info] # Warmup Iteration   2: 102846035.726 ops/s
+[info] # Warmup Iteration   3: 107959633.799 ops/s
+[info] Iteration   1: 107616868.148 ops/s
+[info] Iteration   2: 103093612.505 ops/s
+[info] Iteration   3: 108216819.775 ops/s
+[info] Iteration   4: 106095851.466 ops/s
+[info] Iteration   5: 103351975.001 ops/s
 [info] 
 [info] 
-[info] Result: 104342593.642 ±(99.9%) 22819962.644 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (95426286.667, 104342593.642, 111536281.976), stdev = 5926271.831
-[info]   Confidence interval (99.9%): [81522630.997, 127162556.286]
+[info] Result: 105675025.379 ±(99.9%) 9126274.323 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (103093612.505, 105675025.379, 108216819.775), stdev = 2370064.460
+[info]   Confidence interval (99.9%): [96548751.056, 114801299.702]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -508,22 +529,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 42.50% complete, ETA 00:03:12
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 20427766.831 ops/s
-[info] # Warmup Iteration   2: 20649128.070 ops/s
-[info] # Warmup Iteration   3: 20219081.191 ops/s
-[info] Iteration   1: 21017665.401 ops/s
-[info] Iteration   2: 18944706.983 ops/s
-[info] Iteration   3: 19977317.971 ops/s
-[info] Iteration   4: 18306787.348 ops/s
-[info] Iteration   5: 18745912.405 ops/s
+[info] # Warmup Iteration   1: 20470050.700 ops/s
+[info] # Warmup Iteration   2: 20675541.845 ops/s
+[info] # Warmup Iteration   3: 19009564.843 ops/s
+[info] Iteration   1: 20560842.994 ops/s
+[info] Iteration   2: 19540359.701 ops/s
+[info] Iteration   3: 18615544.830 ops/s
+[info] Iteration   4: 21371334.161 ops/s
+[info] Iteration   5: 20885933.401 ops/s
 [info] 
 [info] 
-[info] Result: 19398478.022 ±(99.9%) 4209531.455 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (18306787.348, 19398478.022, 21017665.401), stdev = 1093201.951
-[info]   Confidence interval (99.9%): [15188946.566, 23608009.477]
+[info] Result: 20194803.017 ±(99.9%) 4269800.058 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (18615544.830, 20194803.017, 21371334.161), stdev = 1108853.516
+[info]   Confidence interval (99.9%): [15925002.959, 24464603.076]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -536,22 +557,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 45.00% complete, ETA 00:03:04
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 2423246.327 ops/s
-[info] # Warmup Iteration   2: 2360291.123 ops/s
-[info] # Warmup Iteration   3: 2472083.328 ops/s
-[info] Iteration   1: 2392207.391 ops/s
-[info] Iteration   2: 2241997.659 ops/s
-[info] Iteration   3: 2451056.938 ops/s
-[info] Iteration   4: 2468023.544 ops/s
-[info] Iteration   5: 2144313.885 ops/s
+[info] # Warmup Iteration   1: 2437433.706 ops/s
+[info] # Warmup Iteration   2: 2450052.219 ops/s
+[info] # Warmup Iteration   3: 2476569.111 ops/s
+[info] Iteration   1: 2476367.717 ops/s
+[info] Iteration   2: 2460229.117 ops/s
+[info] Iteration   3: 2246273.577 ops/s
+[info] Iteration   4: 2464719.484 ops/s
+[info] Iteration   5: 2451502.865 ops/s
 [info] 
 [info] 
-[info] Result: 2339519.883 ±(99.9%) 542331.603 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (2144313.885, 2339519.883, 2468023.544), stdev = 140841.795
-[info]   Confidence interval (99.9%): [1797188.280, 2881851.487]
+[info] Result: 2419818.552 ±(99.9%) 375159.592 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (2246273.577, 2419818.552, 2476367.717), stdev = 97427.755
+[info]   Confidence interval (99.9%): [2044658.960, 2794978.144]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -564,22 +585,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 47.50% complete, ETA 00:02:55
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 245800.190 ops/s
-[info] # Warmup Iteration   2: 247050.982 ops/s
-[info] # Warmup Iteration   3: 229960.496 ops/s
-[info] Iteration   1: 245529.551 ops/s
-[info] Iteration   2: 240670.741 ops/s
-[info] Iteration   3: 232274.307 ops/s
-[info] Iteration   4: 233688.514 ops/s
-[info] Iteration   5: 244044.700 ops/s
+[info] # Warmup Iteration   1: 247041.818 ops/s
+[info] # Warmup Iteration   2: 246095.891 ops/s
+[info] # Warmup Iteration   3: 250465.407 ops/s
+[info] Iteration   1: 249438.504 ops/s
+[info] Iteration   2: 240931.286 ops/s
+[info] Iteration   3: 235423.082 ops/s
+[info] Iteration   4: 217897.648 ops/s
+[info] Iteration   5: 250350.790 ops/s
 [info] 
 [info] 
-[info] Result: 239241.563 ±(99.9%) 23106.308 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (232274.307, 239241.563, 245529.551), stdev = 6000.635
-[info]   Confidence interval (99.9%): [216135.255, 262347.870]
+[info] Result: 238808.262 ±(99.9%) 50919.305 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (217897.648, 238808.262, 250350.790), stdev = 13223.582
+[info]   Confidence interval (99.9%): [187888.957, 289727.567]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -592,22 +613,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 50.00% complete, ETA 00:02:47
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 46208657.382 ops/s
-[info] # Warmup Iteration   2: 46888349.003 ops/s
-[info] # Warmup Iteration   3: 49148368.464 ops/s
-[info] Iteration   1: 49643898.433 ops/s
-[info] Iteration   2: 49324756.008 ops/s
-[info] Iteration   3: 44403159.490 ops/s
-[info] Iteration   4: 50295526.467 ops/s
-[info] Iteration   5: 49751576.651 ops/s
+[info] # Warmup Iteration   1: 46953980.567 ops/s
+[info] # Warmup Iteration   2: 47947017.635 ops/s
+[info] # Warmup Iteration   3: 50915469.093 ops/s
+[info] Iteration   1: 44042362.885 ops/s
+[info] Iteration   2: 42977039.915 ops/s
+[info] Iteration   3: 47498091.043 ops/s
+[info] Iteration   4: 49933948.028 ops/s
+[info] Iteration   5: 44430194.564 ops/s
 [info] 
 [info] 
-[info] Result: 48683783.410 ±(99.9%) 9312331.939 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (44403159.490, 48683783.410, 50295526.467), stdev = 2418383.032
-[info]   Confidence interval (99.9%): [39371451.471, 57996115.349]
+[info] Result: 45776327.287 ±(99.9%) 11044200.656 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (42977039.915, 45776327.287, 49933948.028), stdev = 2868143.838
+[info]   Confidence interval (99.9%): [34732126.631, 56820527.944]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -620,22 +641,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 52.50% complete, ETA 00:02:38
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 520507.286 ops/s
-[info] # Warmup Iteration   2: 623696.049 ops/s
-[info] # Warmup Iteration   3: 624032.896 ops/s
-[info] Iteration   1: 616202.811 ops/s
-[info] Iteration   2: 592009.044 ops/s
-[info] Iteration   3: 572644.753 ops/s
-[info] Iteration   4: 516577.642 ops/s
-[info] Iteration   5: 586652.670 ops/s
+[info] # Warmup Iteration   1: 520233.534 ops/s
+[info] # Warmup Iteration   2: 615543.142 ops/s
+[info] # Warmup Iteration   3: 624015.839 ops/s
+[info] Iteration   1: 610996.731 ops/s
+[info] Iteration   2: 553895.161 ops/s
+[info] Iteration   3: 588444.696 ops/s
+[info] Iteration   4: 574533.743 ops/s
+[info] Iteration   5: 562944.950 ops/s
 [info] 
 [info] 
-[info] Result: 576817.384 ±(99.9%) 143109.437 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (516577.642, 576817.384, 616202.811), stdev = 37165.066
-[info]   Confidence interval (99.9%): [433707.947, 719926.821]
+[info] Result: 578163.056 ±(99.9%) 86477.948 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (553895.161, 578163.056, 610996.731), stdev = 22458.048
+[info]   Confidence interval (99.9%): [491685.108, 664641.004]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -648,22 +669,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 55.00% complete, ETA 00:02:30
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 4529.825 ops/s
-[info] # Warmup Iteration   2: 4955.305 ops/s
-[info] # Warmup Iteration   3: 5159.464 ops/s
-[info] Iteration   1: 5166.951 ops/s
-[info] Iteration   2: 4870.356 ops/s
-[info] Iteration   3: 5169.462 ops/s
-[info] Iteration   4: 4539.476 ops/s
-[info] Iteration   5: 4498.694 ops/s
+[info] # Warmup Iteration   1: 4542.878 ops/s
+[info] # Warmup Iteration   2: 5174.878 ops/s
+[info] # Warmup Iteration   3: 5173.053 ops/s
+[info] Iteration   1: 5196.162 ops/s
+[info] Iteration   2: 5124.150 ops/s
+[info] Iteration   3: 4810.329 ops/s
+[info] Iteration   4: 5189.210 ops/s
+[info] Iteration   5: 4688.447 ops/s
 [info] 
 [info] 
-[info] Result: 4848.987 ±(99.9%) 1251.850 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (4498.694, 4848.987, 5169.462), stdev = 325.102
-[info]   Confidence interval (99.9%): [3597.137, 6100.838]
+[info] Result: 5001.660 ±(99.9%) 908.621 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (4688.447, 5001.660, 5196.162), stdev = 235.966
+[info]   Confidence interval (99.9%): [4093.039, 5910.280]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -676,22 +697,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 57.50% complete, ETA 00:02:22
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 23.742 ops/s
-[info] # Warmup Iteration   2: 25.239 ops/s
-[info] # Warmup Iteration   3: 24.965 ops/s
-[info] Iteration   1: 25.944 ops/s
-[info] Iteration   2: 25.582 ops/s
-[info] Iteration   3: 24.582 ops/s
-[info] Iteration   4: 25.609 ops/s
-[info] Iteration   5: 23.831 ops/s
+[info] # Warmup Iteration   1: 24.319 ops/s
+[info] # Warmup Iteration   2: 27.457 ops/s
+[info] # Warmup Iteration   3: 24.422 ops/s
+[info] Iteration   1: 27.708 ops/s
+[info] Iteration   2: 25.235 ops/s
+[info] Iteration   3: 26.012 ops/s
+[info] Iteration   4: 27.181 ops/s
+[info] Iteration   5: 26.404 ops/s
 [info] 
 [info] 
-[info] Result: 25.109 ±(99.9%) 3.380 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (23.831, 25.109, 25.944), stdev = 0.878
-[info]   Confidence interval (99.9%): [21.729, 28.489]
+[info] Result: 26.508 ±(99.9%) 3.739 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (25.235, 26.508, 27.708), stdev = 0.971
+[info]   Confidence interval (99.9%): [22.769, 30.246]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -704,22 +725,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 60.00% complete, ETA 00:02:13
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 45217034.460 ops/s
-[info] # Warmup Iteration   2: 47443068.516 ops/s
-[info] # Warmup Iteration   3: 52330213.365 ops/s
-[info] Iteration   1: 52433761.838 ops/s
-[info] Iteration   2: 52733269.006 ops/s
-[info] Iteration   3: 52930326.621 ops/s
-[info] Iteration   4: 52707232.317 ops/s
-[info] Iteration   5: 52598846.918 ops/s
+[info] # Warmup Iteration   1: 46314423.227 ops/s
+[info] # Warmup Iteration   2: 48159585.298 ops/s
+[info] # Warmup Iteration   3: 46554405.879 ops/s
+[info] Iteration   1: 52781158.197 ops/s
+[info] Iteration   2: 53566459.556 ops/s
+[info] Iteration   3: 46581553.372 ops/s
+[info] Iteration   4: 46797390.978 ops/s
+[info] Iteration   5: 53498645.712 ops/s
 [info] 
 [info] 
-[info] Result: 52680687.340 ±(99.9%) 703360.185 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (52433761.838, 52680687.340, 52930326.621), stdev = 182660.406
-[info]   Confidence interval (99.9%): [51977327.156, 53384047.525]
+[info] Result: 50645041.563 ±(99.9%) 13957865.255 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (46581553.372, 50645041.563, 53566459.556), stdev = 3624813.282
+[info]   Confidence interval (99.9%): [36687176.308, 64602906.818]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -732,22 +753,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 62.50% complete, ETA 00:02:05
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 456623.079 ops/s
-[info] # Warmup Iteration   2: 557027.589 ops/s
-[info] # Warmup Iteration   3: 563261.568 ops/s
-[info] Iteration   1: 563201.937 ops/s
-[info] Iteration   2: 538368.261 ops/s
-[info] Iteration   3: 493475.165 ops/s
-[info] Iteration   4: 506793.899 ops/s
-[info] Iteration   5: 481727.843 ops/s
+[info] # Warmup Iteration   1: 431703.873 ops/s
+[info] # Warmup Iteration   2: 554665.733 ops/s
+[info] # Warmup Iteration   3: 457262.226 ops/s
+[info] Iteration   1: 513058.189 ops/s
+[info] Iteration   2: 522529.885 ops/s
+[info] Iteration   3: 499293.703 ops/s
+[info] Iteration   4: 522244.830 ops/s
+[info] Iteration   5: 461813.069 ops/s
 [info] 
 [info] 
-[info] Result: 516713.421 ±(99.9%) 129047.113 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (481727.843, 516713.421, 563201.937), stdev = 33513.126
-[info]   Confidence interval (99.9%): [387666.308, 645760.534]
+[info] Result: 503787.935 ±(99.9%) 97413.353 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (461813.069, 503787.935, 522529.885), stdev = 25297.938
+[info]   Confidence interval (99.9%): [406374.582, 601201.288]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -760,22 +781,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 65.00% complete, ETA 00:01:57
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 10213.104 ops/s
-[info] # Warmup Iteration   2: 12443.145 ops/s
-[info] # Warmup Iteration   3: 12579.741 ops/s
-[info] Iteration   1: 12489.165 ops/s
-[info] Iteration   2: 12616.426 ops/s
-[info] Iteration   3: 11975.979 ops/s
-[info] Iteration   4: 11471.677 ops/s
-[info] Iteration   5: 12517.956 ops/s
+[info] # Warmup Iteration   1: 10438.310 ops/s
+[info] # Warmup Iteration   2: 12814.426 ops/s
+[info] # Warmup Iteration   3: 11888.165 ops/s
+[info] Iteration   1: 12548.218 ops/s
+[info] Iteration   2: 12229.638 ops/s
+[info] Iteration   3: 12281.953 ops/s
+[info] Iteration   4: 12236.227 ops/s
+[info] Iteration   5: 11199.269 ops/s
 [info] 
 [info] 
-[info] Result: 12214.241 ±(99.9%) 1864.433 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (11471.677, 12214.241, 12616.426), stdev = 484.187
-[info]   Confidence interval (99.9%): [10349.808, 14078.673]
+[info] Result: 12099.061 ±(99.9%) 2001.485 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (11199.269, 12099.061, 12548.218), stdev = 519.779
+[info]   Confidence interval (99.9%): [10097.576, 14100.546]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -788,22 +809,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 67.50% complete, ETA 00:01:48
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 80.268 ops/s
-[info] # Warmup Iteration   2: 92.407 ops/s
-[info] # Warmup Iteration   3: 88.124 ops/s
-[info] Iteration   1: 92.682 ops/s
-[info] Iteration   2: 88.269 ops/s
-[info] Iteration   3: 80.980 ops/s
-[info] Iteration   4: 93.128 ops/s
-[info] Iteration   5: 92.559 ops/s
+[info] # Warmup Iteration   1: 81.815 ops/s
+[info] # Warmup Iteration   2: 87.326 ops/s
+[info] # Warmup Iteration   3: 81.289 ops/s
+[info] Iteration   1: 92.773 ops/s
+[info] Iteration   2: 92.882 ops/s
+[info] Iteration   3: 92.150 ops/s
+[info] Iteration   4: 93.041 ops/s
+[info] Iteration   5: 88.418 ops/s
 [info] 
 [info] 
-[info] Result: 89.524 ±(99.9%) 19.893 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (80.980, 89.524, 93.128), stdev = 5.166
-[info]   Confidence interval (99.9%): [69.631, 109.417]
+[info] Result: 91.853 ±(99.9%) 7.506 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (88.418, 91.853, 93.041), stdev = 1.949
+[info]   Confidence interval (99.9%): [84.347, 99.359]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -816,22 +837,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 70.00% complete, ETA 00:01:40
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 45659993.270 ops/s
-[info] # Warmup Iteration   2: 47566113.855 ops/s
-[info] # Warmup Iteration   3: 49646574.453 ops/s
-[info] Iteration   1: 48898820.224 ops/s
-[info] Iteration   2: 48474035.308 ops/s
-[info] Iteration   3: 48729525.459 ops/s
-[info] Iteration   4: 51827368.916 ops/s
-[info] Iteration   5: 52348243.796 ops/s
+[info] # Warmup Iteration   1: 47648672.453 ops/s
+[info] # Warmup Iteration   2: 49036428.482 ops/s
+[info] # Warmup Iteration   3: 53039898.309 ops/s
+[info] Iteration   1: 51959095.402 ops/s
+[info] Iteration   2: 41912517.767 ops/s
+[info] Iteration   3: 47376888.048 ops/s
+[info] Iteration   4: 53440327.736 ops/s
+[info] Iteration   5: 48980725.164 ops/s
 [info] 
 [info] 
-[info] Result: 50055598.741 ±(99.9%) 7202181.623 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (48474035.308, 50055598.741, 52348243.796), stdev = 1870383.696
-[info]   Confidence interval (99.9%): [42853417.118, 57257780.363]
+[info] Result: 48733910.823 ±(99.9%) 17326400.899 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (41912517.767, 48733910.823, 53440327.736), stdev = 4499611.291
+[info]   Confidence interval (99.9%): [31407509.925, 66060311.722]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -844,22 +865,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 72.50% complete, ETA 00:01:32
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 398603.391 ops/s
-[info] # Warmup Iteration   2: 549656.936 ops/s
-[info] # Warmup Iteration   3: 586519.834 ops/s
-[info] Iteration   1: 578996.047 ops/s
-[info] Iteration   2: 558618.119 ops/s
-[info] Iteration   3: 562700.651 ops/s
-[info] Iteration   4: 541711.288 ops/s
-[info] Iteration   5: 520633.768 ops/s
+[info] # Warmup Iteration   1: 396012.207 ops/s
+[info] # Warmup Iteration   2: 554273.817 ops/s
+[info] # Warmup Iteration   3: 519644.085 ops/s
+[info] Iteration   1: 512338.811 ops/s
+[info] Iteration   2: 545938.880 ops/s
+[info] Iteration   3: 584145.545 ops/s
+[info] Iteration   4: 530163.742 ops/s
+[info] Iteration   5: 573220.913 ops/s
 [info] 
 [info] 
-[info] Result: 552531.975 ±(99.9%) 85571.262 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (520633.768, 552531.975, 578996.047), stdev = 22222.585
-[info]   Confidence interval (99.9%): [466960.712, 638103.237]
+[info] Result: 549161.578 ±(99.9%) 114389.879 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (512338.811, 549161.578, 584145.545), stdev = 29706.688
+[info]   Confidence interval (99.9%): [434771.699, 663551.457]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -872,22 +893,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 75.00% complete, ETA 00:01:23
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 7786.105 ops/s
-[info] # Warmup Iteration   2: 13759.370 ops/s
-[info] # Warmup Iteration   3: 14214.501 ops/s
-[info] Iteration   1: 14347.356 ops/s
-[info] Iteration   2: 13996.948 ops/s
-[info] Iteration   3: 14383.754 ops/s
-[info] Iteration   4: 13094.698 ops/s
-[info] Iteration   5: 14271.928 ops/s
+[info] # Warmup Iteration   1: 7803.655 ops/s
+[info] # Warmup Iteration   2: 14004.538 ops/s
+[info] # Warmup Iteration   3: 12369.281 ops/s
+[info] Iteration   1: 14812.159 ops/s
+[info] Iteration   2: 15543.213 ops/s
+[info] Iteration   3: 12442.614 ops/s
+[info] Iteration   4: 15645.104 ops/s
+[info] Iteration   5: 14607.020 ops/s
 [info] 
 [info] 
-[info] Result: 14018.937 ±(99.9%) 2073.329 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (13094.698, 14018.937, 14383.754), stdev = 538.437
-[info]   Confidence interval (99.9%): [11945.608, 16092.265]
+[info] Result: 14610.022 ±(99.9%) 4976.414 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (12442.614, 14610.022, 15645.104), stdev = 1292.359
+[info]   Confidence interval (99.9%): [9633.608, 19586.436]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -900,22 +921,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 77.50% complete, ETA 00:01:15
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 71.493 ops/s
-[info] # Warmup Iteration   2: 94.470 ops/s
-[info] # Warmup Iteration   3: 96.743 ops/s
-[info] Iteration   1: 101.561 ops/s
-[info] Iteration   2: 99.400 ops/s
-[info] Iteration   3: 100.427 ops/s
-[info] Iteration   4: 104.819 ops/s
-[info] Iteration   5: 105.546 ops/s
+[info] # Warmup Iteration   1: 74.617 ops/s
+[info] # Warmup Iteration   2: 100.357 ops/s
+[info] # Warmup Iteration   3: 100.779 ops/s
+[info] Iteration   1: 103.212 ops/s
+[info] Iteration   2: 103.114 ops/s
+[info] Iteration   3: 105.181 ops/s
+[info] Iteration   4: 101.494 ops/s
+[info] Iteration   5: 97.617 ops/s
 [info] 
 [info] 
-[info] Result: 102.350 ±(99.9%) 10.429 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (99.400, 102.350, 105.546), stdev = 2.708
-[info]   Confidence interval (99.9%): [91.922, 112.779]
+[info] Result: 102.124 ±(99.9%) 10.928 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (97.617, 102.124, 105.181), stdev = 2.838
+[info]   Confidence interval (99.9%): [91.196, 113.052]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -928,22 +949,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 80.00% complete, ETA 00:01:06
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 322381600.287 ops/s
-[info] # Warmup Iteration   2: 334606207.689 ops/s
-[info] # Warmup Iteration   3: 352252533.784 ops/s
-[info] Iteration   1: 344580892.690 ops/s
-[info] Iteration   2: 365791297.861 ops/s
-[info] Iteration   3: 348193556.974 ops/s
-[info] Iteration   4: 348393059.548 ops/s
-[info] Iteration   5: 369192285.682 ops/s
+[info] # Warmup Iteration   1: 331932920.264 ops/s
+[info] # Warmup Iteration   2: 334321982.210 ops/s
+[info] # Warmup Iteration   3: 342083749.083 ops/s
+[info] Iteration   1: 352110773.209 ops/s
+[info] Iteration   2: 340042657.162 ops/s
+[info] Iteration   3: 310391532.629 ops/s
+[info] Iteration   4: 335424267.729 ops/s
+[info] Iteration   5: 363503259.870 ops/s
 [info] 
 [info] 
-[info] Result: 355230218.551 ±(99.9%) 43741061.083 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (344580892.690, 355230218.551, 369192285.682), stdev = 11359414.658
-[info]   Confidence interval (99.9%): [311489157.468, 398971279.634]
+[info] Result: 340294498.120 ±(99.9%) 76922356.706 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (310391532.629, 340294498.120, 363503259.870), stdev = 19976491.759
+[info]   Confidence interval (99.9%): [263372141.414, 417216854.826]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -956,22 +977,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 82.50% complete, ETA 00:00:58
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 330956272.593 ops/s
-[info] # Warmup Iteration   2: 333932578.651 ops/s
-[info] # Warmup Iteration   3: 372628448.033 ops/s
-[info] Iteration   1: 356378866.758 ops/s
-[info] Iteration   2: 338424006.819 ops/s
-[info] Iteration   3: 323643326.071 ops/s
-[info] Iteration   4: 323568208.603 ops/s
-[info] Iteration   5: 314248177.754 ops/s
+[info] # Warmup Iteration   1: 328765557.793 ops/s
+[info] # Warmup Iteration   2: 332523510.969 ops/s
+[info] # Warmup Iteration   3: 370822919.105 ops/s
+[info] Iteration   1: 365386003.915 ops/s
+[info] Iteration   2: 321258610.959 ops/s
+[info] Iteration   3: 362681987.003 ops/s
+[info] Iteration   4: 369611285.794 ops/s
+[info] Iteration   5: 368119685.616 ops/s
 [info] 
 [info] 
-[info] Result: 331252517.201 ±(99.9%) 63531530.571 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (314248177.754, 331252517.201, 356378866.758), stdev = 16498936.736
-[info]   Confidence interval (99.9%): [267720986.630, 394784047.772]
+[info] Result: 357411514.658 ±(99.9%) 78488510.868 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (321258610.959, 357411514.658, 369611285.794), stdev = 20383217.021
+[info]   Confidence interval (99.9%): [278923003.790, 435900025.526]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -984,22 +1005,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 85.00% complete, ETA 00:00:50
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 333445014.168 ops/s
-[info] # Warmup Iteration   2: 333274128.933 ops/s
-[info] # Warmup Iteration   3: 370084904.953 ops/s
-[info] Iteration   1: 367680094.755 ops/s
-[info] Iteration   2: 369639638.255 ops/s
-[info] Iteration   3: 338502553.879 ops/s
-[info] Iteration   4: 367537885.894 ops/s
-[info] Iteration   5: 370441882.693 ops/s
+[info] # Warmup Iteration   1: 334057161.996 ops/s
+[info] # Warmup Iteration   2: 325543235.482 ops/s
+[info] # Warmup Iteration   3: 349196685.753 ops/s
+[info] Iteration   1: 362644352.102 ops/s
+[info] Iteration   2: 349254393.759 ops/s
+[info] Iteration   3: 362366183.350 ops/s
+[info] Iteration   4: 351523110.098 ops/s
+[info] Iteration   5: 352183082.429 ops/s
 [info] 
 [info] 
-[info] Result: 362760411.095 ±(99.9%) 52438078.410 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (338502553.879, 362760411.095, 370441882.693), stdev = 13618002.439
-[info]   Confidence interval (99.9%): [310322332.686, 415198489.505]
+[info] Result: 355594224.347 ±(99.9%) 24653673.882 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (349254393.759, 355594224.347, 362644352.102), stdev = 6402480.816
+[info]   Confidence interval (99.9%): [330940550.466, 380247898.229]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -1012,22 +1033,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 87.50% complete, ETA 00:00:41
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 333605525.822 ops/s
-[info] # Warmup Iteration   2: 331391498.231 ops/s
-[info] # Warmup Iteration   3: 343046735.934 ops/s
-[info] Iteration   1: 350104112.645 ops/s
-[info] Iteration   2: 324283525.642 ops/s
-[info] Iteration   3: 348333979.599 ops/s
-[info] Iteration   4: 315827211.889 ops/s
-[info] Iteration   5: 342726896.352 ops/s
+[info] # Warmup Iteration   1: 334746578.351 ops/s
+[info] # Warmup Iteration   2: 336152957.450 ops/s
+[info] # Warmup Iteration   3: 305458914.592 ops/s
+[info] Iteration   1: 302965837.554 ops/s
+[info] Iteration   2: 285948732.983 ops/s
+[info] Iteration   3: 210240877.566 ops/s
+[info] Iteration   4: 278572264.754 ops/s
+[info] Iteration   5: 266037458.955 ops/s
 [info] 
 [info] 
-[info] Result: 336255145.225 ±(99.9%) 59035402.319 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (315827211.889, 336255145.225, 350104112.645), stdev = 15331306.507
-[info]   Confidence interval (99.9%): [277219742.906, 395290547.545]
+[info] Result: 268753034.362 ±(99.9%) 136054645.614 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (210240877.566, 268753034.362, 302965837.554), stdev = 35332959.406
+[info]   Confidence interval (99.9%): [132698388.749, 404807679.976]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -1040,22 +1061,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 90.00% complete, ETA 00:00:33
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 102028432.166 ops/s
-[info] # Warmup Iteration   2: 102514848.656 ops/s
-[info] # Warmup Iteration   3: 101126185.110 ops/s
-[info] Iteration   1: 108822071.000 ops/s
-[info] Iteration   2: 109096530.835 ops/s
-[info] Iteration   3: 102975676.751 ops/s
-[info] Iteration   4: 101843635.215 ops/s
-[info] Iteration   5: 95542608.141 ops/s
+[info] # Warmup Iteration   1: 99454939.413 ops/s
+[info] # Warmup Iteration   2: 100333818.811 ops/s
+[info] # Warmup Iteration   3: 110296792.106 ops/s
+[info] Iteration   1: 109588491.006 ops/s
+[info] Iteration   2: 103968809.392 ops/s
+[info] Iteration   3: 110181405.258 ops/s
+[info] Iteration   4: 110295501.705 ops/s
+[info] Iteration   5: 95962024.449 ops/s
 [info] 
 [info] 
-[info] Result: 103656104.388 ±(99.9%) 21599872.856 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (95542608.141, 103656104.388, 109096530.835), stdev = 5609418.387
-[info]   Confidence interval (99.9%): [82056231.532, 125255977.245]
+[info] Result: 105999246.362 ±(99.9%) 23869290.238 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (95962024.449, 105999246.362, 110295501.705), stdev = 6198778.875
+[info]   Confidence interval (99.9%): [82129956.124, 129868536.600]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -1068,22 +1089,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 92.50% complete, ETA 00:00:25
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 20355162.576 ops/s
-[info] # Warmup Iteration   2: 20267121.301 ops/s
-[info] # Warmup Iteration   3: 21321408.854 ops/s
-[info] Iteration   1: 19775859.287 ops/s
-[info] Iteration   2: 19061974.282 ops/s
-[info] Iteration   3: 18513309.933 ops/s
-[info] Iteration   4: 21278065.768 ops/s
-[info] Iteration   5: 19791972.901 ops/s
+[info] # Warmup Iteration   1: 20532039.315 ops/s
+[info] # Warmup Iteration   2: 20658809.543 ops/s
+[info] # Warmup Iteration   3: 18601393.604 ops/s
+[info] Iteration   1: 21237229.299 ops/s
+[info] Iteration   2: 20059177.532 ops/s
+[info] Iteration   3: 21353406.466 ops/s
+[info] Iteration   4: 18940547.034 ops/s
+[info] Iteration   5: 18579691.695 ops/s
 [info] 
 [info] 
-[info] Result: 19684236.434 ±(99.9%) 4001045.523 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (18513309.933, 19684236.434, 21278065.768), stdev = 1039058.816
-[info]   Confidence interval (99.9%): [15683190.912, 23685281.957]
+[info] Result: 20034010.405 ±(99.9%) 4908581.863 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (18579691.695, 20034010.405, 21353406.466), stdev = 1274743.122
+[info]   Confidence interval (99.9%): [15125428.542, 24942592.269]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -1096,22 +1117,22 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 95.00% complete, ETA 00:00:16
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 2427203.152 ops/s
-[info] # Warmup Iteration   2: 2438176.258 ops/s
-[info] # Warmup Iteration   3: 2467715.624 ops/s
-[info] Iteration   1: 2436943.308 ops/s
-[info] Iteration   2: 2256024.157 ops/s
-[info] Iteration   3: 2471123.629 ops/s
-[info] Iteration   4: 2455618.260 ops/s
-[info] Iteration   5: 2170816.100 ops/s
+[info] # Warmup Iteration   1: 2434673.851 ops/s
+[info] # Warmup Iteration   2: 2441932.840 ops/s
+[info] # Warmup Iteration   3: 2413410.000 ops/s
+[info] Iteration   1: 2365395.832 ops/s
+[info] Iteration   2: 2434956.196 ops/s
+[info] Iteration   3: 2282938.234 ops/s
+[info] Iteration   4: 2442842.196 ops/s
+[info] Iteration   5: 2444202.264 ops/s
 [info] 
 [info] 
-[info] Result: 2358105.091 ±(99.9%) 523727.056 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (2170816.100, 2358105.091, 2471123.629), stdev = 136010.253
-[info]   Confidence interval (99.9%): [1834378.035, 2881832.146]
+[info] Result: 2394066.944 ±(99.9%) 270479.501 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (2282938.234, 2394066.944, 2444202.264), stdev = 70242.668
+[info]   Confidence interval (99.9%): [2123587.443, 2664546.446]
 [info] 
 [info] 
-[info] # JMH 1.6 (released 40 days ago, please consider updating!)
+[info] # JMH 1.6 (released 41 days ago, please consider updating!)
 [info] # VM invoker: /usr/lib/jvm/java-7-oracle/jre/bin/java
 [info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
 [info] # Warmup: 3 iterations, 1 s each
@@ -1124,62 +1145,62 @@ Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs
 [info] 
 [info] # Run progress: 97.50% complete, ETA 00:00:08
 [info] # Fork: 1 of 1
-[info] # Warmup Iteration   1: 246036.494 ops/s
-[info] # Warmup Iteration   2: 247175.994 ops/s
-[info] # Warmup Iteration   3: 217226.684 ops/s
-[info] Iteration   1: 247282.590 ops/s
-[info] Iteration   2: 223446.161 ops/s
-[info] Iteration   3: 249187.437 ops/s
-[info] Iteration   4: 227886.585 ops/s
-[info] Iteration   5: 217468.367 ops/s
+[info] # Warmup Iteration   1: 246636.442 ops/s
+[info] # Warmup Iteration   2: 247607.235 ops/s
+[info] # Warmup Iteration   3: 250287.073 ops/s
+[info] Iteration   1: 249072.381 ops/s
+[info] Iteration   2: 247551.527 ops/s
+[info] Iteration   3: 222553.006 ops/s
+[info] Iteration   4: 250356.880 ops/s
+[info] Iteration   5: 250327.884 ops/s
 [info] 
 [info] 
-[info] Result: 233054.228 ±(99.9%) 55289.443 ops/s [Average]
-[info]   Statistics: (min, avg, max) = (217468.367, 233054.228, 249187.437), stdev = 14358.493
-[info]   Confidence interval (99.9%): [177764.785, 288343.671]
+[info] Result: 243972.336 ±(99.9%) 46318.467 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (222553.006, 243972.336, 250356.880), stdev = 12028.759
+[info]   Confidence interval (99.9%): [197653.869, 290290.802]
 [info] 
 [info] 
 [info] # Run complete. Total time: 00:05:34
 [info] 
-[info] Benchmark                             (n)   Mode  Cnt          Score          Error  Units
-[info] JavaFactorial.loop                     10  thrpt    5   54403733.415 ± 14469890.313  ops/s
-[info] JavaFactorial.loop                    100  thrpt    5     641917.245 ±   111953.967  ops/s
-[info] JavaFactorial.loop                   1000  thrpt    5       4991.595 ±      913.618  ops/s
-[info] JavaFactorial.loop                  10000  thrpt    5         27.267 ±        4.450  ops/s
-[info] JavaFactorial.recursion                10  thrpt    5   57601638.470 ±  2097623.029  ops/s
-[info] JavaFactorial.recursion               100  thrpt    5     629900.560 ±   119813.912  ops/s
-[info] JavaFactorial.recursion              1000  thrpt    5      12495.211 ±     2702.245  ops/s
-[info] JavaFactorial.recursion             10000  thrpt    5         89.977 ±       17.109  ops/s
-[info] JavaFactorial.recursionPar             10  thrpt    5   52725181.701 ± 13928643.480  ops/s
-[info] JavaFactorial.recursionPar            100  thrpt    5     646541.202 ±    75259.591  ops/s
-[info] JavaFactorial.recursionPar           1000  thrpt    5      14296.648 ±     3489.134  ops/s
-[info] JavaFactorial.recursionPar          10000  thrpt    5        105.207 ±        9.965  ops/s
-[info] JavaSumOfArithmeticSeries.formula      10  thrpt    5  337289427.785 ± 69140256.324  ops/s
-[info] JavaSumOfArithmeticSeries.formula     100  thrpt    5  354349242.966 ± 76051259.011  ops/s
-[info] JavaSumOfArithmeticSeries.formula    1000  thrpt    5  358587513.393 ± 33631260.910  ops/s
-[info] JavaSumOfArithmeticSeries.formula   10000  thrpt    5  357125966.732 ± 63142270.817  ops/s
-[info] JavaSumOfArithmeticSeries.loop         10  thrpt    5  104342593.642 ± 22819962.644  ops/s
-[info] JavaSumOfArithmeticSeries.loop        100  thrpt    5   19398478.022 ±  4209531.455  ops/s
-[info] JavaSumOfArithmeticSeries.loop       1000  thrpt    5    2339519.883 ±   542331.603  ops/s
-[info] JavaSumOfArithmeticSeries.loop      10000  thrpt    5     239241.563 ±    23106.308  ops/s
-[info] ScalaFactorial.loop                    10  thrpt    5   48683783.410 ±  9312331.939  ops/s
-[info] ScalaFactorial.loop                   100  thrpt    5     576817.384 ±   143109.437  ops/s
-[info] ScalaFactorial.loop                  1000  thrpt    5       4848.987 ±     1251.850  ops/s
-[info] ScalaFactorial.loop                 10000  thrpt    5         25.109 ±        3.380  ops/s
-[info] ScalaFactorial.recursion               10  thrpt    5   52680687.340 ±   703360.185  ops/s
-[info] ScalaFactorial.recursion              100  thrpt    5     516713.421 ±   129047.113  ops/s
-[info] ScalaFactorial.recursion             1000  thrpt    5      12214.241 ±     1864.433  ops/s
-[info] ScalaFactorial.recursion            10000  thrpt    5         89.524 ±       19.893  ops/s
-[info] ScalaFactorial.recursionPar            10  thrpt    5   50055598.741 ±  7202181.623  ops/s
-[info] ScalaFactorial.recursionPar           100  thrpt    5     552531.975 ±    85571.262  ops/s
-[info] ScalaFactorial.recursionPar          1000  thrpt    5      14018.937 ±     2073.329  ops/s
-[info] ScalaFactorial.recursionPar         10000  thrpt    5        102.350 ±       10.429  ops/s
-[info] ScalaSumOfArithmeticSeries.formula     10  thrpt    5  355230218.551 ± 43741061.083  ops/s
-[info] ScalaSumOfArithmeticSeries.formula    100  thrpt    5  331252517.201 ± 63531530.571  ops/s
-[info] ScalaSumOfArithmeticSeries.formula   1000  thrpt    5  362760411.095 ± 52438078.410  ops/s
-[info] ScalaSumOfArithmeticSeries.formula  10000  thrpt    5  336255145.225 ± 59035402.319  ops/s
-[info] ScalaSumOfArithmeticSeries.loop        10  thrpt    5  103656104.388 ± 21599872.856  ops/s
-[info] ScalaSumOfArithmeticSeries.loop       100  thrpt    5   19684236.434 ±  4001045.523  ops/s
-[info] ScalaSumOfArithmeticSeries.loop      1000  thrpt    5    2358105.091 ±   523727.056  ops/s
-[info] ScalaSumOfArithmeticSeries.loop     10000  thrpt    5     233054.228 ±    55289.443  ops/s
-[success] Total time: 341 s, completed Mar 25, 2015 3:37:06 PM
+[info] Benchmark                             (n)   Mode  Cnt          Score           Error  Units
+[info] JavaFactorial.loop                     10  thrpt    5   57403629.677 ±   3675816.802  ops/s
+[info] JavaFactorial.loop                    100  thrpt    5     637548.553 ±    181931.584  ops/s
+[info] JavaFactorial.loop                   1000  thrpt    5       5065.995 ±       852.193  ops/s
+[info] JavaFactorial.loop                  10000  thrpt    5         26.479 ±         4.585  ops/s
+[info] JavaFactorial.recursion                10  thrpt    5   55995917.219 ±   7306170.946  ops/s
+[info] JavaFactorial.recursion               100  thrpt    5     610855.630 ±    137767.667  ops/s
+[info] JavaFactorial.recursion              1000  thrpt    5      12827.234 ±      4936.919  ops/s
+[info] JavaFactorial.recursion             10000  thrpt    5         90.526 ±        15.428  ops/s
+[info] JavaFactorial.recursionPar             10  thrpt    5   56835939.331 ±   8659867.038  ops/s
+[info] JavaFactorial.recursionPar            100  thrpt    5     652957.287 ±    117426.347  ops/s
+[info] JavaFactorial.recursionPar           1000  thrpt    5      14603.248 ±      3686.974  ops/s
+[info] JavaFactorial.recursionPar          10000  thrpt    5        106.869 ±        12.253  ops/s
+[info] JavaSumOfArithmeticSeries.formula      10  thrpt    5  350295729.153 ±  90190815.009  ops/s
+[info] JavaSumOfArithmeticSeries.formula     100  thrpt    5  350333159.311 ±  96420190.911  ops/s
+[info] JavaSumOfArithmeticSeries.formula    1000  thrpt    5  346960025.315 ±  78859616.995  ops/s
+[info] JavaSumOfArithmeticSeries.formula   10000  thrpt    5  360688783.487 ±  55232322.610  ops/s
+[info] JavaSumOfArithmeticSeries.loop         10  thrpt    5  105675025.379 ±   9126274.323  ops/s
+[info] JavaSumOfArithmeticSeries.loop        100  thrpt    5   20194803.017 ±   4269800.058  ops/s
+[info] JavaSumOfArithmeticSeries.loop       1000  thrpt    5    2419818.552 ±    375159.592  ops/s
+[info] JavaSumOfArithmeticSeries.loop      10000  thrpt    5     238808.262 ±     50919.305  ops/s
+[info] ScalaFactorial.loop                    10  thrpt    5   45776327.287 ±  11044200.656  ops/s
+[info] ScalaFactorial.loop                   100  thrpt    5     578163.056 ±     86477.948  ops/s
+[info] ScalaFactorial.loop                  1000  thrpt    5       5001.660 ±       908.621  ops/s
+[info] ScalaFactorial.loop                 10000  thrpt    5         26.508 ±         3.739  ops/s
+[info] ScalaFactorial.recursion               10  thrpt    5   50645041.563 ±  13957865.255  ops/s
+[info] ScalaFactorial.recursion              100  thrpt    5     503787.935 ±     97413.353  ops/s
+[info] ScalaFactorial.recursion             1000  thrpt    5      12099.061 ±      2001.485  ops/s
+[info] ScalaFactorial.recursion            10000  thrpt    5         91.853 ±         7.506  ops/s
+[info] ScalaFactorial.recursionPar            10  thrpt    5   48733910.823 ±  17326400.899  ops/s
+[info] ScalaFactorial.recursionPar           100  thrpt    5     549161.578 ±    114389.879  ops/s
+[info] ScalaFactorial.recursionPar          1000  thrpt    5      14610.022 ±      4976.414  ops/s
+[info] ScalaFactorial.recursionPar         10000  thrpt    5        102.124 ±        10.928  ops/s
+[info] ScalaSumOfArithmeticSeries.formula     10  thrpt    5  340294498.120 ±  76922356.706  ops/s
+[info] ScalaSumOfArithmeticSeries.formula    100  thrpt    5  357411514.658 ±  78488510.868  ops/s
+[info] ScalaSumOfArithmeticSeries.formula   1000  thrpt    5  355594224.347 ±  24653673.882  ops/s
+[info] ScalaSumOfArithmeticSeries.formula  10000  thrpt    5  268753034.362 ± 136054645.614  ops/s
+[info] ScalaSumOfArithmeticSeries.loop        10  thrpt    5  105999246.362 ±  23869290.238  ops/s
+[info] ScalaSumOfArithmeticSeries.loop       100  thrpt    5   20034010.405 ±   4908581.863  ops/s
+[info] ScalaSumOfArithmeticSeries.loop      1000  thrpt    5    2394066.944 ±    270479.501  ops/s
+[info] ScalaSumOfArithmeticSeries.loop     10000  thrpt    5     243972.336 ±     46318.467  ops/s
+[success] Total time: 341 s, completed Mar 26, 2015 2:00:20 PM
