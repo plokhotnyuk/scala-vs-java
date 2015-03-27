@@ -7,8 +7,23 @@ object Build extends Build {
     organization := "com.github.plokhotnyuk",
     description := "Scala vs. Java benchmarks",
     scalaVersion := "2.11.6",
+    libraryDependencies ++= Seq(
+      "org.scalatest" %% "scalatest" % "2.2.1" % "test",
+      "org.scalacheck" %% "scalacheck" % "1.12.2" % "test"
+    ),
     javacOptions := Seq(
       "-target", jreVersion,
+      "-Xlint"
+    ),
+    scalacOptions := Seq(
+      "-target:jvm-" + jreVersion,
+      "-optimize",
+      "-deprecation",
+      "-unchecked",
+      "-feature",
+      "-language:implicitConversions",
+      "-Xlog-reflective-calls",
+      "-Xfuture",
       "-Xlint"
     ),
     javaOptions := Seq(
@@ -22,21 +37,6 @@ object Build extends Build {
       "-XX:+UseNUMA",
       "-XX:-UseBiasedLocking",
       "-XX:+AlwaysPreTouch"
-    ),
-    scalacOptions := Seq(
-      "-target:jvm-" + jreVersion,
-      "-optimize",
-      "-deprecation",
-      "-unchecked",
-      "-feature",
-      "-language:implicitConversions",
-      "-Xlog-reflective-calls",
-      "-Xfuture",
-      "-Xlint"
-    ),
-    libraryDependencies ++= Seq(
-      "org.scalatest" %% "scalatest" % "2.2.1" % "test",
-      "org.scalacheck" %% "scalacheck" % "1.12.2" % "test"
     )
   ).settings(pl.project13.scala.sbt.SbtJmh.jmhSettings: _*)
 }

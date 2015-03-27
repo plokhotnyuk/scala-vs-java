@@ -16,10 +16,10 @@ class SumOfArithmeticSeriesSpec extends WordSpec with PropertyChecks with Matche
   }
 
   def checkJavaSumOfArithmeticSeries(f: JavaSumOfArithmeticSeries => Long): Unit =
-    forAll(choose(1, 10000))(i => f(new JavaSumOfArithmeticSeries { n = i }) should be (sumOfSeries(i)))
+    forAll(choose(1, 10000))(i => f(new JavaSumOfArithmeticSeries { n = i }) should be (sumOfSerie(i)))
 
   def checkScalaSumOfArithmeticSeries(f: ScalaSumOfArithmeticSeries => Long): Unit =
-    forAll(choose(1, 10000))(i => f(new ScalaSumOfArithmeticSeries { n = i }) should be (sumOfSeries(i)))
+    forAll(choose(1, 10000))(i => f(new ScalaSumOfArithmeticSeries { n = i }) should be (sumOfSerie(i)))
 
-  val sumOfSeries: Stream[Long] = 0L #:: sumOfSeries.zip(Stream.from(1)).map { case (s, i) => s + i }
+  val sumOfSerie: Stream[Long] = 0 #:: sumOfSerie.zip(Stream.from(1)).map { case (s, i) => s + i }
 }

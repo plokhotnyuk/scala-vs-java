@@ -20,10 +20,10 @@ class FactorialSpec extends WordSpec with PropertyChecks with Matchers {
   }
 
   def checkJavaFactorial(f: JavaFactorial => BigInteger): Unit =
-    forAll(choose(1, 1000))(i => f(new JavaFactorial { n = i }) should be (factorials(i).bigInteger))
+    forAll(choose(1, 1000))(i => f(new JavaFactorial { n = i }) should be (factorial(i).bigInteger))
 
   def checkScalaFactorial(f: ScalaFactorial => BigInt): Unit =
-    forAll(choose(1, 1000))(i => f(new ScalaFactorial { n = i }) should be (factorials(i)))
+    forAll(choose(1, 1000))(i => f(new ScalaFactorial { n = i }) should be (factorial(i)))
 
-  val factorials: Stream[BigInt] = BigInt(1) #:: factorials.zip(Stream.from(1)).map { case (p, i) => p * i }
+  val factorial: Stream[BigInt] = 1 #:: factorial.zip(Stream.from(1)).map { case (p, i) => p * i }
 }
