@@ -56,7 +56,7 @@ public class JavaFactorial {
     }
 
     private BigInteger recursion(final int n1, final int n2) {
-        if (n2 - n1 < 50) {
+        if (n2 - n1 < 65) {
             return loop(n1, n2);
         }
         final int nm = (n1 + n2) >> 1;
@@ -64,7 +64,7 @@ public class JavaFactorial {
     }
 
     private BigInteger recursePar(final int n1, final int n2) {
-        if (n2 - n1 < 500) {
+        if (n2 - n1 < 700) {
             return recursion(n1, n2);
         }
         final int nm = (n1 + n2) >> 1;

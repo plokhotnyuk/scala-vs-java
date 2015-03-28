@@ -22,7 +22,7 @@ public class JavaFibonacci {
 
     @Benchmark
     public BigInteger doublingLoop() {
-        if (n > 150) {
+        if (n > 128) {
             return doublingLoop(n, BigInteger.ZERO, BigInteger.ONE);
         }
         return n > 92 ?

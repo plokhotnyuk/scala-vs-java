@@ -19,7 +19,7 @@ class ScalaFibonacci {
 
   @Benchmark
   def doublingLoop(): BigInt =
-    if (n > 150) doublingLoop(n, 31 - Integer.numberOfLeadingZeros(n), 0, 1)
+    if (n > 128) doublingLoop(n, 31 - Integer.numberOfLeadingZeros(n), 0, 1)
     else if (n > 92) loop(n - 91, 4660046610375530309L, 7540113804746346429L)
     else fastLoop(n)
 

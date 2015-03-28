@@ -40,14 +40,14 @@ class ScalaFactorial {
   }
 
   private def recursion(n1: Int, n2: Int): BigInt =
-    if (n2 - n1 < 50) loop(n1, n2)
+    if (n2 - n1 < 65) loop(n1, n2)
     else {
       val nm = (n1 + n2) >> 1
       recursion(nm + 1, n2) * recursion(n1, nm)
     }
 
   private def recursionPar(n1: Int, n2: Int): BigInt =
-    if (n2 - n1 < 500) recursion(n1, n2)
+    if (n2 - n1 < 700) recursion(n1, n2)
     else {
       val nm = (n1 + n2) >> 1
       val f = Future(recursionPar(nm + 1, n2))
