@@ -78,8 +78,7 @@ class ScalaFactorial {
         val h1 = n >> i
         val o1 = (h1 - 1) | 1
         val p1 = if (o < o1) p * recursion2(o + 2, o1) else p
-        val r1 = if (o < o1) r * p1 else r
-        split(n, i - 1, s + h, h1, o1, p1, r1)
+        split(n, i - 1, s + h, h1, o1, p1, if (o < o1) r * p1 else r)
       } else r << s
 
     split(n, 31 - Integer.numberOfLeadingZeros(n), 0, 0, 1, 1, 1)

@@ -112,16 +112,15 @@ public class JavaFactorial {
         int i = 31 - Integer.numberOfLeadingZeros(n), s = 0, h = 0, o = 1;
         BigInteger p = BigInteger.ONE, r = BigInteger.ONE;
         while (i >= 0) {
-            int h1 = n >> i;
-            int o1 = (h1 - 1) | 1;
+            s += h;
+            h = n >> i;
+            int o1 = (h - 1) | 1;
             if (o < o1) {
                 p = p.multiply(recursion2(o + 2, o1));
                 r = r.multiply(p);
             }
-            i--;
-            s += h;
-            h = h1;
             o = o1;
+            i--;
         }
         return r.shiftLeft(s);
     }
