@@ -11,12 +11,14 @@ class FactorialSpec extends WordSpec with PropertyChecks with Matchers {
     "calculate factorial by loop" in checkJavaFactorial(_.loop())
     "calculate factorial by recursion" in checkJavaFactorial(_.recursion())
     "calculate factorial by recursionPar" in checkJavaFactorial(_.recursionPar())
+    "calculate factorial by split" in checkJavaFactorial(_.split())
   }
 
   "ScalaFactorial" should {
     "calculate factorial by loop" in checkScalaFactorial(_.loop())
     "calculate factorial by recursion" in checkScalaFactorial(_.recursion())
     "calculate factorial by recursionPar" in checkScalaFactorial(_.recursionPar())
+    "calculate factorial by split" in checkScalaFactorial(_.split())
   }
 
   def checkJavaFactorial(f: JavaFactorial => BigInteger): Unit =

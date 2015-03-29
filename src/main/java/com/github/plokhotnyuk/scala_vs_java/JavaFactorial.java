@@ -30,6 +30,11 @@ public class JavaFactorial {
         return n > 20 ? recursePar(1, n) : BigInteger.valueOf(fastLoop(1, n));
     }
 
+    @Benchmark
+    public BigInteger split() {
+        return n > 180 ? split(n) : (n > 20 ? recursion(1, n) : BigInteger.valueOf(fastLoop(1, n)));
+    }
+
     private long fastLoop(final int n1, int n2) {
         long p = n1;
         while (n2 > n1) {
@@ -40,9 +45,8 @@ public class JavaFactorial {
     }
 
     private BigInteger loop(int n1, final int n2) {
-        long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2));
+        long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2)), pp = 1;
         BigInteger p = BigInteger.ONE;
-        long pp = 1;
         while (n1 <= n2) {
             if (pp <= l) {
                 pp *= n1;
@@ -79,5 +83,46 @@ public class JavaFactorial {
             pool.execute(t);
         }
         return recursePar(n1, nm).multiply(t.join());
+    }
+
+    private BigInteger loop2(int n1, final int n2) {
+        long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2)), pp = 1;
+        BigInteger p = BigInteger.ONE;
+        while (n1 <= n2) {
+            if (pp <= l) {
+                pp *= n1;
+            } else {
+                p = p.multiply(BigInteger.valueOf(pp));
+                pp = n1;
+            }
+            n1 += 2;
+        }
+        return p.multiply(BigInteger.valueOf(pp));
+    }
+
+    private BigInteger recursion2(final int n1, final int n2) {
+        if (n2 - n1 < 65) {
+            return loop2(n1, n2);
+        }
+        final int nm = ((n1 + n2) >> 2) << 1;
+        return recursion2(nm + 1, n2).multiply(recursion2(n1, nm - 1));
+    }
+
+    private BigInteger split(int n) {
+        int i = 31 - Integer.numberOfLeadingZeros(n), s = 0, h = 0, o = 1;
+        BigInteger p = BigInteger.ONE, r = BigInteger.ONE;
+        while (i >= 0) {
+            int h1 = n >> i;
+            int o1 = h1 - 1 + (h1 & 1);
+            if (o < o1) {
+                p = p.multiply(recursion2(o + 2, o1));
+                r = r.multiply(p);
+            }
+            s += h;
+            h = h1;
+            o = o1;
+            i--;
+        }
+        return r.shiftLeft(s);
     }
 }
