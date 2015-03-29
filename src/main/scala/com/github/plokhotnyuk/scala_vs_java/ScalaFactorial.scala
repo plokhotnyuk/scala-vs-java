@@ -33,11 +33,11 @@ class ScalaFactorial {
 
   private def loop(n1: Int, n2: Int): BigInt = {
     @annotation.tailrec
-    def loop(n1: Int, n2: Int, l: Long, pp: Long, p: BigInt): BigInt =
+    def loop(n1: Int, n2: Int, l: Long, p: Long, r: BigInt): BigInt =
       if (n1 <= n2) {
-        if (pp < l) loop(n1 + 1, n2, l, pp * n1, p)
-        else loop(n1 + 1, n2, l, n1, p * pp)
-      } else p * pp
+        if (p < l) loop(n1 + 1, n2, l, p * n1, r)
+        else loop(n1 + 1, n2, l, n1, r * p)
+      } else r * p
 
     loop(n1, n2, Long.MaxValue >> (32 - Integer.numberOfLeadingZeros(n2)), 1, 1)
   }
@@ -59,17 +59,17 @@ class ScalaFactorial {
 
   private def split(n: Int): BigInt = {
     @annotation.tailrec
-    def loop2(n1: Int, n2: Int, l: Long, pp: Long, p: BigInt): BigInt =
+    def loop2(n1: Int, n2: Int, l: Long, p: Long, r: BigInt): BigInt =
       if (n1 <= n2) {
-        if (pp < l) loop2(n1 + 2, n2, l, pp * n1, p)
-        else loop2(n1 + 2, n2, l, n1, p * pp)
-      } else p * pp
+        if (p < l) loop2(n1 + 2, n2, l, p * n1, r)
+        else loop2(n1 + 2, n2, l, n1, r * p)
+      } else r * p
 
     def recursion2(n1: Int, n2: Int): BigInt =
       if (n2 - n1 < 65) loop2(n1, n2, Long.MaxValue >> (32 - Integer.numberOfLeadingZeros(n2)), 1, 1)
       else {
-        val nm = ((n1 + n2) >> 2) << 1
-        recursion2(nm + 1, n2) * recursion2(n1, nm - 1)
+        val nm = ((n1 + n2) >> 1) | 1
+        recursion2(nm, n2) * recursion2(n1, nm - 2)
       }
 
     @annotation.tailrec

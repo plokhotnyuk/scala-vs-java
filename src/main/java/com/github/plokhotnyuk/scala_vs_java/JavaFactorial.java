@@ -45,18 +45,18 @@ public class JavaFactorial {
     }
 
     private BigInteger loop(int n1, final int n2) {
-        long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2)), pp = 1;
-        BigInteger p = BigInteger.ONE;
+        long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2)), p = 1;
+        BigInteger r = BigInteger.ONE;
         while (n1 <= n2) {
-            if (pp <= l) {
-                pp *= n1;
+            if (p <= l) {
+                p *= n1;
             } else {
-                p = p.multiply(BigInteger.valueOf(pp));
-                pp = n1;
+                r = r.multiply(BigInteger.valueOf(p));
+                p = n1;
             }
             n1++;
         }
-        return p.multiply(BigInteger.valueOf(pp));
+        return r.multiply(BigInteger.valueOf(p));
     }
 
     private BigInteger recursion(final int n1, final int n2) {
@@ -86,26 +86,26 @@ public class JavaFactorial {
     }
 
     private BigInteger loop2(int n1, final int n2) {
-        long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2)), pp = 1;
-        BigInteger p = BigInteger.ONE;
+        long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2)), p = 1;
+        BigInteger r = BigInteger.ONE;
         while (n1 <= n2) {
-            if (pp <= l) {
-                pp *= n1;
+            if (p <= l) {
+                p *= n1;
             } else {
-                p = p.multiply(BigInteger.valueOf(pp));
-                pp = n1;
+                r = r.multiply(BigInteger.valueOf(p));
+                p = n1;
             }
             n1 += 2;
         }
-        return p.multiply(BigInteger.valueOf(pp));
+        return r.multiply(BigInteger.valueOf(p));
     }
 
     private BigInteger recursion2(final int n1, final int n2) {
         if (n2 - n1 < 65) {
             return loop2(n1, n2);
         }
-        final int nm = ((n1 + n2) >> 2) << 1;
-        return recursion2(nm + 1, n2).multiply(recursion2(n1, nm - 1));
+        final int nm = ((n1 + n2) >> 1) | 1;
+        return recursion2(nm, n2).multiply(recursion2(n1, nm - 2));
     }
 
     private BigInteger split(int n) {
