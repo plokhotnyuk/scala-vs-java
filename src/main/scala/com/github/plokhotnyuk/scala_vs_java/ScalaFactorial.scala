@@ -76,7 +76,7 @@ class ScalaFactorial {
     def split(n: Int, i: Int, s: Int, h: Int, o: Int, p: BigInt, r: BigInt): BigInt =
       if (i >= 0) {
         val h1 = n >> i
-        val o1 = h1 - 1 + (h1 & 1)
+        val o1 = (h1 - 1) | 1
         val p1 = if (o < o1) p * recursion2(o + 2, o1) else p
         val r1 = if (o < o1) r * p1 else r
         split(n, i - 1, s + h, h1, o1, p1, r1)
