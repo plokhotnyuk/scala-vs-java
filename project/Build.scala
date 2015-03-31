@@ -7,9 +7,9 @@ object Build extends Build {
     organization := "com.github.plokhotnyuk",
     description := "Scala vs. Java benchmarks",
     scalaVersion := "2.11.6",
+    resolvers += "Scalaz Bintray Repo" at "http://dl.bintray.com/scalaz/releases",
     libraryDependencies ++= Seq(
-      "org.scalatest" %% "scalatest" % "2.2.1" % "test",
-      "org.scalacheck" %% "scalacheck" % "1.12.2" % "test"
+      "org.specs2" %% "specs2-scalacheck" % "3.3" % "test"
     ),
     javacOptions := Seq(
       "-target", jreVersion,
@@ -24,7 +24,8 @@ object Build extends Build {
       "-language:implicitConversions",
       "-Xlog-reflective-calls",
       "-Xfuture",
-      "-Xlint"
+      "-Xlint",
+      "-Yrangepos"
     ),
     javaOptions := Seq(
       "-server",
