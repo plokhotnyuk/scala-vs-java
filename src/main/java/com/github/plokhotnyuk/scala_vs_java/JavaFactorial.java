@@ -45,7 +45,8 @@ public class JavaFactorial {
     }
 
     private BigInteger loop(int n1, final int n2) {
-        long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2)), p = 1;
+        final long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2));
+        long p = 1;
         BigInteger r = BigInteger.ONE;
         while (n1 <= n2) {
             if (p <= l) {
@@ -86,7 +87,8 @@ public class JavaFactorial {
     }
 
     private BigInteger loop2(int n1, final int n2) {
-        long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2)), p = 1;
+        final long l = Long.MAX_VALUE >> (32 - Integer.numberOfLeadingZeros(n2));
+        long p = 1;
         BigInteger r = BigInteger.ONE;
         while (n1 <= n2) {
             if (p <= l) {
@@ -109,17 +111,17 @@ public class JavaFactorial {
     }
 
     private BigInteger split(int n) {
-        int i = 31 - Integer.numberOfLeadingZeros(n), s = 0, h = 0, o = 1;
+        int i = 31 - Integer.numberOfLeadingZeros(n), s = -n, o = 1;
         BigInteger p = BigInteger.ONE, r = BigInteger.ONE;
         while (i >= 0) {
-            s += h;
-            h = n >> i;
+            int h = n >> i;
             int o1 = (h - 1) | 1;
             if (o < o1) {
                 p = p.multiply(recursion2(o + 2, o1));
                 r = r.multiply(p);
             }
             o = o1;
+            s += h;
             i--;
         }
         return r.shiftLeft(s);

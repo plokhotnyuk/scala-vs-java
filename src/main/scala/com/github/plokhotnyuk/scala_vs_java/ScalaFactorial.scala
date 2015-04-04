@@ -73,14 +73,16 @@ class ScalaFactorial {
       }
 
     @annotation.tailrec
-    def split(n: Int, i: Int, s: Int, h: Int, o: Int, p: BigInt, r: BigInt): BigInt =
+    def split(n: Int, i: Int, s: Int, o: Int, p: BigInt, r: BigInt): BigInt =
       if (i >= 0) {
-        val h1 = n >> i
-        val o1 = (h1 - 1) | 1
-        val p1 = if (o < o1) p * recursion2(o + 2, o1) else p
-        split(n, i - 1, s + h, h1, o1, p1, if (o < o1) r * p1 else r)
+        val h = n >> i
+        val o1 = (h - 1) | 1
+        if (o < o1) {
+          val p1 = p * recursion2(o + 2, o1)
+          split(n, i - 1, s + h, o1, p1, r * p1)
+        } else split(n, i - 1, s + h, o1, p, r)
       } else r << s
 
-    split(n, 31 - Integer.numberOfLeadingZeros(n), 0, 0, 1, 1, 1)
+    split(n, 31 - Integer.numberOfLeadingZeros(n), -n, 1, 1, 1)
   }
 }
