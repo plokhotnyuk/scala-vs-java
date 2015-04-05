@@ -1,0 +1,1910 @@
+[info] Loading project definition from /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/project
+[info] Set current project to scala-vs-java (in build file:/home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/)
+[info] Updating {file:/home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/}scala-vs-java...
+[info] Resolving org.scala-lang#scala-library;2.11.6 ...
+[info] Resolving org.openjdk.jmh#jmh-core;1.6 ...
+[info] Resolving net.sf.jopt-simple#jopt-simple;4.6 ...
+[info] Resolving org.apache.commons#commons-math3;3.2 ...
+[info] Resolving org.openjdk.jmh#jmh-generator-bytecode;1.6 ...
+[info] Resolving org.openjdk.jmh#jmh-generator-reflection;1.6 ...
+[info] Resolving org.openjdk.jmh#jmh-generator-asm;1.6 ...
+[info] Resolving org.ow2.asm#asm;5.0.3 ...
+[info] Resolving org.specs2#specs2-scalacheck_2.11;3.3 ...
+[info] Resolving org.specs2#specs2-core_2.11;3.3 ...
+[info] Resolving org.specs2#specs2-matcher_2.11;3.3 ...
+[info] Resolving org.specs2#specs2-common_2.11;3.3 ...
+[info] Resolving org.scalaz#scalaz-core_2.11;7.1.1 ...
+[info] Resolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.2 ...
+[info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.2 ...
+[info] Resolving org.scalaz#scalaz-concurrent_2.11;7.1.1 ...
+[info] Resolving org.scalaz#scalaz-effect_2.11;7.1.1 ...
+[info] Resolving org.scalaz.stream#scalaz-stream_2.11;0.7a ...
+[info] Resolving org.scodec#scodec-bits_2.11;1.0.6 ...
+[info] Resolving org.scala-lang#scala-reflect;2.11.6 ...
+[info] Resolving com.chuusai#shapeless_2.11;2.0.0 ...
+[info] Resolving org.scalacheck#scalacheck_2.11;1.12.2 ...
+[info] Resolving org.scala-sbt#test-interface;1.0 ...
+[info] Resolving org.scala-lang#scala-compiler;2.11.6 ...
+[info] Resolving org.scala-lang.modules#scala-xml_2.11;1.0.3 ...
+[info] Resolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.3 ...
+[info] Resolving jline#jline;2.12.1 ...
+[info] Done updating.
+[info] Compiling 3 Scala sources and 3 Java sources to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/classes...
+[warn] /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/src/main/java/com/github/plokhotnyuk/scala_vs_java/JavaFactorial.java:76: serializable class <anonymous com.github.plokhotnyuk.scala_vs_java.JavaFactorial$1> has no definition of serialVersionUID
+[warn] {
+[warn]             protected BigInteger compute() {
+[warn]                 return recursePar(nm + 1, n2);
+[warn]             }
+[warn]         }
+[info] Generating JMH benchmark Java source files...
+Processing 8 classes from /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/classes with "reflection" generator
+Writing out Java source to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/generated-sources/jmh and resources to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/classes
+[info] Compiling generated JMH benchmarks...
+[info] Compiling 3 Scala sources and 47 Java sources to /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/target/scala-2.11/classes...
+[warn] /home/andriy/Projects/com/github/plokhotnyuk/scala-vs-java/src/main/java/com/github/plokhotnyuk/scala_vs_java/JavaFactorial.java:76: serializable class <anonymous com.github.plokhotnyuk.scala_vs_java.JavaFactorial$1> has no definition of serialVersionUID
+[warn] {
+[warn]             protected BigInteger compute() {
+[warn]                 return recursePar(nm + 1, n2);
+[warn]             }
+[warn]         }
+[info] Running org.openjdk.jmh.Main .*
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.loop
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 0.00% complete, ETA 00:08:32
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 57449552.941 ops/s
+[info] # Warmup Iteration   2: 60260739.457 ops/s
+[info] # Warmup Iteration   3: 63847772.299 ops/s
+[info] Iteration   1: 63467530.825 ops/s
+[info] Iteration   2: 63746157.690 ops/s
+[info] Iteration   3: 63985255.731 ops/s
+[info] Iteration   4: 64465089.584 ops/s
+[info] Iteration   5: 60088418.059 ops/s
+[info] 
+[info] 
+[info] Result: 63150490.378 ±(99.9%) 6740448.904 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (60088418.059, 63150490.378, 64465089.584), stdev = 1750473.175
+[info]   Confidence interval (99.9%): [56410041.474, 69890939.282]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.loop
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 1.56% complete, ETA 00:08:48
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 1307873.598 ops/s
+[info] # Warmup Iteration   2: 1442492.081 ops/s
+[info] # Warmup Iteration   3: 1717330.477 ops/s
+[info] Iteration   1: 1716285.353 ops/s
+[info] Iteration   2: 1671137.160 ops/s
+[info] Iteration   3: 1711002.552 ops/s
+[info] Iteration   4: 1552185.565 ops/s
+[info] Iteration   5: 1624391.544 ops/s
+[info] 
+[info] 
+[info] Result: 1655000.435 ±(99.9%) 263004.011 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (1552185.565, 1655000.435, 1716285.353), stdev = 68301.307
+[info]   Confidence interval (99.9%): [1391996.423, 1918004.446]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.loop
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 3.13% complete, ETA 00:08:38
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 10310.992 ops/s
+[info] # Warmup Iteration   2: 11371.769 ops/s
+[info] # Warmup Iteration   3: 10901.881 ops/s
+[info] Iteration   1: 11223.854 ops/s
+[info] Iteration   2: 11368.523 ops/s
+[info] Iteration   3: 11406.992 ops/s
+[info] Iteration   4: 10728.503 ops/s
+[info] Iteration   5: 9880.724 ops/s
+[info] 
+[info] 
+[info] Result: 10921.719 ±(99.9%) 2471.180 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (9880.724, 10921.719, 11406.992), stdev = 641.758
+[info]   Confidence interval (99.9%): [8450.539, 13392.900]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.loop
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 4.69% complete, ETA 00:08:28
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 51.074 ops/s
+[info] # Warmup Iteration   2: 52.276 ops/s
+[info] # Warmup Iteration   3: 54.154 ops/s
+[info] Iteration   1: 49.950 ops/s
+[info] Iteration   2: 52.610 ops/s
+[info] Iteration   3: 52.792 ops/s
+[info] Iteration   4: 51.778 ops/s
+[info] Iteration   5: 53.214 ops/s
+[info] 
+[info] 
+[info] Result: 52.069 ±(99.9%) 4.984 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (49.950, 52.069, 53.214), stdev = 1.294
+[info]   Confidence interval (99.9%): [47.085, 57.053]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.recursion
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 6.25% complete, ETA 00:08:20
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 49168715.058 ops/s
+[info] # Warmup Iteration   2: 53704290.396 ops/s
+[info] # Warmup Iteration   3: 58499339.494 ops/s
+[info] Iteration   1: 63636011.004 ops/s
+[info] Iteration   2: 55002116.259 ops/s
+[info] Iteration   3: 61842502.121 ops/s
+[info] Iteration   4: 62965977.042 ops/s
+[info] Iteration   5: 57915512.592 ops/s
+[info] 
+[info] 
+[info] Result: 60272423.804 ±(99.9%) 14195938.969 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (55002116.259, 60272423.804, 63636011.004), stdev = 3686640.269
+[info]   Confidence interval (99.9%): [46076484.835, 74468362.772]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.recursion
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 7.81% complete, ETA 00:08:12
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 1168291.912 ops/s
+[info] # Warmup Iteration   2: 1506880.489 ops/s
+[info] # Warmup Iteration   3: 1455003.964 ops/s
+[info] Iteration   1: 1618164.072 ops/s
+[info] Iteration   2: 1619221.786 ops/s
+[info] Iteration   3: 1541212.512 ops/s
+[info] Iteration   4: 1440247.164 ops/s
+[info] Iteration   5: 1433992.902 ops/s
+[info] 
+[info] 
+[info] Result: 1530567.687 ±(99.9%) 350442.841 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (1433992.902, 1530567.687, 1619221.786), stdev = 91008.893
+[info]   Confidence interval (99.9%): [1180124.846, 1881010.528]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.recursion
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 9.38% complete, ETA 00:08:03
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 27324.089 ops/s
+[info] # Warmup Iteration   2: 31676.906 ops/s
+[info] # Warmup Iteration   3: 29553.999 ops/s
+[info] Iteration   1: 33516.313 ops/s
+[info] Iteration   2: 33627.223 ops/s
+[info] Iteration   3: 33981.121 ops/s
+[info] Iteration   4: 33097.524 ops/s
+[info] Iteration   5: 32562.262 ops/s
+[info] 
+[info] 
+[info] Result: 33356.888 ±(99.9%) 2097.509 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (32562.262, 33356.888, 33981.121), stdev = 544.717
+[info]   Confidence interval (99.9%): [31259.379, 35454.398]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.recursion
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 10.94% complete, ETA 00:07:55
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 381.036 ops/s
+[info] # Warmup Iteration   2: 456.831 ops/s
+[info] # Warmup Iteration   3: 456.656 ops/s
+[info] Iteration   1: 454.793 ops/s
+[info] Iteration   2: 458.979 ops/s
+[info] Iteration   3: 460.579 ops/s
+[info] Iteration   4: 448.446 ops/s
+[info] Iteration   5: 447.436 ops/s
+[info] 
+[info] 
+[info] Result: 454.047 ±(99.9%) 22.993 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (447.436, 454.047, 460.579), stdev = 5.971
+[info]   Confidence interval (99.9%): [431.053, 477.040]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.recursionPar
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 12.50% complete, ETA 00:07:46
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 57628186.934 ops/s
+[info] # Warmup Iteration   2: 60286567.893 ops/s
+[info] # Warmup Iteration   3: 63395829.920 ops/s
+[info] Iteration   1: 63763116.707 ops/s
+[info] Iteration   2: 55648908.868 ops/s
+[info] Iteration   3: 51285539.181 ops/s
+[info] Iteration   4: 64247401.918 ops/s
+[info] Iteration   5: 56279625.505 ops/s
+[info] 
+[info] 
+[info] Result: 58244918.436 ±(99.9%) 21570044.700 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (51285539.181, 58244918.436, 64247401.918), stdev = 5601672.110
+[info]   Confidence interval (99.9%): [36674873.736, 79814963.136]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.recursionPar
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 14.06% complete, ETA 00:07:37
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 1152867.170 ops/s
+[info] # Warmup Iteration   2: 1636781.633 ops/s
+[info] # Warmup Iteration   3: 1551302.908 ops/s
+[info] Iteration   1: 1524344.335 ops/s
+[info] Iteration   2: 1608236.218 ops/s
+[info] Iteration   3: 1614294.596 ops/s
+[info] Iteration   4: 1623145.271 ops/s
+[info] Iteration   5: 1529693.301 ops/s
+[info] 
+[info] 
+[info] Result: 1579942.744 ±(99.9%) 187293.540 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (1524344.335, 1579942.744, 1623145.271), stdev = 48639.537
+[info]   Confidence interval (99.9%): [1392649.204, 1767236.284]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.recursionPar
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 15.63% complete, ETA 00:07:29
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 23977.563 ops/s
+[info] # Warmup Iteration   2: 28968.559 ops/s
+[info] # Warmup Iteration   3: 29692.924 ops/s
+[info] Iteration   1: 37856.456 ops/s
+[info] Iteration   2: 37300.279 ops/s
+[info] Iteration   3: 34090.443 ops/s
+[info] Iteration   4: 37815.167 ops/s
+[info] Iteration   5: 38001.183 ops/s
+[info] 
+[info] 
+[info] Result: 37012.705 ±(99.9%) 6372.572 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (34090.443, 37012.705, 38001.183), stdev = 1654.937
+[info]   Confidence interval (99.9%): [30640.133, 43385.278]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.recursionPar
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 17.19% complete, ETA 00:07:20
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 309.475 ops/s
+[info] # Warmup Iteration   2: 529.092 ops/s
+[info] # Warmup Iteration   3: 551.225 ops/s
+[info] Iteration   1: 539.835 ops/s
+[info] Iteration   2: 550.602 ops/s
+[info] Iteration   3: 523.666 ops/s
+[info] Iteration   4: 552.211 ops/s
+[info] Iteration   5: 557.428 ops/s
+[info] 
+[info] 
+[info] Result: 544.748 ±(99.9%) 51.638 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (523.666, 544.748, 557.428), stdev = 13.410
+[info]   Confidence interval (99.9%): [493.110, 596.386]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.split
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 18.75% complete, ETA 00:07:12
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 56970355.820 ops/s
+[info] # Warmup Iteration   2: 60391831.277 ops/s
+[info] # Warmup Iteration   3: 56053135.219 ops/s
+[info] Iteration   1: 60993029.190 ops/s
+[info] Iteration   2: 61913981.404 ops/s
+[info] Iteration   3: 61099814.059 ops/s
+[info] Iteration   4: 63081598.037 ops/s
+[info] Iteration   5: 61718206.229 ops/s
+[info] 
+[info] 
+[info] Result: 61761325.784 ±(99.9%) 3219469.524 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (60993029.190, 61761325.784, 63081598.037), stdev = 836086.012
+[info]   Confidence interval (99.9%): [58541856.259, 64980795.308]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.split
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 20.31% complete, ETA 00:07:03
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 1286886.386 ops/s
+[info] # Warmup Iteration   2: 1485580.427 ops/s
+[info] # Warmup Iteration   3: 1481351.962 ops/s
+[info] Iteration   1: 1612080.162 ops/s
+[info] Iteration   2: 1594509.220 ops/s
+[info] Iteration   3: 1621862.818 ops/s
+[info] Iteration   4: 1511787.118 ops/s
+[info] Iteration   5: 1545897.077 ops/s
+[info] 
+[info] 
+[info] Result: 1577227.279 ±(99.9%) 180300.173 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (1511787.118, 1577227.279, 1621862.818), stdev = 46823.382
+[info]   Confidence interval (99.9%): [1396927.106, 1757527.452]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.split
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 21.88% complete, ETA 00:06:55
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 37555.535 ops/s
+[info] # Warmup Iteration   2: 50151.535 ops/s
+[info] # Warmup Iteration   3: 46985.657 ops/s
+[info] Iteration   1: 49409.891 ops/s
+[info] Iteration   2: 45313.699 ops/s
+[info] Iteration   3: 50315.613 ops/s
+[info] Iteration   4: 50024.195 ops/s
+[info] Iteration   5: 49067.525 ops/s
+[info] 
+[info] 
+[info] Result: 48826.185 ±(99.9%) 7794.616 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (45313.699, 48826.185, 50315.613), stdev = 2024.237
+[info]   Confidence interval (99.9%): [41031.569, 56620.801]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFactorial.split
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 23.44% complete, ETA 00:06:47
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 327.166 ops/s
+[info] # Warmup Iteration   2: 598.292 ops/s
+[info] # Warmup Iteration   3: 608.741 ops/s
+[info] Iteration   1: 584.488 ops/s
+[info] Iteration   2: 572.643 ops/s
+[info] Iteration   3: 578.753 ops/s
+[info] Iteration   4: 607.173 ops/s
+[info] Iteration   5: 556.380 ops/s
+[info] 
+[info] 
+[info] Result: 579.887 ±(99.9%) 71.317 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (556.380, 579.887, 607.173), stdev = 18.521
+[info]   Confidence interval (99.9%): [508.571, 651.204]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFibonacci.doublingLoop
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 25.00% complete, ETA 00:06:38
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 54969301.188 ops/s
+[info] # Warmup Iteration   2: 70516843.793 ops/s
+[info] # Warmup Iteration   3: 65856413.930 ops/s
+[info] Iteration   1: 69352127.884 ops/s
+[info] Iteration   2: 71053452.901 ops/s
+[info] Iteration   3: 72784905.166 ops/s
+[info] Iteration   4: 60269280.863 ops/s
+[info] Iteration   5: 73522449.716 ops/s
+[info] 
+[info] 
+[info] Result: 69396443.306 ±(99.9%) 20607092.677 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (60269280.863, 69396443.306, 73522449.716), stdev = 5351596.528
+[info]   Confidence interval (99.9%): [48789350.629, 90003535.984]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFibonacci.doublingLoop
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 26.56% complete, ETA 00:06:30
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 2912353.341 ops/s
+[info] # Warmup Iteration   2: 3228601.706 ops/s
+[info] # Warmup Iteration   3: 3468100.107 ops/s
+[info] Iteration   1: 3647845.611 ops/s
+[info] Iteration   2: 3639591.785 ops/s
+[info] Iteration   3: 3690277.578 ops/s
+[info] Iteration   4: 3685664.970 ops/s
+[info] Iteration   5: 3697144.653 ops/s
+[info] 
+[info] 
+[info] Result: 3672104.919 ±(99.9%) 101636.700 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (3639591.785, 3672104.919, 3697144.653), stdev = 26394.728
+[info]   Confidence interval (99.9%): [3570468.220, 3773741.619]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFibonacci.doublingLoop
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 28.13% complete, ETA 00:06:22
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 416074.811 ops/s
+[info] # Warmup Iteration   2: 477577.139 ops/s
+[info] # Warmup Iteration   3: 498891.730 ops/s
+[info] Iteration   1: 474231.279 ops/s
+[info] Iteration   2: 459474.514 ops/s
+[info] Iteration   3: 440112.898 ops/s
+[info] Iteration   4: 502281.438 ops/s
+[info] Iteration   5: 413517.898 ops/s
+[info] 
+[info] 
+[info] Result: 457923.605 ±(99.9%) 129513.520 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (413517.898, 457923.605, 502281.438), stdev = 33634.250
+[info]   Confidence interval (99.9%): [328410.086, 587437.125]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFibonacci.doublingLoop
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 29.69% complete, ETA 00:06:13
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 22975.268 ops/s
+[info] # Warmup Iteration   2: 25395.239 ops/s
+[info] # Warmup Iteration   3: 26036.050 ops/s
+[info] Iteration   1: 25983.816 ops/s
+[info] Iteration   2: 25557.748 ops/s
+[info] Iteration   3: 25021.452 ops/s
+[info] Iteration   4: 23770.559 ops/s
+[info] Iteration   5: 26053.749 ops/s
+[info] 
+[info] 
+[info] Result: 25277.465 ±(99.9%) 3610.384 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (23770.559, 25277.465, 26053.749), stdev = 937.605
+[info]   Confidence interval (99.9%): [21667.080, 28887.849]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFibonacci.loop
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 31.25% complete, ETA 00:06:05
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 67608211.878 ops/s
+[info] # Warmup Iteration   2: 71787823.532 ops/s
+[info] # Warmup Iteration   3: 65084864.155 ops/s
+[info] Iteration   1: 73220152.510 ops/s
+[info] Iteration   2: 72697978.838 ops/s
+[info] Iteration   3: 70938414.034 ops/s
+[info] Iteration   4: 73969983.937 ops/s
+[info] Iteration   5: 73978611.888 ops/s
+[info] 
+[info] 
+[info] Result: 72961028.241 ±(99.9%) 4825141.361 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (70938414.034, 72961028.241, 73978611.888), stdev = 1253073.889
+[info]   Confidence interval (99.9%): [68135886.880, 77786169.603]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFibonacci.loop
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 32.81% complete, ETA 00:05:57
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 3024057.249 ops/s
+[info] # Warmup Iteration   2: 3194166.141 ops/s
+[info] # Warmup Iteration   3: 3501186.859 ops/s
+[info] Iteration   1: 3511758.006 ops/s
+[info] Iteration   2: 3503947.757 ops/s
+[info] Iteration   3: 3366437.800 ops/s
+[info] Iteration   4: 3489515.304 ops/s
+[info] Iteration   5: 3251999.421 ops/s
+[info] 
+[info] 
+[info] Result: 3424731.658 ±(99.9%) 435992.106 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (3251999.421, 3424731.658, 3511758.006), stdev = 113225.765
+[info]   Confidence interval (99.9%): [2988739.552, 3860723.763]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFibonacci.loop
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 34.38% complete, ETA 00:05:49
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 24234.057 ops/s
+[info] # Warmup Iteration   2: 27058.165 ops/s
+[info] # Warmup Iteration   3: 25376.248 ops/s
+[info] Iteration   1: 26367.740 ops/s
+[info] Iteration   2: 25142.790 ops/s
+[info] Iteration   3: 22322.856 ops/s
+[info] Iteration   4: 26075.044 ops/s
+[info] Iteration   5: 23177.324 ops/s
+[info] 
+[info] 
+[info] Result: 24617.151 ±(99.9%) 6889.102 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (22322.856, 24617.151, 26367.740), stdev = 1789.078
+[info]   Confidence interval (99.9%): [17728.048, 31506.253]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaFibonacci.loop
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 35.94% complete, ETA 00:05:40
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 498.675 ops/s
+[info] # Warmup Iteration   2: 534.278 ops/s
+[info] # Warmup Iteration   3: 534.639 ops/s
+[info] Iteration   1: 530.840 ops/s
+[info] Iteration   2: 533.016 ops/s
+[info] Iteration   3: 529.246 ops/s
+[info] Iteration   4: 502.269 ops/s
+[info] Iteration   5: 422.311 ops/s
+[info] 
+[info] 
+[info] Result: 503.536 ±(99.9%) 181.376 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (422.311, 503.536, 533.016), stdev = 47.103
+[info]   Confidence interval (99.9%): [322.160, 684.913]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaSumOfArithmeticSeries.formula
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 37.50% complete, ETA 00:05:32
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 317997846.549 ops/s
+[info] # Warmup Iteration   2: 312444204.000 ops/s
+[info] # Warmup Iteration   3: 349421669.148 ops/s
+[info] Iteration   1: 347121694.806 ops/s
+[info] Iteration   2: 348368929.800 ops/s
+[info] Iteration   3: 324089641.143 ops/s
+[info] Iteration   4: 347410351.139 ops/s
+[info] Iteration   5: 306908809.513 ops/s
+[info] 
+[info] 
+[info] Result: 334779885.280 ±(99.9%) 71718934.350 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (306908809.513, 334779885.280, 348368929.800), stdev = 18625179.497
+[info]   Confidence interval (99.9%): [263060950.930, 406498819.630]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaSumOfArithmeticSeries.formula
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 39.06% complete, ETA 00:05:24
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 319136432.533 ops/s
+[info] # Warmup Iteration   2: 316355708.266 ops/s
+[info] # Warmup Iteration   3: 347933515.269 ops/s
+[info] Iteration   1: 346648564.725 ops/s
+[info] Iteration   2: 349182474.503 ops/s
+[info] Iteration   3: 331561914.569 ops/s
+[info] Iteration   4: 319093956.305 ops/s
+[info] Iteration   5: 326775052.415 ops/s
+[info] 
+[info] 
+[info] Result: 334652392.503 ±(99.9%) 49787348.425 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (319093956.305, 334652392.503, 349182474.503), stdev = 12929616.280
+[info]   Confidence interval (99.9%): [284865044.078, 384439740.929]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaSumOfArithmeticSeries.formula
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 40.63% complete, ETA 00:05:15
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 316772115.821 ops/s
+[info] # Warmup Iteration   2: 318670056.436 ops/s
+[info] # Warmup Iteration   3: 349383869.700 ops/s
+[info] Iteration   1: 345361787.122 ops/s
+[info] Iteration   2: 304510631.870 ops/s
+[info] Iteration   3: 301824030.336 ops/s
+[info] Iteration   4: 347465894.446 ops/s
+[info] Iteration   5: 304464213.275 ops/s
+[info] 
+[info] 
+[info] Result: 320725311.410 ±(99.9%) 90441213.626 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (301824030.336, 320725311.410, 347465894.446), stdev = 23487295.970
+[info]   Confidence interval (99.9%): [230284097.784, 411166525.036]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaSumOfArithmeticSeries.formula
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 42.19% complete, ETA 00:05:07
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 318410282.602 ops/s
+[info] # Warmup Iteration   2: 318951749.381 ops/s
+[info] # Warmup Iteration   3: 349712644.502 ops/s
+[info] Iteration   1: 335878139.455 ops/s
+[info] Iteration   2: 348468327.136 ops/s
+[info] Iteration   3: 348637975.479 ops/s
+[info] Iteration   4: 347077516.014 ops/s
+[info] Iteration   5: 347281322.886 ops/s
+[info] 
+[info] 
+[info] Result: 345468656.194 ±(99.9%) 20816177.584 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (335878139.455, 345468656.194, 348637975.479), stdev = 5405895.214
+[info]   Confidence interval (99.9%): [324652478.610, 366284833.778]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaSumOfArithmeticSeries.loop
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 43.75% complete, ETA 00:04:59
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 132153500.304 ops/s
+[info] # Warmup Iteration   2: 132519463.485 ops/s
+[info] # Warmup Iteration   3: 154917637.645 ops/s
+[info] Iteration   1: 155547650.758 ops/s
+[info] Iteration   2: 155561617.052 ops/s
+[info] Iteration   3: 155595313.098 ops/s
+[info] Iteration   4: 155749380.024 ops/s
+[info] Iteration   5: 142774387.553 ops/s
+[info] 
+[info] 
+[info] Result: 153045669.697 ±(99.9%) 22111873.754 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (142774387.553, 153045669.697, 155749380.024), stdev = 5742383.395
+[info]   Confidence interval (99.9%): [130933795.944, 175157543.451]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaSumOfArithmeticSeries.loop
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 45.31% complete, ETA 00:04:50
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 28309228.683 ops/s
+[info] # Warmup Iteration   2: 28457658.649 ops/s
+[info] # Warmup Iteration   3: 29457139.303 ops/s
+[info] Iteration   1: 29371696.977 ops/s
+[info] Iteration   2: 29090711.589 ops/s
+[info] Iteration   3: 28043757.087 ops/s
+[info] Iteration   4: 29491993.729 ops/s
+[info] Iteration   5: 29578582.031 ops/s
+[info] 
+[info] 
+[info] Result: 29115348.282 ±(99.9%) 2413248.509 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (28043757.087, 29115348.282, 29578582.031), stdev = 626712.974
+[info]   Confidence interval (99.9%): [26702099.773, 31528596.792]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaSumOfArithmeticSeries.loop
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 46.88% complete, ETA 00:04:42
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 3212996.118 ops/s
+[info] # Warmup Iteration   2: 3248844.565 ops/s
+[info] # Warmup Iteration   3: 3261742.156 ops/s
+[info] Iteration   1: 3239527.193 ops/s
+[info] Iteration   2: 3228486.823 ops/s
+[info] Iteration   3: 3265055.383 ops/s
+[info] Iteration   4: 3007785.612 ops/s
+[info] Iteration   5: 3257617.786 ops/s
+[info] 
+[info] 
+[info] Result: 3199694.559 ±(99.9%) 416830.269 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (3007785.612, 3199694.559, 3265055.383), stdev = 108249.497
+[info]   Confidence interval (99.9%): [2782864.290, 3616524.829]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.JavaSumOfArithmeticSeries.loop
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 48.44% complete, ETA 00:04:34
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 323002.064 ops/s
+[info] # Warmup Iteration   2: 326419.666 ops/s
+[info] # Warmup Iteration   3: 325888.942 ops/s
+[info] Iteration   1: 326577.169 ops/s
+[info] Iteration   2: 295047.176 ops/s
+[info] Iteration   3: 307694.460 ops/s
+[info] Iteration   4: 289319.769 ops/s
+[info] Iteration   5: 284687.114 ops/s
+[info] 
+[info] 
+[info] Result: 300665.138 ±(99.9%) 64904.224 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (284687.114, 300665.138, 326577.169), stdev = 16855.421
+[info]   Confidence interval (99.9%): [235760.914, 365569.361]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.loop
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 50.00% complete, ETA 00:04:25
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 46270389.915 ops/s
+[info] # Warmup Iteration   2: 50132007.160 ops/s
+[info] # Warmup Iteration   3: 54547552.864 ops/s
+[info] Iteration   1: 54881365.580 ops/s
+[info] Iteration   2: 49696406.939 ops/s
+[info] Iteration   3: 52522024.705 ops/s
+[info] Iteration   4: 53517916.701 ops/s
+[info] Iteration   5: 48844243.789 ops/s
+[info] 
+[info] 
+[info] Result: 51892391.543 ±(99.9%) 9833531.535 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (48844243.789, 51892391.543, 54881365.580), stdev = 2553736.912
+[info]   Confidence interval (99.9%): [42058860.008, 61725923.078]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.loop
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 51.56% complete, ETA 00:04:17
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 1159044.678 ops/s
+[info] # Warmup Iteration   2: 1419102.207 ops/s
+[info] # Warmup Iteration   3: 1531093.416 ops/s
+[info] Iteration   1: 1517708.730 ops/s
+[info] Iteration   2: 1489656.104 ops/s
+[info] Iteration   3: 1356739.478 ops/s
+[info] Iteration   4: 1528126.676 ops/s
+[info] Iteration   5: 1520424.203 ops/s
+[info] 
+[info] 
+[info] Result: 1482531.038 ±(99.9%) 276514.090 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (1356739.478, 1482531.038, 1528126.676), stdev = 71809.831
+[info]   Confidence interval (99.9%): [1206016.948, 1759045.128]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.loop
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 53.13% complete, ETA 00:04:09
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 10011.641 ops/s
+[info] # Warmup Iteration   2: 11081.902 ops/s
+[info] # Warmup Iteration   3: 10871.608 ops/s
+[info] Iteration   1: 9701.902 ops/s
+[info] Iteration   2: 9897.563 ops/s
+[info] Iteration   3: 9703.005 ops/s
+[info] Iteration   4: 9767.978 ops/s
+[info] Iteration   5: 9559.132 ops/s
+[info] 
+[info] 
+[info] Result: 9725.916 ±(99.9%) 472.197 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (9559.132, 9725.916, 9897.563), stdev = 122.628
+[info]   Confidence interval (99.9%): [9253.719, 10198.113]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.loop
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 54.69% complete, ETA 00:04:00
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 43.181 ops/s
+[info] # Warmup Iteration   2: 49.566 ops/s
+[info] # Warmup Iteration   3: 49.096 ops/s
+[info] Iteration   1: 49.055 ops/s
+[info] Iteration   2: 48.240 ops/s
+[info] Iteration   3: 51.778 ops/s
+[info] Iteration   4: 51.719 ops/s
+[info] Iteration   5: 52.085 ops/s
+[info] 
+[info] 
+[info] Result: 50.575 ±(99.9%) 6.887 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (48.240, 50.575, 52.085), stdev = 1.789
+[info]   Confidence interval (99.9%): [43.688, 57.463]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.recursion
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 56.25% complete, ETA 00:03:52
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 42028982.588 ops/s
+[info] # Warmup Iteration   2: 51845586.167 ops/s
+[info] # Warmup Iteration   3: 48041551.964 ops/s
+[info] Iteration   1: 51639965.757 ops/s
+[info] Iteration   2: 38985908.533 ops/s
+[info] Iteration   3: 51741614.966 ops/s
+[info] Iteration   4: 53977668.393 ops/s
+[info] Iteration   5: 47831943.327 ops/s
+[info] 
+[info] 
+[info] Result: 48835420.195 ±(99.9%) 22843602.812 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (38985908.533, 48835420.195, 53977668.393), stdev = 5932411.107
+[info]   Confidence interval (99.9%): [25991817.383, 71679023.007]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.recursion
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 57.81% complete, ETA 00:03:44
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 965182.089 ops/s
+[info] # Warmup Iteration   2: 1245781.599 ops/s
+[info] # Warmup Iteration   3: 1279909.676 ops/s
+[info] Iteration   1: 1298783.534 ops/s
+[info] Iteration   2: 1183522.448 ops/s
+[info] Iteration   3: 1304968.979 ops/s
+[info] Iteration   4: 1298691.098 ops/s
+[info] Iteration   5: 1317155.958 ops/s
+[info] 
+[info] 
+[info] Result: 1280624.403 ±(99.9%) 211015.305 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (1183522.448, 1280624.403, 1317155.958), stdev = 54800.005
+[info]   Confidence interval (99.9%): [1069609.098, 1491639.708]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.recursion
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 59.38% complete, ETA 00:03:36
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 24381.657 ops/s
+[info] # Warmup Iteration   2: 32646.057 ops/s
+[info] # Warmup Iteration   3: 30133.804 ops/s
+[info] Iteration   1: 32280.458 ops/s
+[info] Iteration   2: 31378.108 ops/s
+[info] Iteration   3: 29338.979 ops/s
+[info] Iteration   4: 28660.276 ops/s
+[info] Iteration   5: 32329.356 ops/s
+[info] 
+[info] 
+[info] Result: 30797.435 ±(99.9%) 6551.151 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (28660.276, 30797.435, 32329.356), stdev = 1701.313
+[info]   Confidence interval (99.9%): [24246.285, 37348.586]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.recursion
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 60.94% complete, ETA 00:03:27
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 340.736 ops/s
+[info] # Warmup Iteration   2: 457.907 ops/s
+[info] # Warmup Iteration   3: 450.838 ops/s
+[info] Iteration   1: 459.647 ops/s
+[info] Iteration   2: 438.773 ops/s
+[info] Iteration   3: 458.101 ops/s
+[info] Iteration   4: 380.278 ops/s
+[info] Iteration   5: 437.104 ops/s
+[info] 
+[info] 
+[info] Result: 434.781 ±(99.9%) 124.091 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (380.278, 434.781, 459.647), stdev = 32.226
+[info]   Confidence interval (99.9%): [310.689, 558.872]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.recursionPar
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 62.50% complete, ETA 00:03:19
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 40925067.347 ops/s
+[info] # Warmup Iteration   2: 51148146.940 ops/s
+[info] # Warmup Iteration   3: 52879547.613 ops/s
+[info] Iteration   1: 54668842.927 ops/s
+[info] Iteration   2: 51023438.554 ops/s
+[info] Iteration   3: 40092461.338 ops/s
+[info] Iteration   4: 53145295.831 ops/s
+[info] Iteration   5: 45174568.254 ops/s
+[info] 
+[info] 
+[info] Result: 48820921.381 ±(99.9%) 23361653.022 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (40092461.338, 48820921.381, 54668842.927), stdev = 6066947.102
+[info]   Confidence interval (99.9%): [25459268.359, 72182574.403]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.recursionPar
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 64.06% complete, ETA 00:03:11
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 955393.048 ops/s
+[info] # Warmup Iteration   2: 1290396.977 ops/s
+[info] # Warmup Iteration   3: 1155219.570 ops/s
+[info] Iteration   1: 1282957.269 ops/s
+[info] Iteration   2: 1164822.687 ops/s
+[info] Iteration   3: 1191115.771 ops/s
+[info] Iteration   4: 1300951.688 ops/s
+[info] Iteration   5: 1280307.695 ops/s
+[info] 
+[info] 
+[info] Result: 1244031.022 ±(99.9%) 236941.327 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (1164822.687, 1244031.022, 1300951.688), stdev = 61532.910
+[info]   Confidence interval (99.9%): [1007089.695, 1480972.350]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.recursionPar
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 65.63% complete, ETA 00:03:02
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 9986.044 ops/s
+[info] # Warmup Iteration   2: 22790.838 ops/s
+[info] # Warmup Iteration   3: 30498.502 ops/s
+[info] Iteration   1: 31385.314 ops/s
+[info] Iteration   2: 30967.014 ops/s
+[info] Iteration   3: 28280.812 ops/s
+[info] Iteration   4: 30032.690 ops/s
+[info] Iteration   5: 31603.647 ops/s
+[info] 
+[info] 
+[info] Result: 30453.895 ±(99.9%) 5220.594 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (28280.812, 30453.895, 31603.647), stdev = 1355.772
+[info]   Confidence interval (99.9%): [25233.301, 35674.489]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.recursionPar
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 67.19% complete, ETA 00:02:54
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 227.328 ops/s
+[info] # Warmup Iteration   2: 483.368 ops/s
+[info] # Warmup Iteration   3: 488.769 ops/s
+[info] Iteration   1: 544.180 ops/s
+[info] Iteration   2: 556.281 ops/s
+[info] Iteration   3: 543.016 ops/s
+[info] Iteration   4: 538.491 ops/s
+[info] Iteration   5: 560.019 ops/s
+[info] 
+[info] 
+[info] Result: 548.397 ±(99.9%) 35.610 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (538.491, 548.397, 560.019), stdev = 9.248
+[info]   Confidence interval (99.9%): [512.787, 584.008]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.split
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 68.75% complete, ETA 00:02:46
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 46613814.451 ops/s
+[info] # Warmup Iteration   2: 50025453.120 ops/s
+[info] # Warmup Iteration   3: 55460669.889 ops/s
+[info] Iteration   1: 49533272.916 ops/s
+[info] Iteration   2: 55353786.938 ops/s
+[info] Iteration   3: 49336305.677 ops/s
+[info] Iteration   4: 55429577.348 ops/s
+[info] Iteration   5: 54081823.961 ops/s
+[info] 
+[info] 
+[info] Result: 52746953.368 ±(99.9%) 11826899.115 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (49336305.677, 52746953.368, 55429577.348), stdev = 3071408.142
+[info]   Confidence interval (99.9%): [40920054.253, 64573852.482]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.split
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 70.31% complete, ETA 00:02:37
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 913140.409 ops/s
+[info] # Warmup Iteration   2: 1142352.804 ops/s
+[info] # Warmup Iteration   3: 1229082.846 ops/s
+[info] Iteration   1: 1284461.690 ops/s
+[info] Iteration   2: 1283909.137 ops/s
+[info] Iteration   3: 1230089.095 ops/s
+[info] Iteration   4: 1031206.329 ops/s
+[info] Iteration   5: 1140263.634 ops/s
+[info] 
+[info] 
+[info] Result: 1193985.977 ±(99.9%) 417216.730 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (1031206.329, 1193985.977, 1284461.690), stdev = 108349.860
+[info]   Confidence interval (99.9%): [776769.247, 1611202.707]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.split
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 71.88% complete, ETA 00:02:29
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 33269.514 ops/s
+[info] # Warmup Iteration   2: 47543.478 ops/s
+[info] # Warmup Iteration   3: 47310.452 ops/s
+[info] Iteration   1: 47689.535 ops/s
+[info] Iteration   2: 47461.361 ops/s
+[info] Iteration   3: 39375.765 ops/s
+[info] Iteration   4: 47378.486 ops/s
+[info] Iteration   5: 46989.310 ops/s
+[info] 
+[info] 
+[info] Result: 45778.891 ±(99.9%) 13817.469 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (39375.765, 45778.891, 47689.535), stdev = 3588.353
+[info]   Confidence interval (99.9%): [31961.422, 59596.361]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFactorial.split
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 73.44% complete, ETA 00:02:21
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 406.732 ops/s
+[info] # Warmup Iteration   2: 606.462 ops/s
+[info] # Warmup Iteration   3: 604.736 ops/s
+[info] Iteration   1: 580.338 ops/s
+[info] Iteration   2: 559.742 ops/s
+[info] Iteration   3: 580.035 ops/s
+[info] Iteration   4: 601.497 ops/s
+[info] Iteration   5: 601.792 ops/s
+[info] 
+[info] 
+[info] Result: 584.681 ±(99.9%) 67.741 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (559.742, 584.681, 601.792), stdev = 17.592
+[info]   Confidence interval (99.9%): [516.940, 652.422]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFibonacci.doublingLoop
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 75.00% complete, ETA 00:02:12
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 116176924.364 ops/s
+[info] # Warmup Iteration   2: 113184594.328 ops/s
+[info] # Warmup Iteration   3: 114238075.002 ops/s
+[info] Iteration   1: 114956466.610 ops/s
+[info] Iteration   2: 110394475.308 ops/s
+[info] Iteration   3: 102505062.117 ops/s
+[info] Iteration   4: 104589900.748 ops/s
+[info] Iteration   5: 115308522.205 ops/s
+[info] 
+[info] 
+[info] Result: 109550885.397 ±(99.9%) 22563042.552 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (102505062.117, 109550885.397, 115308522.205), stdev = 5859550.499
+[info]   Confidence interval (99.9%): [86987842.846, 132113927.949]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFibonacci.doublingLoop
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 76.56% complete, ETA 00:02:04
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 2755195.752 ops/s
+[info] # Warmup Iteration   2: 3144273.272 ops/s
+[info] # Warmup Iteration   3: 2345808.901 ops/s
+[info] Iteration   1: 2990833.564 ops/s
+[info] Iteration   2: 3163215.981 ops/s
+[info] Iteration   3: 3056441.756 ops/s
+[info] Iteration   4: 3030006.559 ops/s
+[info] Iteration   5: 3195629.067 ops/s
+[info] 
+[info] 
+[info] Result: 3087225.385 ±(99.9%) 339200.741 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (2990833.564, 3087225.385, 3195629.067), stdev = 88089.355
+[info]   Confidence interval (99.9%): [2748024.645, 3426426.126]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFibonacci.doublingLoop
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 78.13% complete, ETA 00:01:56
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 334866.552 ops/s
+[info] # Warmup Iteration   2: 375134.630 ops/s
+[info] # Warmup Iteration   3: 378780.009 ops/s
+[info] Iteration   1: 429557.489 ops/s
+[info] Iteration   2: 433859.121 ops/s
+[info] Iteration   3: 399258.829 ops/s
+[info] Iteration   4: 377555.267 ops/s
+[info] Iteration   5: 429106.349 ops/s
+[info] 
+[info] 
+[info] Result: 413867.411 ±(99.9%) 94518.500 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (377555.267, 413867.411, 433859.121), stdev = 24546.154
+[info]   Confidence interval (99.9%): [319348.912, 508385.911]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFibonacci.doublingLoop
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 79.69% complete, ETA 00:01:48
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 20608.824 ops/s
+[info] # Warmup Iteration   2: 24319.926 ops/s
+[info] # Warmup Iteration   3: 25105.256 ops/s
+[info] Iteration   1: 22918.413 ops/s
+[info] Iteration   2: 24625.810 ops/s
+[info] Iteration   3: 23653.252 ops/s
+[info] Iteration   4: 22812.406 ops/s
+[info] Iteration   5: 21913.488 ops/s
+[info] 
+[info] 
+[info] Result: 23184.674 ±(99.9%) 3908.845 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (21913.488, 23184.674, 24625.810), stdev = 1015.115
+[info]   Confidence interval (99.9%): [19275.829, 27093.519]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFibonacci.loop
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 81.25% complete, ETA 00:01:39
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 112446264.214 ops/s
+[info] # Warmup Iteration   2: 118166250.572 ops/s
+[info] # Warmup Iteration   3: 114708368.426 ops/s
+[info] Iteration   1: 115357091.418 ops/s
+[info] Iteration   2: 105976266.168 ops/s
+[info] Iteration   3: 108785213.917 ops/s
+[info] Iteration   4: 100710534.114 ops/s
+[info] Iteration   5: 100417700.480 ops/s
+[info] 
+[info] 
+[info] Result: 106249361.219 ±(99.9%) 23903688.427 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (100417700.480, 106249361.219, 115357091.418), stdev = 6207711.975
+[info]   Confidence interval (99.9%): [82345672.792, 130153049.647]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFibonacci.loop
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 82.81% complete, ETA 00:01:31
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 2413702.010 ops/s
+[info] # Warmup Iteration   2: 2922353.552 ops/s
+[info] # Warmup Iteration   3: 3050935.290 ops/s
+[info] Iteration   1: 3006470.505 ops/s
+[info] Iteration   2: 2862450.730 ops/s
+[info] Iteration   3: 2716676.173 ops/s
+[info] Iteration   4: 2666845.723 ops/s
+[info] Iteration   5: 2608101.115 ops/s
+[info] 
+[info] 
+[info] Result: 2772108.849 ±(99.9%) 621311.526 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (2608101.115, 2772108.849, 3006470.505), stdev = 161352.630
+[info]   Confidence interval (99.9%): [2150797.323, 3393420.375]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFibonacci.loop
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 84.38% complete, ETA 00:01:23
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 21823.243 ops/s
+[info] # Warmup Iteration   2: 24017.703 ops/s
+[info] # Warmup Iteration   3: 24030.775 ops/s
+[info] Iteration   1: 24991.935 ops/s
+[info] Iteration   2: 21590.672 ops/s
+[info] Iteration   3: 21705.048 ops/s
+[info] Iteration   4: 25750.487 ops/s
+[info] Iteration   5: 25699.528 ops/s
+[info] 
+[info] 
+[info] Result: 23947.534 ±(99.9%) 8167.187 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (21590.672, 23947.534, 25750.487), stdev = 2120.992
+[info]   Confidence interval (99.9%): [15780.347, 32114.721]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaFibonacci.loop
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 85.94% complete, ETA 00:01:14
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 489.990 ops/s
+[info] # Warmup Iteration   2: 459.512 ops/s
+[info] # Warmup Iteration   3: 523.750 ops/s
+[info] Iteration   1: 530.802 ops/s
+[info] Iteration   2: 529.884 ops/s
+[info] Iteration   3: 533.929 ops/s
+[info] Iteration   4: 502.958 ops/s
+[info] Iteration   5: 502.068 ops/s
+[info] 
+[info] 
+[info] Result: 519.928 ±(99.9%) 61.501 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (502.068, 519.928, 533.929), stdev = 15.972
+[info]   Confidence interval (99.9%): [458.427, 581.430]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaSumOfArithmeticSeries.formula
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 87.50% complete, ETA 00:01:06
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 318840520.771 ops/s
+[info] # Warmup Iteration   2: 316887108.236 ops/s
+[info] # Warmup Iteration   3: 317327729.003 ops/s
+[info] Iteration   1: 344408815.697 ops/s
+[info] Iteration   2: 335378743.656 ops/s
+[info] Iteration   3: 345969764.468 ops/s
+[info] Iteration   4: 318432854.572 ops/s
+[info] Iteration   5: 329758611.263 ops/s
+[info] 
+[info] 
+[info] Result: 334789757.931 ±(99.9%) 43510847.155 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (318432854.572, 334789757.931, 345969764.468), stdev = 11299628.832
+[info]   Confidence interval (99.9%): [291278910.776, 378300605.086]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaSumOfArithmeticSeries.formula
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 89.06% complete, ETA 00:00:58
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 320560711.180 ops/s
+[info] # Warmup Iteration   2: 297179668.825 ops/s
+[info] # Warmup Iteration   3: 352403199.689 ops/s
+[info] Iteration   1: 347402481.874 ops/s
+[info] Iteration   2: 323708445.808 ops/s
+[info] Iteration   3: 309624453.523 ops/s
+[info] Iteration   4: 345264235.288 ops/s
+[info] Iteration   5: 306012715.301 ops/s
+[info] 
+[info] 
+[info] Result: 326402466.359 ±(99.9%) 74598919.184 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (306012715.301, 326402466.359, 347402481.874), stdev = 19373102.413
+[info]   Confidence interval (99.9%): [251803547.175, 401001385.543]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaSumOfArithmeticSeries.formula
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 90.63% complete, ETA 00:00:49
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 316999325.413 ops/s
+[info] # Warmup Iteration   2: 311283187.530 ops/s
+[info] # Warmup Iteration   3: 352015507.640 ops/s
+[info] Iteration   1: 321742754.955 ops/s
+[info] Iteration   2: 336321331.548 ops/s
+[info] Iteration   3: 328979260.777 ops/s
+[info] Iteration   4: 306852698.443 ops/s
+[info] Iteration   5: 348512911.794 ops/s
+[info] 
+[info] 
+[info] Result: 328481791.504 ±(99.9%) 60154648.165 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (306852698.443, 328481791.504, 348512911.794), stdev = 15621971.099
+[info]   Confidence interval (99.9%): [268327143.339, 388636439.669]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaSumOfArithmeticSeries.formula
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 92.19% complete, ETA 00:00:41
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 318326421.905 ops/s
+[info] # Warmup Iteration   2: 310070860.385 ops/s
+[info] # Warmup Iteration   3: 321842349.395 ops/s
+[info] Iteration   1: 336977848.013 ops/s
+[info] Iteration   2: 351790117.150 ops/s
+[info] Iteration   3: 341719180.355 ops/s
+[info] Iteration   4: 352518916.272 ops/s
+[info] Iteration   5: 324407854.226 ops/s
+[info] 
+[info] 
+[info] Result: 341482783.203 ±(99.9%) 44737990.664 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (324407854.226, 341482783.203, 352518916.272), stdev = 11618314.104
+[info]   Confidence interval (99.9%): [296744792.539, 386220773.867]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaSumOfArithmeticSeries.loop
+[info] # Parameters: (n = 10)
+[info] 
+[info] # Run progress: 93.75% complete, ETA 00:00:33
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 129641419.518 ops/s
+[info] # Warmup Iteration   2: 133790921.855 ops/s
+[info] # Warmup Iteration   3: 147177065.250 ops/s
+[info] Iteration   1: 114113791.657 ops/s
+[info] Iteration   2: 142993460.249 ops/s
+[info] Iteration   3: 156433206.412 ops/s
+[info] Iteration   4: 156344160.452 ops/s
+[info] Iteration   5: 141074623.999 ops/s
+[info] 
+[info] 
+[info] Result: 142191848.554 ±(99.9%) 66510671.719 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (114113791.657, 142191848.554, 156433206.412), stdev = 17272610.232
+[info]   Confidence interval (99.9%): [75681176.835, 208702520.272]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaSumOfArithmeticSeries.loop
+[info] # Parameters: (n = 100)
+[info] 
+[info] # Run progress: 95.31% complete, ETA 00:00:24
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 28377299.018 ops/s
+[info] # Warmup Iteration   2: 28515004.607 ops/s
+[info] # Warmup Iteration   3: 27276141.929 ops/s
+[info] Iteration   1: 29384888.583 ops/s
+[info] Iteration   2: 29214287.709 ops/s
+[info] Iteration   3: 27205988.503 ops/s
+[info] Iteration   4: 26450232.428 ops/s
+[info] Iteration   5: 25950479.919 ops/s
+[info] 
+[info] 
+[info] Result: 27641175.429 ±(99.9%) 6082738.399 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (25950479.919, 27641175.429, 29384888.583), stdev = 1579667.846
+[info]   Confidence interval (99.9%): [21558437.029, 33723913.828]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaSumOfArithmeticSeries.loop
+[info] # Parameters: (n = 1000)
+[info] 
+[info] # Run progress: 96.88% complete, ETA 00:00:16
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 3209476.672 ops/s
+[info] # Warmup Iteration   2: 3250550.849 ops/s
+[info] # Warmup Iteration   3: 3261711.447 ops/s
+[info] Iteration   1: 2869958.309 ops/s
+[info] Iteration   2: 3248117.989 ops/s
+[info] Iteration   3: 2975580.722 ops/s
+[info] Iteration   4: 3020134.476 ops/s
+[info] Iteration   5: 2938841.076 ops/s
+[info] 
+[info] 
+[info] Result: 3010526.514 ±(99.9%) 553547.484 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (2869958.309, 3010526.514, 3248117.989), stdev = 143754.524
+[info]   Confidence interval (99.9%): [2456979.031, 3564073.998]
+[info] 
+[info] 
+[info] # JMH 1.6 (released 51 days ago, please consider updating!)
+[info] # VM invoker: /usr/lib/jvm/jdk1.8.0_40/jre/bin/java
+[info] # VM options: -Xms1024m -Xmx1024m -XX:NewSize=896m -XX:MaxNewSize=896m -Xss256k -XX:+UseG1GC -XX:+TieredCompilation -XX:+UseNUMA -XX:-UseBiasedLocking -XX:+AlwaysPreTouch
+[info] # Warmup: 3 iterations, 1 s each
+[info] # Measurement: 5 iterations, 1 s each
+[info] # Timeout: 10 min per iteration
+[info] # Threads: 1 thread, will synchronize iterations
+[info] # Benchmark mode: Throughput, ops/time
+[info] # Benchmark: com.github.plokhotnyuk.scala_vs_java.ScalaSumOfArithmeticSeries.loop
+[info] # Parameters: (n = 10000)
+[info] 
+[info] # Run progress: 98.44% complete, ETA 00:00:08
+[info] # Fork: 1 of 1
+[info] # Warmup Iteration   1: 323306.438 ops/s
+[info] # Warmup Iteration   2: 326566.014 ops/s
+[info] # Warmup Iteration   3: 326772.324 ops/s
+[info] Iteration   1: 325427.288 ops/s
+[info] Iteration   2: 298936.415 ops/s
+[info] Iteration   3: 305537.534 ops/s
+[info] Iteration   4: 305808.510 ops/s
+[info] Iteration   5: 305820.855 ops/s
+[info] 
+[info] 
+[info] Result: 308306.121 ±(99.9%) 38554.804 ops/s [Average]
+[info]   Statistics: (min, avg, max) = (298936.415, 308306.121, 325427.288), stdev = 10012.560
+[info]   Confidence interval (99.9%): [269751.317, 346860.924]
+[info] 
+[info] 
+[info] # Run complete. Total time: 00:08:51
+[info] 
+[info] Benchmark                             (n)   Mode  Cnt          Score          Error  Units
+[info] JavaFactorial.loop                     10  thrpt    5   63150490.378 ±  6740448.904  ops/s
+[info] JavaFactorial.loop                    100  thrpt    5    1655000.435 ±   263004.011  ops/s
+[info] JavaFactorial.loop                   1000  thrpt    5      10921.719 ±     2471.180  ops/s
+[info] JavaFactorial.loop                  10000  thrpt    5         52.069 ±        4.984  ops/s
+[info] JavaFactorial.recursion                10  thrpt    5   60272423.804 ± 14195938.969  ops/s
+[info] JavaFactorial.recursion               100  thrpt    5    1530567.687 ±   350442.841  ops/s
+[info] JavaFactorial.recursion              1000  thrpt    5      33356.888 ±     2097.509  ops/s
+[info] JavaFactorial.recursion             10000  thrpt    5        454.047 ±       22.993  ops/s
+[info] JavaFactorial.recursionPar             10  thrpt    5   58244918.436 ± 21570044.700  ops/s
+[info] JavaFactorial.recursionPar            100  thrpt    5    1579942.744 ±   187293.540  ops/s
+[info] JavaFactorial.recursionPar           1000  thrpt    5      37012.705 ±     6372.572  ops/s
+[info] JavaFactorial.recursionPar          10000  thrpt    5        544.748 ±       51.638  ops/s
+[info] JavaFactorial.split                    10  thrpt    5   61761325.784 ±  3219469.524  ops/s
+[info] JavaFactorial.split                   100  thrpt    5    1577227.279 ±   180300.173  ops/s
+[info] JavaFactorial.split                  1000  thrpt    5      48826.185 ±     7794.616  ops/s
+[info] JavaFactorial.split                 10000  thrpt    5        579.887 ±       71.317  ops/s
+[info] JavaFibonacci.doublingLoop             10  thrpt    5   69396443.306 ± 20607092.677  ops/s
+[info] JavaFibonacci.doublingLoop            100  thrpt    5    3672104.919 ±   101636.700  ops/s
+[info] JavaFibonacci.doublingLoop           1000  thrpt    5     457923.605 ±   129513.520  ops/s
+[info] JavaFibonacci.doublingLoop          10000  thrpt    5      25277.465 ±     3610.384  ops/s
+[info] JavaFibonacci.loop                     10  thrpt    5   72961028.241 ±  4825141.361  ops/s
+[info] JavaFibonacci.loop                    100  thrpt    5    3424731.658 ±   435992.106  ops/s
+[info] JavaFibonacci.loop                   1000  thrpt    5      24617.151 ±     6889.102  ops/s
+[info] JavaFibonacci.loop                  10000  thrpt    5        503.536 ±      181.376  ops/s
+[info] JavaSumOfArithmeticSeries.formula      10  thrpt    5  334779885.280 ± 71718934.350  ops/s
+[info] JavaSumOfArithmeticSeries.formula     100  thrpt    5  334652392.503 ± 49787348.425  ops/s
+[info] JavaSumOfArithmeticSeries.formula    1000  thrpt    5  320725311.410 ± 90441213.626  ops/s
+[info] JavaSumOfArithmeticSeries.formula   10000  thrpt    5  345468656.194 ± 20816177.584  ops/s
+[info] JavaSumOfArithmeticSeries.loop         10  thrpt    5  153045669.697 ± 22111873.754  ops/s
+[info] JavaSumOfArithmeticSeries.loop        100  thrpt    5   29115348.282 ±  2413248.509  ops/s
+[info] JavaSumOfArithmeticSeries.loop       1000  thrpt    5    3199694.559 ±   416830.269  ops/s
+[info] JavaSumOfArithmeticSeries.loop      10000  thrpt    5     300665.138 ±    64904.224  ops/s
+[info] ScalaFactorial.loop                    10  thrpt    5   51892391.543 ±  9833531.535  ops/s
+[info] ScalaFactorial.loop                   100  thrpt    5    1482531.038 ±   276514.090  ops/s
+[info] ScalaFactorial.loop                  1000  thrpt    5       9725.916 ±      472.197  ops/s
+[info] ScalaFactorial.loop                 10000  thrpt    5         50.575 ±        6.887  ops/s
+[info] ScalaFactorial.recursion               10  thrpt    5   48835420.195 ± 22843602.812  ops/s
+[info] ScalaFactorial.recursion              100  thrpt    5    1280624.403 ±   211015.305  ops/s
+[info] ScalaFactorial.recursion             1000  thrpt    5      30797.435 ±     6551.151  ops/s
+[info] ScalaFactorial.recursion            10000  thrpt    5        434.781 ±      124.091  ops/s
+[info] ScalaFactorial.recursionPar            10  thrpt    5   48820921.381 ± 23361653.022  ops/s
+[info] ScalaFactorial.recursionPar           100  thrpt    5    1244031.022 ±   236941.327  ops/s
+[info] ScalaFactorial.recursionPar          1000  thrpt    5      30453.895 ±     5220.594  ops/s
+[info] ScalaFactorial.recursionPar         10000  thrpt    5        548.397 ±       35.610  ops/s
+[info] ScalaFactorial.split                   10  thrpt    5   52746953.368 ± 11826899.115  ops/s
+[info] ScalaFactorial.split                  100  thrpt    5    1193985.977 ±   417216.730  ops/s
+[info] ScalaFactorial.split                 1000  thrpt    5      45778.891 ±    13817.469  ops/s
+[info] ScalaFactorial.split                10000  thrpt    5        584.681 ±       67.741  ops/s
+[info] ScalaFibonacci.doublingLoop            10  thrpt    5  109550885.397 ± 22563042.552  ops/s
+[info] ScalaFibonacci.doublingLoop           100  thrpt    5    3087225.385 ±   339200.741  ops/s
+[info] ScalaFibonacci.doublingLoop          1000  thrpt    5     413867.411 ±    94518.500  ops/s
+[info] ScalaFibonacci.doublingLoop         10000  thrpt    5      23184.674 ±     3908.845  ops/s
+[info] ScalaFibonacci.loop                    10  thrpt    5  106249361.219 ± 23903688.427  ops/s
+[info] ScalaFibonacci.loop                   100  thrpt    5    2772108.849 ±   621311.526  ops/s
+[info] ScalaFibonacci.loop                  1000  thrpt    5      23947.534 ±     8167.187  ops/s
+[info] ScalaFibonacci.loop                 10000  thrpt    5        519.928 ±       61.501  ops/s
+[info] ScalaSumOfArithmeticSeries.formula     10  thrpt    5  334789757.931 ± 43510847.155  ops/s
+[info] ScalaSumOfArithmeticSeries.formula    100  thrpt    5  326402466.359 ± 74598919.184  ops/s
+[info] ScalaSumOfArithmeticSeries.formula   1000  thrpt    5  328481791.504 ± 60154648.165  ops/s
+[info] ScalaSumOfArithmeticSeries.formula  10000  thrpt    5  341482783.203 ± 44737990.664  ops/s
+[info] ScalaSumOfArithmeticSeries.loop        10  thrpt    5  142191848.554 ± 66510671.719  ops/s
+[info] ScalaSumOfArithmeticSeries.loop       100  thrpt    5   27641175.429 ±  6082738.399  ops/s
+[info] ScalaSumOfArithmeticSeries.loop      1000  thrpt    5    3010526.514 ±   553547.484  ops/s
+[info] ScalaSumOfArithmeticSeries.loop     10000  thrpt    5     308306.121 ±    38554.804  ops/s
+[success] Total time: 542 s, completed Apr 5, 2015 9:44:27 AM
