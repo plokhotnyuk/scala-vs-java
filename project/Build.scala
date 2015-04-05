@@ -32,6 +32,7 @@ object Build extends Build {
       "-Xms1024m",
       "-Xmx1024m",
       "-XX:NewSize=896m",
+      "-XX:MaxNewSize=896m",
       "-Xss256k",
       "-XX:+UseG1GC",
       "-XX:+TieredCompilation",
