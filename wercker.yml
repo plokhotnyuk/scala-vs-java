@@ -1,0 +1,10 @@
+box: plokhotnyuk/scala
+build:
+  steps:
+    - script:
+        name: build
+        code: |
+          sudo cat /proc/cpuinfo
+          sudo cat /proc/meminfo
+          sbt test
+          sbt "run .*"
