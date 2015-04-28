@@ -6,7 +6,7 @@ jdk:
   - openjdk7
   - oraclejdk7
 script:
-  - sudo cat /proc/cpuinfo
-  - sudo cat /proc/meminfo
+  - cat /proc/cpuinfo
+  - cat /proc/meminfo
   - sbt test
   - sbt "run .*"

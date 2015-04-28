@@ -4,7 +4,7 @@ build:
     - script:
         name: build
         code: |
-          sudo cat /proc/cpuinfo
-          sudo cat /proc/meminfo
+          cat /proc/cpuinfo
+          cat /proc/meminfo
           sbt test
           sbt "run .*"
