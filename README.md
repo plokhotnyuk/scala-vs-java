@@ -4,8 +4,6 @@ Main goal of this project is to show that it is possible to write idiomatic Scal
 
 [![Travis CI Build Status](https://secure.travis-ci.org/plokhotnyuk/scala-vs-java.png)](http://travis-ci.org/plokhotnyuk/scala-vs-java)
 
-[![Shippable Build Status](https://api.shippable.com/projects/550ee5965ab6cc1352a767a9/badge?branchName=master)](https://app.shippable.com/projects/550ee5965ab6cc1352a767a9/builds)
-
 [![Wercker Build Status](https://app.wercker.com/status/a73f239e6cf3a305c53182e4c99b83d9/s "wercker status")](https://app.wercker.com/project/bykey/a73f239e6cf3a305c53182e4c99b83d9)
 
 ## Hardware required
